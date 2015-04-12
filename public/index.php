@@ -45,7 +45,7 @@ define('EXT', '.php');
  * deprecated notices. Disable with: E_ALL & ~E_DEPRECATED
  */
 error_reporting(E_ALL | E_STRICT);
-
+ini_set('display_errors', TRUE);
 /**
  * End of standard configuration! Changing any of the code below should only be
  * attempted by those with a working knowledge of Kohana internals.
@@ -72,6 +72,9 @@ if ( ! is_dir($system) AND is_dir(DOCROOT.$system))
 define('APPPATH', realpath($application).DIRECTORY_SEPARATOR);
 define('MODPATH', realpath($modules).DIRECTORY_SEPARATOR);
 define('SYSPATH', realpath($system).DIRECTORY_SEPARATOR);
+
+// Required once function
+require_once(MODPATH.'common/function.php');
 
 // Clean up the configuration vars
 unset($application, $modules, $system);
