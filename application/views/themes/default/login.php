@@ -17,13 +17,17 @@
         <section class="panel panel-default bg-white m-t-lg">
             <header class="panel-heading text-center"><strong>登陆</strong></header>
             <form action="#" class="panel-body wrapper-lg">
-                <div class="form-group"><label class="control-label">手机号码</label>
-					<input type="phone" placeholder="手机号码" class="form-control input-lg">
-                </div>
-                <div class="form-group"><label class="control-label">登陆密码</label>
-					<input type="password" id="inputPassword" placeholder="登陆密码" class="form-control input-lg">
-                </div>
-                <div class="checkbox"><label> <input type="checkbox"> 保持登陆状态 </label></div>
+				<div class="input-group m-b">
+					<span class="input-group-addon">手机号码</span>
+					<input type="text" name="username" placeholder="请输入您的手机号" required="required" class="form-control">
+				</div>
+				<div class="input-group m-b">
+					<span class="input-group-addon">登录密码</span>
+					<input type="password" name="password" placeholder="请输入您的登录密码" required="required" class="form-control">
+				</div>
+                <div class="checkbox">
+					<label> <input type="checkbox"> 保持登陆状态 </label>
+				</div>
                 <a href="#" class="pull-right m-t-xs">
                     <small>找回密码?</small>
                 </a>

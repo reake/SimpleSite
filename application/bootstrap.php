@@ -123,10 +123,10 @@ Kohana::modules(array(
 	// 'auth'       => MODPATH.'auth',       // Basic authentication
 	// 'cache'      => MODPATH.'cache',      // Caching with multiple backends
 	// 'codebench'  => MODPATH.'codebench',  // Benchmarking tool
-	// 'database'   => MODPATH.'database',   // Database access
+	 'database'   => MODPATH.'database',   // Database access
 	// 'image'      => MODPATH.'image',      // Image manipulation
 	// 'minion'     => MODPATH.'minion',     // CLI Tasks
-	// 'orm'        => MODPATH.'orm',        // Object Relationship Mapping
+	 'orm'        => MODPATH.'orm',        // Object Relationship Mapping
 	// 'unittest'   => MODPATH.'unittest',   // Unit testing
 	// 'userguide'  => MODPATH.'userguide',  // User guide and API documentation
 	));
@@ -145,10 +145,16 @@ Kohana::modules(array(
  * defaults for the URI.
  */
 
-Route::set('user', '<action>', array('action' => '(login|logout|register|lock)'))
+Route::set('user', '<action>', array('action' => '(login|logout|register)'))
 	->defaults(array(
 		'controller' => 'home',
 		'action'     => 'login',
+	));
+
+Route::set('common', '<action>', array('action' => '(sms|lock)'))
+	->defaults(array(
+		'controller' => 'common',
+		'action'     => 'index',
 	));
 
 Route::set('home', '(<controller>(/<action>))')
