@@ -122,13 +122,13 @@
 			e.preventDefault();
 			registerButton.text('注册中...');
 			$.post('/register', $("form#register").serialize(), function (result) {
+				registerButton.text('注册账号');
 				if (result.status == 1001) {
 					alert('恭喜你，注册成功！');
 					window.location.href = result.result.data;
 				} else {
 					alert(result.result.msg);
 				}
-				registerButton.text('注册账号');
 			}, 'JSON');
 		})
 	})();

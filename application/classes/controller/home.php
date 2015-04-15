@@ -44,9 +44,9 @@ class Controller_Home extends Controller_Base
 	{
 		if ($this->request->is_ajax()) {
 			$post    = $this->request->post();
-			$success = Auth_User::instance()->login($post['username'], $post['password']);
+			$success = Auth_ORM::instance()->login($post['username'], $post['password']);
 			if ($success) {
-				Tool_Utility::jsonReturn(1001);
+				Tool_Utility::jsonReturn(1001,'登陆成功','/manage/dashboard/index');
 			} else {
 				Tool_Utility::jsonReturn(1800);
 			}
@@ -60,7 +60,7 @@ class Controller_Home extends Controller_Base
 
 	public function action_logout()
 	{
-		Auth_User::instance()->logout();
+		Auth::instance()->logout();
 		$this->redirect('/login');
 	}
 

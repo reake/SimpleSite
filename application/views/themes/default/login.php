@@ -16,7 +16,7 @@
     <div class="container aside-xxl"><a class="navbar-brand block" href="<?php p($siteUrl); ?>">简站(Simple-Site)</a>
         <section class="panel panel-default bg-white m-t-lg">
             <header class="panel-heading text-center"><strong>登陆</strong></header>
-            <form action="#" class="panel-body wrapper-lg">
+            <form action="#" id="login" class="panel-body wrapper-lg">
 				<div class="input-group m-b">
 					<span class="input-group-addon">手机号码</span>
 					<input type="text" name="username" placeholder="请输入您的手机号" required="required" class="form-control">
@@ -31,12 +31,13 @@
                 <a href="#" class="pull-right m-t-xs">
                     <small>找回密码?</small>
                 </a>
-                <button type="submit" class="btn btn-primary">登陆系统</button>
+                <button type="submit" class="btn btn-primary">登陆</button>
                 <div class="line line-dashed"></div>
                 <p class="text-muted text-center">
                     <small>还没有账号?</small>
                 </p>
-                <a href="<?php echo $registerUrl; ?>" class="btn btn-default btn-block">一分钟创建一个账号</a></form>
+                <a href="<?php echo $registerUrl; ?>" class="btn btn-default btn-block">一分钟创建一个账号</a>
+			</form>
         </section>
     </div>
 </section>
@@ -51,5 +52,20 @@
 <!-- / footer --> <!-- Bootstrap --> <!-- App -->
 <script src="<?php echo p($siteUrl); ?>/_assets/js/app.v1.js"></script>
 <script src="<?php echo p($siteUrl); ?>/_assets/js/app.plugin.js"></script>
+<script>
+	var loginButton = $("button[type=submit]");
+	$("form#login").submit(function(e){
+		e.preventDefault();
+		loginButton.text('登陆中...');
+		$.post('/login',$("form#login").serialize(),function(result){
+			loginButton.text('登陆');
+			if(result.status == 1001){
+				window.location.href = result.result.data;
+			}else{
+				alert(result.result.msg);
+			}
+		},'JSON');
+	})
+</script>
 </body>
 </html>

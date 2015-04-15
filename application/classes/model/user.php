@@ -4,6 +4,10 @@ class Model_User extends ORM
 {
 	protected $_table_name = 'User';
 	protected $_table_columns = array(
+		'id' => array(
+			'type' => 'int',
+			'is_nullable' => false
+		),
 		'username' => array(
 			'type'        => 'string',
 			'is_nullable' => FALSE
@@ -20,6 +24,9 @@ class Model_User extends ORM
 			'type'        => 'string',
 			'is_nullable' => FALSE,
 		)
+	);
+	protected $_has_many = array(
+		'roles' => array('through' => 'roles_users')
 	);
 
 	public function rules()
@@ -73,5 +80,13 @@ class Model_User extends ORM
 	public static function salt()
 	{
 		return TRUE;
+	}
+
+	public static function complete_login(){
+
+	}
+
+	public function unique_key(){
+		return 'mobile';
 	}
 }
