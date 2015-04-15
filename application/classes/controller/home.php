@@ -44,7 +44,7 @@ class Controller_Home extends Controller_Base
 	{
 		if ($this->request->is_ajax()) {
 			$post    = $this->request->post();
-			$success = Auth::instance()->login($post['username'], $post['password']);
+			$success = Auth_User::instance()->login($post['username'], $post['password']);
 			if ($success) {
 				Tool_Utility::jsonReturn(1001);
 			} else {
@@ -60,7 +60,7 @@ class Controller_Home extends Controller_Base
 
 	public function action_logout()
 	{
-		Auth::instance()->logout();
+		Auth_User::instance()->logout();
 		$this->redirect('/login');
 	}
 

@@ -12,8 +12,8 @@ class Controller_Manage_Template extends Controller
 
 	public function before()
 	{
-		if (Auth::instance()->logged_in()) {
-			$this->user = Auth::instance()->get_user();
+		if (Auth_User::instance()->logged_in()) {
+			$this->user = Auth_User::instance()->get_user();
 		} else {
 			$this->redirect('/login');
 		}
