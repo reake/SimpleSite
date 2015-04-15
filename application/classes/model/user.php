@@ -2,7 +2,7 @@
 
 class Model_User extends ORM
 {
-	protected $_table_name = 'user';
+	protected $_table_name = 'User';
 	protected $_table_columns = array(
 		'username' => array(
 			'type'        => 'string',
@@ -27,18 +27,18 @@ class Model_User extends ORM
 		return array(
 			'username' => array(
 				array('not_empty'),
-				array('min_length', array(':value', 5)),
-				array('max_length', array(':value', 32)),
+				array('min_length', array(':value', 3)),
+				array('max_length', array(':value', 15)),
 			),
 			'password' => array(
 				array('not_empty'),
-				array('min_length', array(':value', 8)),
+				array('min_length', array(':value', 6)),
 				array('max_length', array(':value', 32)),
 			),
 			'mobile'   => array(
 				array('not_empty'),
-				array('min_length', array(':value', 12)),
-				array('max_length', array(':value', 12)),
+				array('min_length', array(':value', 11)),
+				array('max_length', array(':value', 11)),
 			),
 			'email'    => array(
 				array('min_length', array(':value', 5)),

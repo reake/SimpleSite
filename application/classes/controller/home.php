@@ -5,26 +5,34 @@ class Controller_Home extends Controller_Base
 	public function action_index()
 	{
 		$this->template = 'base';
-		$this->data = array(
+		$this->data     = array(
 			'loginUrl' => '/login'
 		);
 	}
 
 	public function action_register()
 	{
-		if($this->request->is_ajax()){
-			$user = ORM::factory('user');
-			$user->username = $this->request->post('username');
-			$user->mobile = $this->request->post('mobile');
-//			$user->code = $this->request->param('code');
-			$user->password = $this->request->post('password');
-//			$user->isAgree = $this->request->param('isAgree');
-			try{
-				$user->save();
-			}catch(ORM_Validation_Exception $e){
-				print_r($e->errors('models'));
+		if ($this->request->is_ajax()) {
+			$post = $this->request->post();
+			$ret = Tool_SMS::instance()->verifyEventSMSCode($post['mobile'], $post['code'], 'register');
+			if ($ret === TRUE) {
+				$user           = ORM::factory('user');
+				$user->username = $post['username'];
+				$user->mobile   = $post['mobile'];
+				$user->password = $post['password'];
+				$user->created = time();
+				$user->updated = time();
+				try {
+					$user->save();
+					Tool_Utility::jsonReturn(1001,'/login');
+				} catch (ORM_Validation_Exception $e) {
+					foreach($e->errors('models') as $v){
+						Tool_Utility::jsonReturn(4444,$v);
+					}
+				}
+			} else {
+				Tool_Utility::jsonReturn($ret);
 			}
-//			Tool_Utility::jsonReturn(1001,'/login');
 		}
 		$this->template = 'register';
 		$this->data     = array(
@@ -36,7 +44,7 @@ class Controller_Home extends Controller_Base
 	{
 		$this->template = 'login';
 		$this->data     = array(
-			'registerUrl' => '/register',
+			'registerUrl'     => '/register',
 			'findPasswordUrl' => '/findPassword'
 		);
 	}
@@ -46,7 +54,8 @@ class Controller_Home extends Controller_Base
 		$this->template = 'logout';
 	}
 
-	public function action_findPassword(){
+	public function action_findPassword()
+	{
 		$this->template = 'findPassword';
 	}
 }
