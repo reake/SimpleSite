@@ -30,7 +30,7 @@
 				</div>
 				<div class="input-group m-b">
 					<span class="input-group-addon">验证码</span>
-					<input type="number" name="code" required="required" placeholder="请输入手机收到的验证码" class="form-control">
+					<input type="number" name="code" placeholder="请输入手机收到的验证码" required="required" class="form-control">
 				</div>
 				<div class="input-group m-b">
 					<span class="input-group-addon">密码</span>
@@ -39,7 +39,7 @@
 				</div>
 				<div class="checkbox">
 					<label>
-						<input type="checkbox" name="isAgree" required="required"> 同意 <a href="#">《简站(Simple-Site)
+						<input type="checkbox" checked> 同意 <a href="#">《简站(Simple-Site)
 							用户使用协议》</a>
 					</label>
 				</div>
@@ -70,7 +70,7 @@
 		 * Register - Send SMS
 		 * @type {number}
 		 */
-		var i = 5;
+		var i = 60;
 		var intervalId = null;
 		var sendButton = $("button.sendCode");
 		var mobileInput = $("input[name=mobile]");
@@ -101,11 +101,11 @@
 				mobileInput.attr('readonly', true);
 				sendButton.attr('disabled', true);
 				sendButton.text(sendingText);
-				$.post('/sms', {chunnel: 'register', mobile: mobile}, function (result) {
+				$.post('/sms', {channel: 'register', mobile: mobile}, function (result) {
 					if (result.status == 1001) {
 						intervalId = setInterval("window.countDown()", 1000);
 					} else {
-						alert(result.result);
+						alert(result.result.msg);
 						sendButton.text(sendText);
 						sendButton.attr('disabled', false);
 						mobileInput.attr('readonly', false);
@@ -118,19 +118,19 @@
 		 * Register
 		 */
 		var registerButton = $("button.register");
-		registerButton.on('click', function () {
+		$("form#register").submit(function(e){
+			e.preventDefault();
 			registerButton.text('注册中...');
 			$.post('/register', $("form#register").serialize(), function (result) {
 				if (result.status == 1001) {
-					registerButton.text('注册账号');
 					alert('恭喜你，注册成功！');
-					window.location.href = result.result;
+					window.location.href = result.result.data;
 				} else {
-					alert(result.result);
+					alert(result.result.msg);
 				}
+				registerButton.text('注册账号');
 			}, 'JSON');
-			return false;
-		});
+		})
 	})();
 </script>
 </body>

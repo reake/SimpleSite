@@ -1,31 +1,81 @@
 <?php
-class Tool_SMS{
-	CONST APP_KEY = 'f405fed7a73ab7ebc5a51a960ece2c63';
+
+class Tool_SMS
+{
+	CONST APP_KEY = '88b3af707808b5f0fd0d7e6373132883';
+
+	CONST MIN_SEND_TIME = 60;
+	CONST SMS_CODE_EXPIRE_TIME = 300; // 30min
 	private static $types = array(
-		'register'     => 1689,
-		'findPassword' => 1690
+		'register'     => array(
+			'codeKey'     => 'sms_last_register_code',
+			'sendTimeKey' => 'sms_last_register_time_',
+			'tplID'       => 2380
+		),
+		'findPassword' => array(
+			'codeKey'     => 'sms_last_find_password_code',
+			'sendTimeKey' => 'sms_last_find_password_send_time_',
+			'tplID'       => 2381
+		)
 	);
+
+	private static $_instance;
+
+	public static function instance()
+	{
+		if (self::$_instance === NULL) self::$_instance = new self();
+		return self::$_instance;
+	}
 
 	/**
 	 * Send register sms
 	 * @param $mobile
-	 * @param $content
+	 * @param $event
 	 * @return bool
 	 */
-	public function sendRegister($mobile, $content)
+	public function sendEventSMS($mobile, $event)
 	{
-		return self::sendSMS($mobile, $content, self::$types['register']);
+		if (empty($mobile) || !isset(self::$types[$event])) return 4001;
+		# Detection is already register
+		$user  = ORM::factory('user');
+		$count = $user->where('mobile', '=', $mobile)->find_all()->count();
+		if (empty($count)) {
+			$cache        = Cache::instance();
+			$lastSendTime = $cache->get(self::$types[$event]['sendTimeKey'] . $mobile);
+			if (!empty($lastSendTime) && (time()->$lastSendTime) < self::MIN_SEND_TIME) return 2001;
+
+			$code = substr(str_shuffle('0123456789'), 0, 6);
+			if (self::sendSMS($mobile, $code, self::$types[$event]['tplID']) === TRUE) {
+				$cache->set(self::$types[$event]['codeKey'] . $mobile, $code);
+				$cache->set(self::$types[$event]['sendTimeKey'] . $mobile, time());
+				return TRUE;
+			} else {
+				return 2003;
+			}
+		} else {
+			return 2000;
+		}
 	}
 
 	/**
-	 * Send find password code
 	 * @param $mobile
-	 * @param $content
-	 * @return bool
+	 * @param $code
+	 * @param $event
+	 * @return bool|int
+	 * @throws Cache_Exception
 	 */
-	public function sendFindPassword($mobile, $content)
+	public function verifyEventSMSCode($mobile, $code, $event)
 	{
-		return self::sendSMS($mobile, $content, self::$types['findPassword']);
+		if (empty($mobile) || empty($code) || !isset(self::$types[$event])) return 4001;
+		$cache        = Cache::instance();
+		$lastSendTime = $cache->get(self::$types[$event]['sendTimeKey'] . $mobile);
+		if ((time() - $lastSendTime) > self::SMS_CODE_EXPIRE_TIME) return 2004;
+		$lastCode = $cache->get(self::$types[$event]['codeKey'] . $mobile);
+		if ($lastCode == $code) {
+			return TRUE;
+		} else {
+			return 2005;
+		}
 	}
 
 	/**
@@ -35,25 +85,18 @@ class Tool_SMS{
 	 * @param $type
 	 * @return bool
 	 */
-	private static function sendSMS($mobile, $content, $type)
+	private static function sendSMS($mobile, $content, $tplId)
 	{
-		if (empty($mobile) || empty($content) || empty($type)) {
-			error_log('sendSMS:' . 'param except');
-			return FALSE;
-		}
-		if($type == self::$types['findPassword']){
-			$content = urlencode("#code#={$content}");
-		}elseif($type == self::$types['register']){
-			$content = urlencode("#code#={$content}&#app#=搜狗宠物卫士");
-		}
-		$api    = 'http://v.juhe.cn/sms/send?mobile=' . $mobile . '&tpl_id=' . $type . '&tpl_value=' . $content . '&key=' . self::APP_KEY;
-		$result = self::request($api);
-		$result = json_decode($result, TRUE);
+		if (empty($mobile) || empty($content) || empty($tplId)) return 4001;
+		$content = urlencode('#code#=' . $content);
+		$api     = 'http://v.juhe.cn/sms/send?mobile=' . $mobile . '&tpl_id=' . $tplId . '&tpl_value=' . $content . '&key=' . self::APP_KEY;
+		$result  = self::request($api);
+		$result  = json_decode($result, TRUE);
 		if ($result['error_code'] == 0) {
 			return TRUE;
 		} else {
-			error_log('sendSMS:' . $result['error_code']);
-			return FALSE;
+			print_r($result);
+			return 2006;
 		}
 	}
 
