@@ -5,6 +5,7 @@ class Tool_Utility
 	public static function jsonReturn($code, $msg = NULL, $data = NULL)
 	{
 		$msgArr = array(
+			1800 => '账号或密码错误',
 			1900 => '请同意注册协议',
 			2000 => '手机号已经被注册',
 			2001 => '短信发送时间过短，请稍后重试',

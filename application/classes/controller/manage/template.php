@@ -8,9 +8,15 @@ class Controller_Manage_Template extends Controller
 {
 	protected $template = 'dashboard';
 	protected $data = array();
+	protected $user = array();
 
 	public function before()
 	{
+		if (Auth::instance()->logged_in()) {
+			$this->user = Auth::instance()->get_user();
+		} else {
+			$this->redirect('/login');
+		}
 		$data = array(
 			'siteTitle' => '简站(Simple-Site)',
 			'keywords'  => '免费建站、微信网站、免费微信网站',
