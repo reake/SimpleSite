@@ -89,7 +89,10 @@ if (isset($_SERVER['KOHANA_ENV'])) {
  * - boolean  expose      set the X-Powered-By header                        FALSE
  */
 Kohana::init(array(
-	'base_url' => '/kohana/',
+	'base_url'   => '',
+	'caching'    => '',
+	'profile'    => '',
+	'index_file' => FALSE
 ));
 
 /**

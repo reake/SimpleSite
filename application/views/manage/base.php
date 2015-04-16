@@ -49,7 +49,8 @@
 		</div>
 	</div>
 </div>
-<!-- Bootstrap --> <!-- App -->
+<!-- Bootstrap -->
+<!-- App -->
 <script src="<?php p($siteUrl); ?>/_assets/js/app.plugin.js"></script>
 <script src="<?php p($siteUrl); ?>/_assets/js/main.js"></script>
 </body>

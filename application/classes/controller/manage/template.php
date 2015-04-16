@@ -14,6 +14,10 @@ class Controller_Manage_Template extends Controller
 	{
 		if (Auth_ORM::instance()->logged_in()) {
 			$this->user = Auth_ORM::instance()->get_user()->as_array();
+			$count      = ORM::factory('site', array('uid' => $this->user['id']))->count_all();
+			if (empty($count) && $this->request->action() != 'step1') {
+				$this->redirect('/manage/create/step1');
+			}
 		} else {
 			$this->redirect('/login');
 		}
@@ -28,12 +32,13 @@ class Controller_Manage_Template extends Controller
 
 	public function after()
 	{
-		$view          = View::factory('manage/base');
-		$view->sidebar = View::factory('manage/sidebar');
-		$view->header  = View::factory('manage/header');
+		$view = View::factory('manage/base');
+
+		$sites         = ORM::factory('Site')->getAll($this->user['id']);
+		$view->sidebar = View::factory('manage/sidebar', array('sites' => $sites, 'currentSiteName' => $sites[0]['name']));
+		$view->header  = View::factory('manage/header', array('user' => $this->user));
 		$view->meta    = View::factory('manage/meta');
-		$view->body    = View::factory('manage/' . $this->template);
-		if (!empty($this->data)) foreach ($this->data as $key => $value) $view->set($key, $value);
+		$view->body    = View::factory('manage/' . $this->template, $this->data);
 		$this->response->body($view);
 	}
 }

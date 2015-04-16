@@ -1,11 +1,11 @@
 <header class="bg-dark dk header navbar navbar-fixed-top-xs">
 	<div class="navbar-header aside-md">
 		<a class="btn btn-link visible-xs" data-toggle="class:nav-off-screen,open"
-										   data-target="#nav,html">
+		   data-target="#nav,html">
 			<i class="fa fa-bars"></i>
 		</a>
 		<a href="<?php p($siteUrl); ?>/_assets/#" class="navbar-brand" data-toggle="fullscreen">
-			<img src="<?php p($siteUrl); ?>/_assets/images/logo.png" class="m-r-sm"><?php p($siteTitle); ?></a>
+			<img src="<?php p($siteUrl); ?>/_assets/images/logo.png"><?php p($siteTitle); ?></a>
 		<a class="btn btn-link visible-xs" data-toggle="dropdown" data-target=".nav-user">
 			<i class="fa fa-cog"></i>
 		</a>
@@ -35,7 +35,7 @@
 			<a href="<?php p($siteUrl); ?>/_assets/#" class="dropdown-toggle" data-toggle="dropdown">
 				<span class="thumb-sm avatar pull-left">
 					<img src="<?php p($siteUrl); ?>/_assets/images/avatar.jpg">
-				</span> 吴止介 <b class="caret"></b>
+				</span> <?php p($user['username']); ?> <b class="caret"></b>
 			</a>
 			<ul class="dropdown-menu animated fadeInRight">
 				<span class="arrow top"></span>

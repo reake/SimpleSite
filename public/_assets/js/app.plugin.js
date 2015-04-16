@@ -115,6 +115,7 @@
 
 	// wizard
   $(document).on('change', '.wizard', function (e, data) {
+      if(typeof data == 'undefined') return;
     if(data.direction !== 'next' ) return;
     var item = $(this).wizard('selectedItem');
     var $step = $(this).find('.step-pane:eq(' + (item.step-1) + ')');

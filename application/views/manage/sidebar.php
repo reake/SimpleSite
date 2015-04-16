@@ -3,14 +3,13 @@
 		<header class="header bg-primary lter text-center clearfix">
 			<div class="btn-group">
 				<button type="button" class="btn btn-sm btn-dark btn-icon" title="New project"><i
-						class="fa fa-plus"></i></button>
+						class="fa fa-dot-circle-o"></i></button>
 				<div class="btn-group hidden-nav-xs">
-					<button type="button" class="btn btn-sm btn-primary dropdown-toggle"
-							data-toggle="dropdown"> 创建新的 <span class="caret"></span></button>
+					<button type="button" class="btn btn-sm btn-primary dropdown-toggle" data-toggle="dropdown"> <?php echo $currentSiteName;?> <span class="caret"></span></button>
 					<ul class="dropdown-menu text-left">
-						<li><a href="<?php p($siteUrl); ?>/_assets/#">内容(文章、图片、视频)</a></li>
-						<li><a href="<?php p($siteUrl); ?>/_assets/#">消息(推送、消息)</a></li>
-						<li><a href="<?php p($siteUrl); ?>/_assets/#">活动(游戏、活动)</a></li>
+						<?php foreach($sites as $site){ ?>
+						<li><a href="<?php echo $site['url']; ?>"><?php echo $site['name']; ?></a></li>
+						<?php } ?>
 					</ul>
 				</div>
 			</div>
