@@ -1,5 +1,5 @@
 <?php
-class Controller_Base extends Controller{
+class Controller_Base extends Controller_Template{
 	protected $template = NULL;
 	protected $data = array();
 
