@@ -48,7 +48,7 @@
 										<i class="fa fa-pencil"></i>
 									</a>
 									<ul class="dropdown-menu pull-right">
-										<li><a href="#">编辑</a></li>
+										<li><a href="/manage/site/edit?siteId=<?php p($site['id']);?>">编辑</a></li>
 										<li class="divider"></li>
 										<li><a href="#">删除</a></li>
 									</ul>
