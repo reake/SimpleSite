@@ -32,11 +32,6 @@ class Tool_Utility
 		exit();
 	}
 
-	public static function getSiteId()
-	{
-		return 0;
-	}
-
 	public static function request($url, $params = array(), $method = 'GET', $multi = FALSE, $extheaders = array())
 	{
 		if (!function_exists('curl_init')) exit('Need to open the curl extension');
