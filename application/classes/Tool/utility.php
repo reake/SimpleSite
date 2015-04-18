@@ -36,4 +36,60 @@ class Tool_Utility
 	{
 		return 0;
 	}
+
+	public static function request($url, $params = array(), $method = 'GET', $multi = FALSE, $extheaders = array())
+	{
+		if (!function_exists('curl_init')) exit('Need to open the curl extension');
+		$method = strtoupper($method);
+		$ci = curl_init();
+		curl_setopt($ci, CURLOPT_CONNECTTIMEOUT, 3);
+		$timeout = $multi ? 30 : 3;
+		curl_setopt($ci, CURLOPT_TIMEOUT, $timeout);
+		curl_setopt($ci, CURLOPT_RETURNTRANSFER, TRUE);
+		curl_setopt($ci, CURLOPT_SSL_VERIFYPEER, FALSE);
+		curl_setopt($ci, CURLOPT_SSL_VERIFYHOST, FALSE);
+		curl_setopt($ci, CURLOPT_HEADER, FALSE);
+		$headers = (array)$extheaders;
+		switch ($method) {
+			case 'POST':
+				curl_setopt($ci, CURLOPT_POST, TRUE);
+				if (!empty($params)) {
+					if ($multi) {
+						foreach ($multi as $key => $file) {
+							$params[$key] = '@' . $file;
+						}
+						curl_setopt($ci, CURLOPT_POSTFIELDS, $params);
+						$headers[] = 'Expect: ';
+					} else {
+						curl_setopt($ci, CURLOPT_POSTFIELDS, http_build_query($params));
+					}
+				}
+				break;
+			case 'DELETE':
+			case 'GET':
+				$method == 'DELETE' && curl_setopt($ci, CURLOPT_CUSTOMREQUEST, 'DELETE');
+				if (!empty($params)) {
+					$url = $url . (strpos($url, '?') ? '&' : '?')
+						. (is_array($params) ? http_build_query($params) : $params);
+				}
+				break;
+		}
+		curl_setopt($ci, CURLINFO_HEADER_OUT, TRUE);
+		curl_setopt($ci, CURLOPT_URL, $url);
+		if ($headers) {
+			curl_setopt($ci, CURLOPT_HTTPHEADER, $headers);
+		}
+
+		$response = curl_exec($ci);
+		curl_close($ci);
+		return $response;
+	}
+
+	public static function getAddressByIP($ip)
+	{
+		$api       = 'http://ip.taobao.com/service/getIpInfo.php?ip=' . $ip;
+		$response  = self::request($api);
+		$ipAddress = json_decode($response, TRUE);
+		return ($ipAddress['code'] == 0) ? $ipAddress['data'] : FALSE;
+	}
 }

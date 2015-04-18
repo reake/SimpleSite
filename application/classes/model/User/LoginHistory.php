@@ -15,7 +15,10 @@ class Model_User_LoginHistory extends ORM
 		$OJ = $this->where('uid','=', $userId)->find_all();
 		$arr = array();
 		foreach($OJ as $v){
-			$arr[] = $v->as_array();
+			$tmpArr = $v->as_array();
+			$tmpArr['created'] = date('Y-m-d H:i:s', $tmpArr['created']);
+			$tmpArr['updated'] = date('Y-m-d H:i:s', $tmpArr['updated']);
+			$arr[] = $tmpArr;
 		}
 		return $arr;
 	}
