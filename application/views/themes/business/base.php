@@ -45,10 +45,10 @@
 <div class="banner">
 	<div class="bannerpic">
 		<ul>
-			<li><a href="http://www.wolong.com/sitenews!info.htm?info=intro&menuId=intro1"><img src="images/tran.gif"
-																								width="100%"
-																								height="583"
-																								style="background:url(http://115.231.192.210/imagefile/66e978ce77f24adfaa844cf9296c77a3.jpg) no-repeat center top"></a>
+			<li>
+				<a href="http://www.wolong.com/sitenews!info.htm?info=intro&menuId=intro1">
+					<img src="images/tran.gif" width="100%" height="583" style="background:url(http://115.231.192.210/imagefile/66e978ce77f24adfaa844cf9296c77a3.jpg) no-repeat center top">
+				</a>
 			</li>
 		</ul>
 	</div>
@@ -85,8 +85,11 @@
 
 <div class="menu clear">
 	<div class="clear">
-		<div class="logo fle"><a href="default.html" title="卧龙控股集团"><img src="images/logo.jpg" width="139" height="42"
-																		 alt=""></a></div>
+		<div class="logo fle">
+			<a href="default.html" title="卧龙控股集团">
+				<img src="<?php p($logo); ?>" width="139" height="42" alt="">
+			</a>
+		</div>
 		<div class="menucon fri">
 			<ul class="clear">
 				<li><a href="sitemenu!company.htm?id=company" class="first">卧龙集团</a>
@@ -439,127 +442,15 @@
 				<li><a href="#">版权中心</a></li>
 				<li>|</li>
 				<li><a href="sitemenu!footer.htm?info=contact&id=contract">联系我们</a></li>
-				<li>|</li>
-				<li><a href="http://www.wolong.com/wljy">卧龙家园</a> |</li>
-				<li><a href="http://wolong.com.cn/olong-admin/serch.do?method=toLogin&id=1">采购系统入口</a></li>
-				<li>|</li>
 			</ul>
 		</div>
 		<div class="foot-select1 fle">
 			<dl>
-				<dt>成员企业</dt>
+				<dt>友情链接</dt>
 				<dd>
-
-
-					<a title="|-卧龙控股集团有限公司" href="http://www.wolong.com/" target="_blank">|-卧龙控股集团有限公司</a>
-
-
-					<a title="&nbsp;&nbsp;|-卧龙电气集团股份有限公司" href="http://www.wolong.com.cn/" target="_blank">&nbsp;&nbsp;|-卧龙电气集团股份有限公司</a>
-
-
-					<a title="&nbsp;&nbsp;&nbsp;&nbsp;|-浙江龙能电力发展有限公司" href="http://www.wolong.com.cn/lndl/"
-					   target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;|-浙江龙能电力发展有限公司</a>
-
-
-					<a title="&nbsp;&nbsp;&nbsp;&nbsp;|-武汉奥特彼电机有限公司" href="http://www.whwldj.com/" target="_blank">
-						&nbsp;&nbsp;&nbsp;&nbsp;|-武汉奥特彼电机有限公司</a>
-
-
-					<a title="&nbsp;&nbsp;&nbsp;&nbsp;|-卧龙电气电源事业本部" href="http://www.wolong.com.cn/dysyb/"
-					   target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;|-卧龙电气电源事业本部</a>
-
-
-					<a title="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-卧龙电气浙江灯塔电源有限公司" href="http://www.wldengta.com/"
-					   target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-卧龙电气浙江灯塔电源有限公司</a>
-
-
-					<a title="&nbsp;&nbsp;&nbsp;&nbsp;|-卧龙电气淮安清江电机有限公司" href="http://www.wolong.com.cn/qingjiang/"
-					   target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;|-卧龙电气淮安清江电机有限公司</a>
-
-
-					<a title="&nbsp;&nbsp;&nbsp;&nbsp;|-卧龙电气电机与控制事业本部" href="http://www.wolong.com.cn/djkz/"
-					   target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;|-卧龙电气电机与控制事业本部</a>
-
-
-					<a title="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-卧龙电气BROOK电机事业部"
-					   href="http://www.wolong.com.cn/brook/" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-卧龙电气BROOK电机事业部</a>
-
-
-					<a title="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-浙江卧龙新能源有限公司" href="http://www.wolong-solar.com/"
-					   target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-浙江卧龙新能源有限公司</a>
-
-
-					<a title="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-卧龙电气集团杭州研究院有限公司"
-					   href="http://www.wolong.com.cn/yjy/" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-卧龙电气集团杭州研究院有限公司</a>
-
-
-					<a title="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-卧龙电气控制电机事业部" href="http://www.wolong.com.cn/kzdj/"
-					   target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-卧龙电气控制电机事业部</a>
-
-
-					<a title="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-卧龙电气冲压件事业部" href="http://www.wolong.com.cn/cyj/"
-					   target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-卧龙电气冲压件事业部</a>
-
-
-					<a title="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-卧龙电气工业电机事业部" href="http://www.wolong.com.cn/gydj/"
-					   target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-卧龙电气工业电机事业部</a>
-
-
-					<a title="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-浙江卧龙家用电机有限公司" href="http://www.wolong.com.cn/wljd/"
-					   target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-浙江卧龙家用电机有限公司</a>
-
-
-					<a title="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-卧龙电气微电机事业部" href="http://www.wolong.com.cn/wdj/"
-					   target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-卧龙电气微电机事业部</a>
-
-
-					<a title="&nbsp;&nbsp;&nbsp;&nbsp;|-卧龙输变电事业本部" href="http://www.wolong.com.cn/wlsbd/"
-					   target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;|-卧龙输变电事业本部</a>
-
-
-					<a title="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-浙江变压器有限公司" href="http://www.wolong.com.cn/zjbyq/"
-					   target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-浙江变压器有限公司</a>
-
-
-					<a title="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-卧龙电气烟台东源变压器有限公司"
-					   href="http://www.wolong.com.cn/dybyq/" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-卧龙电气烟台东源变压器有限公司</a>
-
-
-					<a title="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-卧龙电气集团北京华泰变压器有限公司" href="http://www.wlbjht.com/"
-					   target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-卧龙电气集团北京华泰变压器有限公司</a>
-
-
-					<a title="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-卧龙电气银川变压器有限公司" href="http://www.ycb.com.cn/"
-					   target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-卧龙电气银川变压器有限公司</a>
-
-
-					<a title="&nbsp;&nbsp;&nbsp;&nbsp;|-卧龙电气机械事业本部" href="http://www.wolong.com.cn/jixie/"
-					   target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;|-卧龙电气机械事业本部</a>
-
-
-					<a title="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-浙江卧龙电工设备有限公司" href="http://www.wolong.com.cn/dgsb/"
-					   target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-浙江卧龙电工设备有限公司</a>
-
-
-					<a title="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-浙江欧龙搅拌技术有限公司" href="http://www.eurolon.cn/"
-					   target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-浙江欧龙搅拌技术有限公司</a>
-
-
-					<a title="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-绍兴欧力-卧龙振动机械有限公司  " href="http://www.oli-wolong.com/"
-					   target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-绍兴欧力-卧龙振动机械有限公司 </a>
-
-
-					<a title="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-浙江曼托瓦尼机械有限公司" href="http://www.mbi-china.com.cn/"
-					   target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-浙江曼托瓦尼机械有限公司</a>
-
-
-					<a title="&nbsp;&nbsp;|-卧龙资本" href="http://www.wolongcapital.com/" target="_blank">&nbsp;&nbsp;|-卧龙资本</a>
-
-
-					<a title="&nbsp;&nbsp;&nbsp;&nbsp;|-卧龙租赁" href="http://www.wolongcapital.com/wlzl/" target="_blank">
-						&nbsp;&nbsp;&nbsp;&nbsp;|-卧龙租赁</a>
-
-
+					<?php foreach($friendLinks as $link){ ?>
+					<a title="<?php p($link['description']); ?>" href="<?php p($link['url']); ?>" target="_blank"><?php p($link['title']); ?></a>
+					<?php } ?>
 				</dd>
 			</dl>
 		</div>
@@ -569,7 +460,7 @@
 				<a class="jiathis_button_tsina share-weibo"></a>
 				<a class="jiathis_button_tqq share-tqq"></a>
 			</div>
-			© 2014 卧龙控股集团 <a target="_blank" title="杭州网站建设-博采互动" href="http://www.bocweb.cn/">技术支持：博采互动</a>
+			Copyright &copy; 2015 <?php p($domain);?>. All Rights Reserved <a target="_blank" title="简站 - 简单建站！" href="http://www.simple-site.cn/">技术支持：简站(Simple-Site.cn)</a>
 
 		</div>
 	</div>
@@ -593,8 +484,7 @@
 	})
 </script>
 <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1387759827890950" charset="utf-8"></script>
-<div
-	style="float: center; font-size: 12px; margin-top: 8px; margin-bottom:8px; text-align: center; margin-right: 13px;display:none"></div>
+<div style="float: center; font-size: 12px; margin-top: 8px; margin-bottom:8px; text-align: center; margin-right: 13px;display:none"></div>
 <div id="backtop"><img class="png" src="images/totop.png"></div>
 </body>
 </html>

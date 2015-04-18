@@ -169,6 +169,12 @@ Route::set('profile', 'manage/profile(/<action>)')
 		'action'     => 'index',
 	));
 
+Route::set('friendLink', 'manage/friendlink(/<action>)')
+	->defaults(array(
+		'controller' => 'manage_friendLink',
+		'action'     => 'index',
+	));
+
 Route::set('create', 'manage/create(/<action>)')
 	->defaults(array(
 		'controller' => 'manage_create',

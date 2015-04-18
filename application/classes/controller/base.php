@@ -20,9 +20,11 @@ class Controller_Base extends Controller_Template
 			);
 		} else {
 			$site        = ORM::factory('Site')->where('domain', '=', $hostArr[0])->find()->as_array();
+			$site['logo'] = '/media/image/data/'.$site['logo'];
 			$site['author'] = '简站(Simple-Site.cn) - 免费建站、微信网站、免费微信网站!';
 			$this->theme = "themes/{$site['theme']}/";
 		}
+		$site['friendLinks'] = ORM::factory('FriendLink')->getAll($site['id']);
 		$this->template = View::factory($this->theme . 'base');
 		foreach ($site as $key => $value) View::bind_global($key, $site[$key]);
 	}

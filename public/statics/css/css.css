@@ -79,7 +79,7 @@ a:hover {
     display: none;
     position: absolute;
     bottom: 22px;
-    width: 238px;
+    width: 98px;
     z-index: 15;
     padding: 0 2px 0 5px;
     border: #e5e4e4 1px solid;
@@ -92,7 +92,7 @@ a:hover {
 }
 
 .foot-txt {
-    width: 310px;
+    width: 510px;
     color: #999;
 }
 

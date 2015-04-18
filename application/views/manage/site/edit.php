@@ -39,7 +39,7 @@
 							<div class="col-lg-9">
 								<div class="input-group m-b">
 									<span class="input-group-addon">http://</span>
-									<input type="text" name="domain" class="form-control"
+									<input type="text" name="url" class="form-control"
 										   value="<?php p($siteInfo['url']); ?>">
 								</div>
 							</div>

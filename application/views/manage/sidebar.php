@@ -68,7 +68,7 @@
 									</a>
 								</li>
 								<li>
-									<a href="<?php p($siteUrl); ?>/_assets/gallery.html">
+									<a href="<?php p($siteUrl); ?>/manage/friendlink/index">
 										<i class="fa fa-angle-right"></i>
 										<span>友情链接</span>
 									</a>
