@@ -3,12 +3,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	<title>卧龙控股集团有限公司官方网站</title>
-	<meta name="keywords" content="卧龙电气，卧龙地产，卧龙ATB，卧龙-LJ公司"/>
-	<meta name="description"
-		  content="卧龙控股集团有限公司创立于1984年，经过近30年的发展，已经成为一家拥有150亿元资产规模、年销售130亿元市场规模、四家上市公司[卧龙电气（600580SH）、卧龙地产（600173SH）、卧龙ATB（000061783AT）、卧龙-LJ公司（LIJO.SI）]、44家控股子公司、11000余员工，电气制造、房地产开发和金融投资三业并举的综合性跨国企业集团。"/>
-
-	<meta name="author" content="杭州博采网络科技有限公司-博采互动-http://www.bocweb.cn"/>
+	<title><?php p($title); ?></title>
+	<base href="/statics/"/>
+	<meta name="keywords" content="<?php p($keywords); ?>"/>
+	<meta name="description" content="<?php p($description); ?>"/>
+	<meta name="author" content="<?php p($author); ?>"/>
 	<link rel="shortcut icon" href="favicon.ico">
 	<link rel="icon" href="logo.png" type="logo.png">
 	<link href="css/css.css" rel="stylesheet" type="text/css">
@@ -46,7 +45,7 @@
 <div class="banner">
 	<div class="bannerpic">
 		<ul>
-			<li><a href="http://www.wolong.com/sitenews!info.htm?info=intro&menuId=intro1"><img src="img/tran.gif"
+			<li><a href="http://www.wolong.com/sitenews!info.htm?info=intro&menuId=intro1"><img src="images/tran.gif"
 																								width="100%"
 																								height="583"
 																								style="background:url(http://115.231.192.210/imagefile/66e978ce77f24adfaa844cf9296c77a3.jpg) no-repeat center top"></a>
@@ -86,7 +85,7 @@
 
 <div class="menu clear">
 	<div class="clear">
-		<div class="logo fle"><a href="default.html" title="卧龙控股集团"><img src="img/logo.jpg" width="139" height="42"
+		<div class="logo fle"><a href="default.html" title="卧龙控股集团"><img src="images/logo.jpg" width="139" height="42"
 																		 alt=""></a></div>
 		<div class="menucon fri">
 			<ul class="clear">
@@ -350,9 +349,9 @@
 			<div class="boxtop-tit">企业报</div>
 			<div class="boxtop-con mart20">
 				<a href="sitenews!info.htm?pageNo=1&info=news_report&menuId=news&childMenuId=7d6d62d996af45d597ae2f7f6845dd12"><img
-						src="img/index_img01.jpg" width="255" height="220" alt=""></a>
+						src="images/index_img01.jpg" width="255" height="220" alt=""></a>
 
-				<p><img src="img/index_img05.jpg" width="255" height="74" alt=""></p>
+				<p><img src="images/index_img05.jpg" width="255" height="74" alt=""></p>
 			</div>
 		</div>
 	</div>
@@ -575,9 +574,6 @@
 		</div>
 	</div>
 </div>
-<p align="center">
-	<script language="javaScript" src="http://zjnet.zjaic.gov.cn/sxqybswj/3306821000001108.js"></script>
-</p>
 
 <script type="text/javascript">
 	$(function () {
@@ -599,6 +595,6 @@
 <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1387759827890950" charset="utf-8"></script>
 <div
 	style="float: center; font-size: 12px; margin-top: 8px; margin-bottom:8px; text-align: center; margin-right: 13px;display:none"></div>
-<div id="backtop"><img class="png" src="img/totop.png"></div>
+<div id="backtop"><img class="png" src="images/totop.png"></div>
 </body>
 </html>

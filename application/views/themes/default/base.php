@@ -2,24 +2,24 @@
 <html lang="en" class=" ">
 <head>
     <meta charset="utf-8"/>
-	<title><?php p($siteTitle); ?></title>
+	<title><?php p($title); ?></title>
 	<meta name="description" content="<?php p($keywords);?>"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-    <link rel="stylesheet" href="<?php echo p($siteUrl); ?>/_assets/css/font.css" type="text/css"/>
-    <link rel="stylesheet" href="<?php echo p($siteUrl); ?>/_assets/css/landing.css" type="text/css"/>
-    <link rel="stylesheet" href="<?php echo p($siteUrl); ?>/_assets/css/app.v1.css" type="text/css"/>
+    <link rel="stylesheet" href="<?php echo p($url); ?>/_assets/css/font.css" type="text/css"/>
+    <link rel="stylesheet" href="<?php echo p($url); ?>/_assets/css/landing.css" type="text/css"/>
+    <link rel="stylesheet" href="<?php echo p($url); ?>/_assets/css/app.v1.css" type="text/css"/>
     <!--[if lt IE 9]>
-    <script src="<?php echo p($siteUrl); ?>/_assets/js/ie/html5shiv.js"></script>
-    <script src="<?php echo p($siteUrl); ?>/_assets/js/ie/respond.min.js"></script>
-    <script src="<?php echo p($siteUrl); ?>/_assets/js/ie/excanvas.js"></script>
+    <script src="<?php echo p($url); ?>/_assets/js/ie/html5shiv.js"></script>
+    <script src="<?php echo p($url); ?>/_assets/js/ie/respond.min.js"></script>
+    <script src="<?php echo p($url); ?>/_assets/js/ie/excanvas.js"></script>
 	<![endif]-->
 </head>
 <body class=""> <!-- header -->
 <header id="header" class="navbar navbar-fixed-top bg-white box-shadow b-b b-light" data-spy="affix"
         data-offset-top="1">
     <div class="container">
-        <div class="navbar-header"><a href="#" class="navbar-brand"><img src="<?php echo p($siteUrl); ?>/_assets/images/logo.png" class="m-r-sm"><span
-                class="text-muted"><?php p($siteTitle); ?> </span></a>
+        <div class="navbar-header"><a href="#" class="navbar-brand"><img src="<?php echo p($url); ?>/_assets/images/logo.png" class="m-r-sm"><span
+                class="text-muted"><?php p($title); ?> </span></a>
             <button class="btn btn-link visible-xs" type="button" data-toggle="collapse" data-target=".navbar-collapse">
                 <i class="fa fa-bars"></i></button>
         </div>
@@ -69,7 +69,7 @@
                             <header class="panel-heading text-center"><i class="fa fa-minus fa-2x m-b-n-xs block"></i>
                             </header>
                             <div>
-                                <div class="m-l-xs m-r-xs"><img src="<?php echo p($siteUrl); ?>/_assets/images/phone-2.png" class="img-full"></div>
+                                <div class="m-l-xs m-r-xs"><img src="<?php echo p($url); ?>/_assets/images/phone-2.png" class="img-full"></div>
                             </div>
                         </section>
                     </div>
@@ -78,7 +78,7 @@
                     <section class="panel bg-dark m-b-n-lg no-border device animated fadeInUp">
                         <header class="panel-heading text-left"><i class="fa fa-circle fa-fw"></i> <i
                                 class="fa fa-circle fa-fw"></i> <i class="fa fa-circle fa-fw"></i></header>
-                        <img src="<?php echo p($siteUrl); ?>/_assets/images/main.png" class="img-full"></section>
+                        <img src="<?php echo p($url); ?>/_assets/images/main.png" class="img-full"></section>
                 </aside>
                 <aside class="col-md-3 v-bottom">
                     <div class="hidden-sm hidden-xs">
@@ -87,7 +87,7 @@
                             <header class="panel-heading text-center"><i
                                     class="fa fa-minus fa-2x text-white m-b-n-xs block"></i></header>
                             <div class="">
-                                <div class="m-l-xs m-r-xs"><img src="<?php echo p($siteUrl); ?>/_assets/images/phone-1.png" class="img-full"></div>
+                                <div class="m-l-xs m-r-xs"><img src="<?php echo p($url); ?>/_assets/images/phone-1.png" class="img-full"></div>
                             </div>
                         </section>
                     </div>
@@ -236,10 +236,10 @@
     </div>
 </footer>
 <!-- / footer --> <!-- Bootstrap --> <!-- App -->
-<script src="<?php echo p($siteUrl); ?>/_assets/js/app.v1.js"></script>
-<script src="<?php echo p($siteUrl); ?>/_assets/js/appear/jquery.appear.js"></script>
-<script src="<?php echo p($siteUrl); ?>/_assets/js/scroll/smoothscroll.js"></script>
-<script src="<?php echo p($siteUrl); ?>/_assets/js/landing.js"></script>
-<script src="<?php echo p($siteUrl); ?>/_assets/js/app.plugin.js"></script>
+<script src="<?php echo p($url); ?>/_assets/js/app.v1.js"></script>
+<script src="<?php echo p($url); ?>/_assets/js/appear/jquery.appear.js"></script>
+<script src="<?php echo p($url); ?>/_assets/js/scroll/smoothscroll.js"></script>
+<script src="<?php echo p($url); ?>/_assets/js/landing.js"></script>
+<script src="<?php echo p($url); ?>/_assets/js/app.plugin.js"></script>
 </body>
 </html>
