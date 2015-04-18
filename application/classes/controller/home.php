@@ -46,7 +46,14 @@ class Controller_Home extends Controller_Base
 			$post    = $this->request->post();
 			$success = Auth_ORM::instance()->login($post['username'], $post['password']);
 			if ($success) {
-				Tool_Utility::jsonReturn(1001,'登陆成功','/manage/dashboard/index');
+				$loginHistory            = ORM::factory('User_LoginHistory');
+				$loginHistory->uid       = $success;
+				$loginHistory->ip        = clientIP();
+				$loginHistory->userAgent = $_SERVER['HTTP_USER_AGENT'];
+				$loginHistory->created   = time();
+				$loginHistory->updated   = time();
+				$loginHistory->save();
+				Tool_Utility::jsonReturn(1001, '登陆成功', '/manage/dashboard/index');
 			} else {
 				Tool_Utility::jsonReturn(1800);
 			}

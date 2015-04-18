@@ -121,21 +121,15 @@
 							</a>
 							<ul class="nav lt">
 								<li>
-									<a href="<?php p($siteUrl); ?>/_assets/gallery.html">
+									<a href="<?php p($siteUrl); ?>/manage/sites/index">
 										<i class="fa fa-angle-right"></i>
-										<span>网站信息</span>
+										<span>网站管理</span>
 									</a>
 								</li>
 								<li>
-									<a href="<?php p($siteUrl); ?>/_assets/gallery.html">
+									<a href="<?php p($siteUrl); ?>/manage/profile/index">
 										<i class="fa fa-angle-right"></i>
-										<span>常用设置</span>
-									</a>
-								</li>
-								<li>
-									<a href="<?php p($siteUrl); ?>/_assets/gallery.html">
-										<i class="fa fa-angle-right"></i>
-										<span>管理员设置</span>
+										<span>个人设置</span>
 									</a>
 								</li>
 							</ul>

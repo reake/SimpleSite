@@ -13,16 +13,7 @@
             <!-- /.aside -->
             <section id="content">
                 <section class="vbox">
-                    <section class="scrollable padder">
-                        <ul class="breadcrumb no-border no-radius b-b b-light pull-in">
-                            <li><a href="<?php p($siteUrl); ?>/_assets/index.html"><i class="fa fa-home"></i> 简站(Simple-Site) </a></li>
-                            <li class="active">预览中心</li>
-                        </ul>
-                        <div class="m-b-md"><h3 class="m-b-none">预览中心</h3>
-                            <small>欢迎回来，有问题问题请通过左下角按钮反馈给我们！</small>
-                        </div>
-                        <?php p($body); ?>
-                    </section>
+					<?php p($body); ?>
                 </section>
                 <a href="<?php p($siteUrl); ?>/_assets/#" class="hide nav-off-screen-block" data-toggle="class:nav-off-screen, open"
                    data-target="#nav,html"></a></section>

@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="en" class=" ">
 <head>
-    <meta charset="utf-8"/>
-    <title>Notebook | Web Application</title>
-    <meta name="description"
-          content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-    <link rel="stylesheet" href="css/font.css" type="text/css"/>
-    <link rel="stylesheet" href="css/landing.css" type="text/css"/>
-    <link rel="stylesheet" href="css/app.v1.css" type="text/css"/>
-    <!--[if lt IE 9]>
-    <script src="js/ie/html5shiv.js"></script>
-    <script src="js/ie/respond.min.js"></script>
-    <script src="js/ie/excanvas.js"></script> <![endif]--></head>
+	<meta charset="utf-8"/>
+	<title><?php p($siteTitle); ?></title>
+	<meta name="description" content="<?php p($keywords);?>"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+	<link rel="stylesheet" href="<?php echo p($siteUrl); ?>/_assets/css/font.css" type="text/css"/>
+	<link rel="stylesheet" href="<?php echo p($siteUrl); ?>/_assets/css/landing.css" type="text/css"/>
+	<link rel="stylesheet" href="<?php echo p($siteUrl); ?>/_assets/css/app.v1.css" type="text/css"/>
+	<!--[if lt IE 9]>
+	<script src="<?php echo p($siteUrl); ?>/_assets/js/ie/html5shiv.js"></script>
+	<script src="<?php echo p($siteUrl); ?>/_assets/js/ie/respond.min.js"></script>
+	<script src="<?php echo p($siteUrl); ?>/_assets/js/ie/excanvas.js"></script>
+	<![endif]-->
+</head>
 <body class=""> <!-- header -->
 <header id="header" class="navbar navbar-fixed-top bg-white box-shadow b-b b-light" data-spy="affix"
         data-offset-top="1">
@@ -26,8 +27,8 @@
             <ul class="nav navbar-nav navbar-right">
                 <li class="active"><a href="landing.html">简站</a></li>
                 <li><a href="features.html">亮点</a></li>
-                <li><a href="price.html">下载</a></li>
-                <li><a href="blog.html">动态</a></li>
+                <li><a href="../../manage/price.html">下载</a></li>
+                <li><a href="../../manage/blog.html">动态</a></li>
                 <li>
                     <div class="m-t-sm"><a
                             href="signup.html" class="btn btn-sm btn-success m-l"><strong>注册/登陆</strong></a></div>
@@ -175,7 +176,7 @@
                         local storage and mysql data save. We also created a RESTful api to Get, Post, Put and Delete
                         the data. </p>
 
-                    <p class="m-b-xl"><a href="notebook.html" class="btn btn-dark font-bold">Try it now</a></p></div>
+                    <p class="m-b-xl"><a href="../../manage/notebook.html" class="btn btn-dark font-bold">Try it now</a></p></div>
                 <div class="col-sm-5 text-center" data-ride="animated" data-animation="fadeInRightBig">
                     <section class="panel bg-light m-t-lg m-r-n-lg m-b-n-lg no-border device animated fadeInUp">
                         <header class="panel-heading text-left"><i class="fa fa-circle fa-fw icon-muted"></i> <i

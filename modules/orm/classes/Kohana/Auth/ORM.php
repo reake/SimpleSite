@@ -110,7 +110,7 @@ class Kohana_Auth_ORM extends Auth {
 			// Finish the login
 			$this->complete_login($user);
 
-			return TRUE;
+			return $user->pk();
 		}
 
 		// Login failed

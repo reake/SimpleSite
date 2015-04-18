@@ -157,6 +157,18 @@ Route::set('dashboard', 'manage/dashboard(/<action>)')
 		'action'     => 'index',
 	));
 
+Route::set('sites', 'manage/sites(/<action>)')
+	->defaults(array(
+		'controller' => 'manage_sites',
+		'action'     => 'index',
+	));
+
+Route::set('profile', 'manage/profile(/<action>)')
+	->defaults(array(
+		'controller' => 'manage_profile',
+		'action'     => 'index',
+	));
+
 Route::set('create', 'manage/create(/<action>)')
 	->defaults(array(
 		'controller' => 'manage_create',

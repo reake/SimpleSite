@@ -4,9 +4,8 @@
  * Base Template
  * Class Controller_Manage_Template
  */
-class Controller_Manage_Template extends Controller
+class Controller_Manage_Template extends Controller_Template
 {
-	protected $template = 'dashboard';
 	protected $data = array();
 	protected $user = array();
 
@@ -26,6 +25,7 @@ class Controller_Manage_Template extends Controller
 			'keywords'  => '免费建站、微信网站、免费微信网站',
 			'siteUrl'   => 'http://www.simple-site.cn',
 			'copyright' => 'Copyright © 2015 Simple-Site. All Rights Reserved',
+			'user' => $this->user,
 		);
 		foreach ($data as $key => $value) View::bind_global($key, $data[$key]);
 	}
