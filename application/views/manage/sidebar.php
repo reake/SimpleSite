@@ -44,9 +44,15 @@
 							</a>
 							<ul class="nav lt">
 								<li>
+									<a href="<?php p($siteUrl); ?>/manage/content/index">
+										<i class="fa fa-angle-right"></i>
+										<span>网站管理</span>
+									</a>
+								</li>
+								<li>
 									<a href="<?php p($siteUrl); ?>/_assets/gallery.html">
 										<i class="fa fa-angle-right"></i>
-										<span>文章管理</span>
+										<span>微信管理</span>
 									</a>
 								</li>
 								<li>
@@ -128,7 +134,7 @@
 								<li>
 									<a href="<?php p($siteUrl); ?>/manage/site/index">
 										<i class="fa fa-angle-right"></i>
-										<span>网站管理</span>
+										<span>网站设置</span>
 									</a>
 								</li>
 								<li>

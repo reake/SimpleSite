@@ -175,6 +175,12 @@ Route::set('friendLink', 'manage/friendlink(/<action>)')
 		'action'     => 'index',
 	));
 
+Route::set('content', 'manage/content(/<action>)')
+	->defaults(array(
+		'controller' => 'manage_content',
+		'action'     => 'index',
+	));
+
 Route::set('create', 'manage/create(/<action>)')
 	->defaults(array(
 		'controller' => 'manage_create',
