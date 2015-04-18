@@ -157,9 +157,9 @@ Route::set('dashboard', 'manage/dashboard(/<action>)')
 		'action'     => 'index',
 	));
 
-Route::set('sites', 'manage/sites(/<action>)')
+Route::set('site', 'manage/site(/<action>)')
 	->defaults(array(
-		'controller' => 'manage_sites',
+		'controller' => 'manage_site',
 		'action'     => 'index',
 	));
 

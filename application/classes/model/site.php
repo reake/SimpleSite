@@ -2,6 +2,10 @@
 
 class Model_Site extends ORM
 {
+	public static $siteStatus = array(
+		0 => '下线',
+		1 => '上线'
+	);
 	protected $_table_name = 'Site';
 	protected $_primary_key = 'id';
 	protected $_table_columns = array(
@@ -19,12 +23,17 @@ class Model_Site extends ORM
 		'updated'     => array('data_type' => 'int')
 	);
 
-	public function getAll($userId){
-		$sitesOJ = $this->where('uid','=', $userId)->find_all();
-		$sites = array();
-		foreach($sitesOJ as $st){
-			$sites[] = $st->as_array();
+	public function getAll($userId)
+	{
+		$sitesOJ = $this->where('uid', '=', $userId)->find_all();
+		$sites   = array();
+		foreach ($sitesOJ as $st) {
+			$tmpArr            = $st->as_array();
+			$tmpArr['status']  = self::$siteStatus[$tmpArr['status']];
+			$tmpArr['created'] = date('Y-m-d', $tmpArr['created']);
+			$sites[]           = $tmpArr;
 		}
 		return $sites;
 	}
+
 }

@@ -20,6 +20,7 @@
 						<th>网站状态</th>
 						<th>网站名称</th>
 						<th>网站介绍</th>
+						<th>创建时间</th>
 						<th width="70">操作</th>
 					</tr>
 					</thead>
@@ -37,6 +38,9 @@
 							</td>
 							<td>
 								<?php p($site['description']); ?>
+							</td>
+							<td>
+								<?php p($site['created']); ?>
 							</td>
 							<td class="text-right">
 								<div class="btn-group">

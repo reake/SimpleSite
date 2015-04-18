@@ -1,4 +1,4 @@
-<header class="header bg-white b-b b-light"><p>信息管理</p></header>
+<header class="header bg-white b-b b-light"><p>个人设置</p></header>
 <section class="scrollable">
 	<section class="hbox stretch">
 		<aside class="aside-lg bg-light lter b-r">
