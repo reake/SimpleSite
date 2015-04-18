@@ -19,6 +19,7 @@ class Model_Site extends ORM
 		'theme'       => array('data_type' => 'int',),
 		'status'      => array('data_type' => 'int',),
 		'url'         => array('data_type' => 'string',),
+		'domain'         => array('data_type' => 'string',),
 		'created'     => array('data_type' => 'int'),
 		'updated'     => array('data_type' => 'int')
 	);

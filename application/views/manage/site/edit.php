@@ -35,8 +35,22 @@
 							<label class="col-lg-2 control-label">网站域名</label>
 
 							<div class="col-lg-10">
-								<input type="text" name="url" class="form-control col-lg-8"
-									   value="<?php p($siteInfo['url']); ?>">
+								<div class="input-group m-b">
+									<span class="input-group-addon">http://</span>
+									<input type="text" name="domain" class="form-control"
+										   value="<?php p($siteInfo['url']); ?>">
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-lg-2 control-label">测试域名</label>
+
+							<div class="col-lg-10">
+								<div class="input-group m-b">
+									<input type="text" name="domain" class="form-control"
+										   value="<?php p($siteInfo['domain']); ?>">
+									<span class="input-group-addon">.simple-site.cn</span>
+								</div>
 							</div>
 						</div>
 						<div class="form-group">

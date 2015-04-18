@@ -21,6 +21,7 @@ class Controller_Manage_Site extends Controller_Manage_Template
 				$site->set('name', $post['name'])
 					->set('status', $status)
 					->set('url', $post['url'])
+					->set('domain',$post['domain'])
 					->set('title', $post['title'])
 					->set('keywords', $post['keywords'])
 					->set('description', $post['description']);
@@ -37,9 +38,10 @@ class Controller_Manage_Site extends Controller_Manage_Template
 		}
 		$this->template = 'site/edit';
 		$siteId         = intval($this->request->query('siteId'));
+		$siteInfo = ORM::factory('Site')->where('id', '=', $siteId)->where('uid', '=', $this->user['id'])->find()->as_array();
 		$data           = array(
 			'siteId'   => $siteId,
-			'siteInfo' => ORM::factory('Site')->where('id', '=', $siteId)->where('uid', '=', $this->user['id'])->find()->as_array()
+			'siteInfo' => $siteInfo
 		);
 		$this->data     = $data;
 	}
