@@ -48,7 +48,7 @@
 				<p class="text-muted text-center">
 					<small>已经有账号了?</small>
 				</p>
-				<a href="<?php echo $loginUrl; ?>" class="btn btn-default btn-block">立即登陆</a>
+				<a href="<?php p($loginUrl); ?>" class="btn btn-default btn-block">立即登陆</a>
 			</form>
 		</section>
 	</div>

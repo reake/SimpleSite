@@ -12,6 +12,7 @@ class Controller_Home extends Controller_Base
 
 	public function action_register()
 	{
+		$this->auto_render = FALSE;
 		if ($this->request->is_ajax()) {
 			$post = $this->request->post();
 			$ret  = Tool_SMS::instance()->verifyEventSMSCode($post['mobile'], $post['code'], 'register');
@@ -34,14 +35,12 @@ class Controller_Home extends Controller_Base
 				Tool_Utility::jsonReturn($ret);
 			}
 		}
-		$this->template = 'register';
-		$this->data     = array(
-			'loginUrl' => '/login'
-		);
+		$this->response->body(View::factory($this->theme . 'register', array('loginUrl' => '/login')));
 	}
 
 	public function action_login()
 	{
+		$this->auto_render = FALSE;
 		if ($this->request->is_ajax()) {
 			$post    = $this->request->post();
 			$success = Auth_ORM::instance()->login($post['username'], $post['password']);
@@ -58,22 +57,21 @@ class Controller_Home extends Controller_Base
 				Tool_Utility::jsonReturn(1800);
 			}
 		}
-		$this->template = 'login';
-		$this->data     = array(
-			'registerUrl'     => '/register',
-			'findPasswordUrl' => '/findPassword'
-		);
+		$this->response->body(View::factory($this->theme . 'login', array('registerUrl' => '/register', 'findPasswordUrl' => '/findPassword')));
 	}
 
-	public function action_feature(){
+	public function action_feature()
+	{
 		$this->template = 'feature';
 	}
 
-	public function action_download(){
+	public function action_download()
+	{
 		$this->template = 'download';
 	}
 
-	public function action_news(){
+	public function action_news()
+	{
 		$this->template = 'news';
 	}
 
