@@ -41,7 +41,7 @@
 				<span class="arrow top"></span>
 				<li><a href="<?php p($siteUrl); ?>/_assets/#">系统设置</a></li>
 				<li><a href="<?php p($siteUrl); ?>/manage/profile/index">账号信息</a></li>
-				<li><a data-target="lockModal" data-toggle="generalModal">锁定屏幕</a></li>
+				<li><a class="lockModal">锁定屏幕</a></li>
 				<li class="divider"></li>
 				<li><a href="<?php p($siteUrl); ?>/logout">退出登陆</a></li>
 			</ul>

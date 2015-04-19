@@ -27,12 +27,11 @@
 	<div class="modal-over">
 		<div class="modal-center animated fadeInUp text-center" style="width:200px;margin:-80px 0 0 -100px;">
 			<div class="thumb-md"><img src="<?php p($siteUrl); ?>/_assets/images/avatar.jpg" class="img-circle b-a b-light b-3x"></div>
-			<p class="text-white h4 m-t m-b">吴止介</p>
-
+			<p class="text-white h4 m-t m-b"><?php p($user['username']); ?></p>
 			<div class="input-group">
-				<input type="password" class="form-control text-sm" placeholder="输入登陆密码解锁">
+				<input type="password" class="form-control text-sm" name="unLockPassword" placeholder="输入登陆密码解锁">
 				<span class="input-group-btn">
-					<button class="btn btn-success" type="button" data-dismiss="modal">
+					<button class="btn btn-success unLockScreen" type="button">
 						<i class="fa fa-arrow-right"></i>
 					</button>
 				</span>
