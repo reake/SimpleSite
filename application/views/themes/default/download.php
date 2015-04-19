@@ -1,19 +1,5 @@
 <section id="content">
-    <div class="bg-dark lt">
-        <div class="container">
-            <div class="m-b-lg m-t-lg"><h3 class="m-b-none">Plans & Pricing</h3>
-                <small class="text-muted">Choose the plan that best fits your needs</small>
-            </div>
-        </div>
-    </div>
-    <div class="bg-white b-b b-light">
-        <div class="container">
-            <ul class="breadcrumb no-border bg-empty m-b-none m-l-n-sm">
-                <li><a href="landing.html">Home</a></li>
-                <li class="active">Price</li>
-            </ul>
-        </div>
-    </div>
+    <?php p($subMenu); ?>
     <div class="container">
         <div class="m-t-xl m-b-xl text-center"><h2>Find the Right Pricing Plan For You</h2></div>
         <div class="clearfix">

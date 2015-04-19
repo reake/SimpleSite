@@ -2,7 +2,7 @@
 		data-offset-top="1">
 	<div class="container">
 		<div class="navbar-header">
-			<a href="#" class="navbar-brand">
+			<a href="/" class="navbar-brand">
 				<img src="<?php echo p($url); ?>/_assets/images/logo.png" class="m-r-sm">
 				<span class="text-muted"><?php p($title); ?> </span>
 			</a>
@@ -24,4 +24,4 @@
 			</ul>
 		</div>
 	</div>
-</header><?php
+</header>

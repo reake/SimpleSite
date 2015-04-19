@@ -1,19 +1,5 @@
 <section id="content">
-    <div class="bg-dark lt">
-        <div class="container">
-            <div class="m-b-lg m-t-lg"><h3 class="m-b-none">Blog</h3>
-                <small class="text-muted">Just another blog</small>
-            </div>
-        </div>
-    </div>
-    <div class="bg-white b-b b-light">
-        <div class="container">
-            <ul class="breadcrumb no-border bg-empty m-b-none m-l-n-sm">
-                <li><a href="landing.html">Home</a></li>
-                <li class="active">Blog</li>
-            </ul>
-        </div>
-    </div>
+	<?php p($subMenu); ?>
     <div class="container m-t-lg m-b-lg">
         <div class="row">
             <div class="col-sm-9">

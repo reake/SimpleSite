@@ -32,10 +32,10 @@ class Controller_Base extends Controller_Template
 
 	public function after()
 	{
-		$view = View::factory($this->theme.'base');
-		$view->content = View::factory($this->theme.$this->template);
-		$view->header  = View::factory($this->theme.'header');
-		$view->footer = View::factory($this->theme.'footer');
+		$view          = View::factory($this->theme . 'base');
+		$view->content = View::factory($this->theme . $this->template, array('subMenu' => View::factory($this->theme . 'subMenu')));
+		$view->header  = View::factory($this->theme . 'header');
+		$view->footer  = View::factory($this->theme . 'footer');
 		if (!empty($this->data)) foreach ($this->data as $key => $value) $view->set($key, $value);
 		$this->response->body($view);
 	}
