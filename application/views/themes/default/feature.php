@@ -1,43 +1,3 @@
-<!DOCTYPE html>
-<html lang="en" class=" ">
-<head>
-	<meta charset="utf-8"/>
-	<title><?php p($siteTitle); ?></title>
-	<meta name="description" content="<?php p($keywords);?>"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-	<link rel="stylesheet" href="<?php echo p($siteUrl); ?>/_assets/css/font.css" type="text/css"/>
-	<link rel="stylesheet" href="<?php echo p($siteUrl); ?>/_assets/css/landing.css" type="text/css"/>
-	<link rel="stylesheet" href="<?php echo p($siteUrl); ?>/_assets/css/app.v1.css" type="text/css"/>
-	<!--[if lt IE 9]>
-	<script src="<?php echo p($siteUrl); ?>/_assets/js/ie/html5shiv.js"></script>
-	<script src="<?php echo p($siteUrl); ?>/_assets/js/ie/respond.min.js"></script>
-	<script src="<?php echo p($siteUrl); ?>/_assets/js/ie/excanvas.js"></script>
-	<![endif]-->
-</head>
-<body class=""> <!-- header -->
-<header id="header" class="navbar navbar-fixed-top bg-white box-shadow b-b b-light" data-spy="affix"
-        data-offset-top="1">
-    <div class="container">
-        <div class="navbar-header"><a href="#" class="navbar-brand"><img src="images/logo.png" class="m-r-sm"><span
-                class="text-muted">简站(Simple-Site)</span></a>
-            <button class="btn btn-link visible-xs" type="button" data-toggle="collapse" data-target=".navbar-collapse">
-                <i class="fa fa-bars"></i></button>
-        </div>
-        <div class="collapse navbar-collapse">
-            <ul class="nav navbar-nav navbar-right">
-                <li class="active"><a href="landing.html">简站</a></li>
-                <li><a href="features.html">亮点</a></li>
-                <li><a href="../../manage/price.html">下载</a></li>
-                <li><a href="../../manage/blog.html">动态</a></li>
-                <li>
-                    <div class="m-t-sm"><a
-                            href="signup.html" class="btn btn-sm btn-success m-l"><strong>注册/登陆</strong></a></div>
-                </li>
-            </ul>
-        </div>
-    </div>
-</header>
-<!-- / header -->
 <section id="content">
     <div class="bg-dark lt">
         <div class="container">
@@ -91,9 +51,9 @@
                         <div class="m-l-xs m-r-xs">
                             <div class="carousel auto slide" id="c-fade" data-interval="3000">
                                 <div class="carousel-inner">
-                                    <div class="item active text-center"><img src="images/phone-2.png" class="img-full">
+                                    <div class="item active text-center"><img src="<?php echo p($url); ?>/_assets/images/phone-2.png" class="img-full">
                                     </div>
-                                    <div class="item text-center"><img src="images/phone-1.png" class="img-full"></div>
+                                    <div class="item text-center"><img src="<?php echo p($url); ?>/_assets/images/phone-1.png" class="img-full"></div>
                                 </div>
                             </div>
                         </div>
@@ -140,7 +100,7 @@
                         <header class="panel-heading text-left"><i class="fa fa-circle fa-fw icon-muted"></i> <i
                                 class="fa fa-circle fa-fw icon-muted"></i> <i class="fa fa-circle fa-fw icon-muted"></i>
                         </header>
-                        <img src="images/main.png" class="img-full"></section>
+                        <img src="<?php echo p($url); ?>/_assets/images/main.png" class="img-full"></section>
                 </div>
             </div>
         </div>
@@ -182,7 +142,7 @@
                         <header class="panel-heading text-left"><i class="fa fa-circle fa-fw icon-muted"></i> <i
                                 class="fa fa-circle fa-fw icon-muted"></i> <i class="fa fa-circle fa-fw icon-muted"></i>
                         </header>
-                        <img src="images/app.png" class="img-full"></section>
+                        <img src="<?php echo p($url); ?>/_assets/images/app.png" class="img-full"></section>
                 </div>
             </div>
         </div>
@@ -191,52 +151,3 @@
         <div class="container"><p class="m-t-xl m-b-xl">Much more features will be added in. </p></div>
     </div>
 </section>
-<!-- footer -->
-<footer id="footer">
-    <div class="bg-primary text-center">
-        <div class="container wrapper">
-            <div class="m-t-xl m-b"> For your faster and easier web development. <a
-                    href="http://themeforest.net/user/Flatfull/portfolio?ref=flatfull" target="_blank"
-                    class="btn btn-lg btn-dark b-white bg-empty m-sm">Download it</a> <a href="index.html"
-                                                                                         target="_blank"
-                                                                                         class="btn btn-lg btn-warning b-white bg-empty m-sm">Live
-                Preview</a></div>
-        </div>
-        <i class="fa fa-caret-down fa-4x text-primary m-b-n-lg block"></i></div>
-    <div class="bg-dark dker wrapper">
-        <div class="container text-center m-t-lg">
-            <div class="row m-t-xl m-b-xl">
-                <div class="col-sm-4" data-ride="animated" data-animation="fadeInLeft" data-delay="300"><i
-                        class="fa fa-map-marker fa-3x icon-muted"></i> <h5 class="text-uc m-b m-t-lg">Find Us</h5>
-
-                    <p class="text-sm">23 soe Midlokls <br> 120002 Loki — UNITED KINGDOM </p></div>
-                <div class="col-sm-4" data-ride="animated" data-animation="fadeInUp" data-delay="600"><i
-                        class="fa fa-envelope-o fa-3x icon-muted"></i> <h5 class="text-uc m-b m-t-lg">Mail Us</h5>
-
-                    <p class="text-sm"><a href="mailto:hey@example.com">info@example.com</a></p></div>
-                <div class="col-sm-4" data-ride="animated" data-animation="fadeInRight" data-delay="900"><i
-                        class="fa fa-globe fa-3x icon-muted"></i> <h5 class="text-uc m-b m-t-lg">Join Us</h5>
-
-                    <p class="text-sm">Send your resume to <br><a href="mailto:hey@example.com">recruit@example.com</a>
-                    </p></div>
-            </div>
-            <div class="m-t-xl m-b-xl"><p><a href="#" class="btn btn-icon btn-rounded btn-facebook bg-empty m-sm"><i
-                    class="fa fa-facebook"></i></a> <a href="#"
-                                                       class="btn btn-icon btn-rounded btn-twitter bg-empty m-sm"><i
-                    class="fa fa-twitter"></i></a> <a href="#" class="btn btn-icon btn-rounded btn-gplus bg-empty m-sm"><i
-                    class="fa fa-google-plus"></i></a></p>
-
-                <p><a href="#content" data-jump="true"
-                      class="btn btn-icon btn-rounded btn-dark b-dark bg-empty m-sm text-muted"><i
-                        class="fa fa-angle-up"></i></a></p></div>
-        </div>
-    </div>
-</footer>
-<!-- / footer --> <!-- Bootstrap --> <!-- App -->
-<script src="js/app.v1.js"></script>
-<script src="js/appear/jquery.appear.js"></script>
-<script src="js/scroll/smoothscroll.js"></script>
-<script src="js/landing.js"></script>
-<script src="js/app.plugin.js"></script>
-</body>
-</html>

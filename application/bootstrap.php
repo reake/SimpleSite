@@ -133,7 +133,7 @@ Kohana::modules(array(
  * defaults for the URI.
  */
 
-Route::set('user', '<action>', array('action' => '(login|logout|register)'))
+Route::set('user', '<action>', array('action' => '(login|logout|register|feature|download|news)'))
 	->defaults(array(
 		'controller' => 'home',
 		'action'     => 'login',

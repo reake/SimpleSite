@@ -4,7 +4,7 @@ class Controller_Home extends Controller_Base
 {
 	public function action_index()
 	{
-		$this->template = 'base';
+		$this->template = 'index';
 		$this->data     = array(
 			'loginUrl' => '/login'
 		);
@@ -63,6 +63,18 @@ class Controller_Home extends Controller_Base
 			'registerUrl'     => '/register',
 			'findPasswordUrl' => '/findPassword'
 		);
+	}
+
+	public function action_feature(){
+		$this->template = 'feature';
+	}
+
+	public function action_download(){
+		$this->template = 'download';
+	}
+
+	public function action_news(){
+		$this->template = 'news';
 	}
 
 	public function action_logout()
