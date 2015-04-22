@@ -1,17 +1,17 @@
 <section class="scrollable padder">
 	<ul class="breadcrumb no-border no-radius b-b b-light pull-in">
 		<li><a href="<?php p($siteUrl); ?>/_assets/index.html"><i class="fa fa-home"></i> 简站(Simple-Site) </a></li>
-		<li class="active">友情链接</li>
+		<li class="active">网站栏目</li>
 	</ul>
-	<div class="m-b-md"><h3 class="m-b-none">友情链接</h3>
-		<small>管理网站的友情链接</small>
+	<div class="m-b-md"><h3 class="m-b-none">网站栏目</h3>
+		<small>管理网站栏目</small>
 	</div>
 	<div class="row">
 		<div class="col-sm-12">
 			<section class="panel panel-default">
 				<header class="panel-heading">
-					<a class="btn btn-sm btn-default pull-right" href="/manage/create/step1">增加网站</a>
-					友情链接列表
+					<a class="btn btn-sm btn-default pull-right" href="/manage/category/set">添加栏目</a>
+					网站栏目列表
 				</header>
 				<table class="table table-striped m-b-none">
 					<thead>
@@ -27,28 +27,28 @@
 					</tr>
 					</thead>
 					<tbody>
-					<?php foreach($category as $v){ ?>
+					<?php foreach ($category as $k => $v) { ?>
 						<tr>
 							<td>
-								<?php p($v['id']); ?>
+								<?php p($v->id); ?>
 							</td>
 							<td>
-								<?php p($v['status']); ?>
+								<?php p($v->status); ?>
 							</td>
 							<td>
-								<?php p($v['title']); ?>
+								<?php p($v->name); ?>
 							</td>
 							<td>
-								<?php p($v['url']); ?>
+								<?php p($v->url); ?>
 							</td>
 							<td>
-								<?php p($v['description']); ?>
+								<?php p($v->types); ?>
 							</td>
 							<td>
-								<?php p($v['path']); ?>
+								<?php p($v->status); ?>
 							</td>
 							<td>
-								<?php p($v['created']); ?>
+								<?php p($v->created); ?>
 							</td>
 							<td class="text-right">
 								<div class="btn-group">
@@ -56,9 +56,9 @@
 										<i class="fa fa-pencil"></i>
 									</a>
 									<ul class="dropdown-menu pull-right">
-										<li><a href="/manage/category/edit?siteId=<?php p($v['id']);?>">编辑</a></li>
+										<li><a href="/manage/category/set?id=<?php p($v->id); ?>">编辑</a></li>
 										<li class="divider"></li>
-										<li><a href="#">删除</a></li>
+										<li><a onclick="delCategory(<?php p($v->id); ?>">删除</a></li>
 									</ul>
 								</div>
 							</td>
@@ -70,3 +70,14 @@
 		</div>
 	</div>
 </section>
+<script>
+	function delCategory(cid) {
+		$.post('/manage/category/set', {'action': 'del', id: cid}, function (result) {
+			if (result.status == 1001) {
+				window.location.href = '/manage/category/index';
+			} else {
+				alert(result.result.msg);
+			}
+		}, 'JSON')
+	}
+</script>

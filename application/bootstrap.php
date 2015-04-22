@@ -18,7 +18,7 @@ if (is_file(APPPATH . 'classes/Kohana' . EXT)) {
  * @link http://kohanaframework.org/guide/using.configuration
  * @link http://www.php.net/manual/timezones
  */
-date_default_timezone_set('America/Chicago');
+date_default_timezone_set('Asia/Shanghai');
 
 /**
  * Set the default locale.
@@ -114,9 +114,9 @@ Kohana::modules(array(
 	// 'codebench'  => MODPATH.'codebench',  // Benchmarking tool
 	'database' => MODPATH . 'database',   // Database access
 	// 'image'      => MODPATH.'image',      // Image manipulation
-	// 'minion'     => MODPATH.'minion',     // CLI Tasks
+	'unittest'   => MODPATH.'unittest',   // Unit testing
+	 'minion'     => MODPATH.'minion',     // CLI Tasks
 	'orm'      => MODPATH . 'orm',        // Object Relationship Mapping
-	// 'unittest'   => MODPATH.'unittest',   // Unit testing
 //	 'userguide'  => MODPATH.'userguide',  // User guide and API documentation
 ));
 
@@ -127,7 +127,6 @@ Kohana::modules(array(
  * uncomment the line below and define a preferrably long salt.
  */
  Cookie::$salt = 'asdfasdf';
-
 /**
  * Set the routes. Each route must have a minimum of a name, a URI and a set of
  * defaults for the URI.
