@@ -2,9 +2,9 @@
 	<aside class="aside aside-md bg-white">
 		<section class="vbox">
 			<header class="dk header">
-				<button class="btn btn-icon btn-default btn-sm pull-right"><i class="fa fa-cog"></i></button>
+				<a href="/manage/category/index" class="btn btn-icon btn-default btn-sm pull-right"><i class="fa fa-cog"></i></a>
 				<button class="btn btn-icon btn-default btn-sm pull-right visible-xs m-r-xs" data-toggle="class:show"
-						data-target="#mail-nav"><i class="fa fa-reorder"></i></button>
+						data-target="#mail-nav"><i class="fa fa-cog"></i></button>
 				<p class="h4">栏目导航</p></header>
 			<section>
 				<section>
@@ -283,3 +283,8 @@
 	</aside>
 	<!-- /.aside -->
 </section>
+<script>
+	$(function(){
+
+	})
+</script>

@@ -181,6 +181,12 @@ Route::set('content', 'manage/content(/<action>)')
 		'action'     => 'index',
 	));
 
+Route::set('category', 'manage/category(/<action>)')
+	->defaults(array(
+		'controller' => 'manage_category',
+		'action'     => 'index',
+	));
+
 Route::set('create', 'manage/create(/<action>)')
 	->defaults(array(
 		'controller' => 'manage_create',

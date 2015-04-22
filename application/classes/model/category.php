@@ -19,6 +19,14 @@ class Model_Category extends ORM
 		'updated' => array('type' => 'int'),
 	);
 
+	public function filters(){
+		return array(
+			TRUE => array(
+				array('trim')
+			)
+		);
+	}
+
 	public function getAll($siteId,$isTop = 0)
 	{
 		$categoryTop    = $this->where('sid', '=', $siteId)->where('pid','=',$isTop)->find_all();

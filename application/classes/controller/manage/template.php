@@ -41,7 +41,6 @@ class Controller_Manage_Template extends Controller_Template
 	public function after()
 	{
 		$view = View::factory('manage/base');
-
 		$sites         = ORM::factory('Site')->getAll($this->user['id']);
 		$view->sidebar = View::factory('manage/sidebar', array('sites' => $sites, 'siteId' => $this->siteId));
 		$view->header  = View::factory('manage/header', array('user' => $this->user));
