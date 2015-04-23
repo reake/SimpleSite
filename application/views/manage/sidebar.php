@@ -23,131 +23,36 @@
 				 data-color="#333333"> <!-- nav -->
 				<nav class="nav-primary hidden-xs">
 					<ul class="nav">
-						<li class="active">
-							<a href="<?php p($siteUrl); ?>/manage/dashboard/index" class="active">
-								<i class="fa fa-dashboard icon">
-									<b class="bg-danger"></b>
-								</i>
-								<span>预览中心</span>
-							</a>
-						</li>
-						<li>
-							<a href="<?php p($siteUrl); ?>/_assets/#pages">
-								<i class="fa fa-file-text icon">
+						<?php foreach($category as $v){ ?>
+						<li <?php if(in_array($route,$v['route'])){ ?>class="active"<?php } ?>>
+							<a href="<?php if(isset($v['url'])) p($v['url']); ?>" <?php if(in_array($route,$v['route'])){ ?>class="active"<?php } ?>>
+								<i class="fa fa-<?php p($v['icon']);?> icon">
 									<b class="bg-primary"></b>
 								</i>
 								<span class="pull-right">
 									<i class="fa fa-angle-down text"></i>
 									<i class="fa fa-angle-up text-active"></i>
 								</span>
-								<span>内容管理</span>
+								<span><?php p($v['name']);?></span>
 							</a>
+							<?php if(isset($v['subCategory'])){ ?>
 							<ul class="nav lt">
-								<li>
-									<a href="<?php p($siteUrl); ?>/manage/content/index">
+								<?php foreach($v['subCategory'] as $c){ ?>
+								<li <?php if($controller.'::'.$action == $c['route']){ ?> class="active" <?php } ?>>
+									<a href="<?php p($c['url']); ?>">
 										<i class="fa fa-angle-right"></i>
-										<span>网站管理</span>
+										<span><?php p($c['name']); ?></span>
 									</a>
 								</li>
-								<li>
-									<a href="<?php p($siteUrl); ?>/_assets/gallery.html">
-										<i class="fa fa-angle-right"></i>
-										<span>微信管理</span>
-									</a>
-								</li>
-								<li>
-									<a href="<?php p($siteUrl); ?>/_assets/gallery.html">
-										<i class="fa fa-angle-right"></i>
-										<span>报名管理</span>
-									</a>
-								</li>
-								<li>
-									<a href="<?php p($siteUrl); ?>/_assets/gallery.html">
-										<i class="fa fa-angle-right"></i>
-										<span>订单管理</span>
-									</a>
-								</li>
-								<li>
-									<a href="<?php p($siteUrl); ?>/_assets/gallery.html">
-										<i class="fa fa-angle-right"></i>
-										<span>广告管理</span>
-									</a>
-								</li>
-								<li>
-									<a href="<?php p($siteUrl); ?>/manage/friendlink/index">
-										<i class="fa fa-angle-right"></i>
-										<span>友情链接</span>
-									</a>
-								</li>
-								<li>
-									<a href="<?php p($siteUrl); ?>/_assets/gallery.html">
-										<i class="fa fa-angle-right"></i>
-										<span>文件管理</span>
-									</a>
-								</li>
+								<?php } ?>
 							</ul>
+							<?php } ?>
 						</li>
-						<li>
-							<a href="<?php p($siteUrl); ?>/_assets/#pages">
-								<i class="fa fa-envelope-o icon">
-									<b class="bg-primary"></b>
-								</i>
-								<span class="pull-right">
-									<i class="fa fa-angle-down text"></i>
-									<i class="fa fa-angle-up text-active"></i>
-								</span>
-								<span>营销管理</span>
-							</a>
-							<ul class="nav lt">
-								<li>
-									<a href="<?php p($siteUrl); ?>/_assets/gallery.html">
-										<i class="fa fa-angle-right"></i>
-										<span>消息管理</span>
-									</a>
-								</li>
-								<li>
-									<a href="<?php p($siteUrl); ?>/_assets/gallery.html">
-										<i class="fa fa-angle-right"></i>
-										<span>评论留言</span>
-									</a>
-								</li>
-								<li>
-									<a href="<?php p($siteUrl); ?>/_assets/gallery.html">
-										<i class="fa fa-angle-right"></i>
-										<span>用户反馈</span>
-									</a>
-								</li>
-							</ul>
-						</li>
-						<li>
-							<a href="<?php p($siteUrl); ?>/_assets/#pages">
-								<i class="fa fa-cog icon">
-									<b class="bg-primary"></b>
-								</i>
-								<span class="pull-right">
-									<i class="fa fa-angle-down text"></i>
-									<i class="fa fa-angle-up text-active"></i>
-								</span>
-								<span>系统设置</span>
-							</a>
-							<ul class="nav lt">
-								<li>
-									<a href="<?php p($siteUrl); ?>/manage/site/index">
-										<i class="fa fa-angle-right"></i>
-										<span>网站设置</span>
-									</a>
-								</li>
-								<li>
-									<a href="<?php p($siteUrl); ?>/manage/profile/index">
-										<i class="fa fa-angle-right"></i>
-										<span>个人设置</span>
-									</a>
-								</li>
-							</ul>
-						</li>
+						<?php } ?>
 					</ul>
 				</nav>
-				<!-- / nav --> </div>
+				<!-- / nav -->
+			</div>
 		</section>
 		<footer class="footer lt hidden-xs b-t b-dark">
 			<div id="feedback" class="dropup">
@@ -155,7 +60,7 @@
 					<section class="panel bg-white">
 						<header class="panel-heading b-b b-light">意见反馈</header>
 						<div class="panel-body animated fadeInRight">
-							<textarea name="feedback" class="form-control" rows="10"></textarea>
+							<textarea name="feedback" class="form-control" rows="5"></textarea>
 
 							<p>
 								<a href="<?php p($siteUrl); ?>/_assets/#" class="btn btn-sm btn-default">提交</a>
