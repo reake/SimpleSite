@@ -31,77 +31,77 @@ class Controller_Manage_Template extends Controller_Template
 			# CATEGORY
 			$category = array(
 				0 => array(
-					'name' => '预览中心',
+					'name'        => '预览中心',
 					'description' => ' ',
-					'icon' => 'dashboard',
-					'url' => '',
+					'icon'        => 'dashboard',
+					'url'         => '',
 					'subCategory' => array(
-						0 => array('name' => '预览中心','description' => ' ','route' => 'Manage_Dashboard::index', 'url' => URL::site('/manage/dashboard/index')),
+						0 => array('name' => '预览中心', 'description' => ' ', 'route' => 'Manage_Dashboard::index', 'url' => URL::site('/manage/dashboard/index')),
 					)
 				),
 				1 => array(
-					'name' => '内容管理',
+					'name'        => '内容管理',
 					'description' => ' ',
-					'icon' => 'file-text',
-					'url' => '',
+					'icon'        => 'file-text',
+					'url'         => '',
 					'subCategory' => array(
-						0 => array('name' => '网站管理','description' => ' ','route' => 'Manage_Content::index', 'url' => URL::site('/manage/content/index')),
-						1 => array('name' => '微信管理','description' => ' ','route' => 'index', 'url' => URL::site('/manage/wx/index')),
-						2 => array('name' => '报名管理','description' => ' ','route' => 'index', 'url' => URL::site('/manage/su/index')),
-						3 => array('name' => '订单管理','description' => ' ','route' => 'index', 'url' => URL::site('/manage/order/index')),
-						4 => array('name' => '广告管理','description' => ' ','route' => 'index', 'url' => URL::site('/manage/ad/index')),
-						5 => array('name' => '友情链接','description' => ' ','route' => 'index', 'url' => URL::site('/manage/fl/index')),
-						6 => array('name' => '文件管理','description' => ' ','route' => 'index', 'url' => URL::site('/manage/file/index'))
+						0 => array('name' => '网站管理', 'description' => ' ', 'route' => 'Manage_Content::index', 'url' => URL::site('/manage/content/index')),
+						1 => array('name' => '微信管理', 'description' => ' ', 'route' => 'index', 'url' => URL::site('/manage/wx/index')),
+						2 => array('name' => '报名管理', 'description' => ' ', 'route' => 'index', 'url' => URL::site('/manage/su/index')),
+						3 => array('name' => '订单管理', 'description' => ' ', 'route' => 'index', 'url' => URL::site('/manage/order/index')),
+						4 => array('name' => '广告管理', 'description' => ' ', 'route' => 'index', 'url' => URL::site('/manage/ad/index')),
+						5 => array('name' => '友情链接', 'description' => ' ', 'route' => 'index', 'url' => URL::site('/manage/fl/index')),
+						6 => array('name' => '文件管理', 'description' => ' ', 'route' => 'index', 'url' => URL::site('/manage/file/index'))
 					)
 				),
 				2 => array(
-					'name' => '营销管理',
+					'name'        => '营销管理',
 					'description' => ' ',
-					'icon' => 'envelope-o',
-					'url' => '',
+					'icon'        => 'envelope-o',
+					'url'         => '',
 					'subCategory' => array(
-						0 => array('name' => '消息管理','description' => ' ','route' => 'index', 'url' => URL::site('/manage/site/index')),
-						1 => array('name' => '评论留言','description' => ' ','route' => 'index', 'url' => URL::site('/manage/site/index')),
-						2 => array('name' => '用户反馈','description' => ' ','route' => 'index', 'url' => URL::site('/manage/site/index'))
+						0 => array('name' => '消息管理', 'description' => ' ', 'route' => 'index', 'url' => URL::site('/manage/site/index')),
+						1 => array('name' => '评论留言', 'description' => ' ', 'route' => 'index', 'url' => URL::site('/manage/site/index')),
+						2 => array('name' => '用户反馈', 'description' => ' ', 'route' => 'index', 'url' => URL::site('/manage/site/index'))
 					)
 				),
 				3 => array(
-					'name' => '系统设置',
+					'name'        => '系统设置',
 					'description' => ' ',
-					'icon' => 'cog',
-					'url' => ' ',
+					'icon'        => 'cog',
+					'url'         => ' ',
 					'subCategory' => array(
 						0 => array(
-							'name' => '网站设置',
+							'name'        => '网站设置',
 							'description' => '管理您所有的网站',
-							'route' => 'Manage_Site::index',
-							'url' => URL::site('/manage/site/index'),
+							'route'       => 'Manage_Site::index',
+							'url'         => URL::site('/manage/site/index'),
 							'subCategory' => array(
 								0 => array(
-									'name' => '修改网站',
+									'name'        => '修改网站',
 									'description' => '修改网站参数信息',
-									'route' => 'Manage_Site::edit',
+									'route'       => 'Manage_Site::edit',
 								)
 							)
 						),
 						1 => array(
-							'name' => '个人设置',
+							'name'        => '个人设置',
 							'description' => ' ',
-							'route' => 'index',
-							'url' => URL::site('/manage/profile/index')
+							'route'       => 'index',
+							'url'         => URL::site('/manage/profile/index')
 						)
 					)
 				)
 			);
 
-			foreach($category as $k => $v){
-				if(isset($category[$k]['subCategory'])){
-					foreach($category[$k]['subCategory'] as $k2 => $c){
-						$category[$k]['route'][] = $c['route'];
+			foreach ($category as $k => $v) {
+				if (isset($category[$k]['subCategory'])) {
+					foreach ($category[$k]['subCategory'] as $k2 => $c) {
+						$category[$k]['route'][]                        = $c['route'];
 						$category[$k]['subCategory'][$k2]['subRoute'][] = $c['route'];
-						if(isset($c['subCategory'])){
-							foreach($c['subCategory'] as $k3 => $d){
-								$category[$k]['route'][] = $d['route'];
+						if (isset($c['subCategory'])) {
+							foreach ($c['subCategory'] as $k3 => $d) {
+								$category[$k]['route'][]                        = $d['route'];
 								$category[$k]['subCategory'][$k2]['subRoute'][] = $d['route'];
 							}
 						}
@@ -110,7 +110,7 @@ class Controller_Manage_Template extends Controller_Template
 			}
 
 			$this->category = $category;
-			$this->route = $this->request->controller().'::'.$this->request->action();
+			$this->route    = $this->request->controller() . '::' . $this->request->action();
 
 
 			$data = array(
@@ -119,10 +119,10 @@ class Controller_Manage_Template extends Controller_Template
 				'siteUrl'    => 'http://www.simple-site.cn',
 				'copyright'  => 'Copyright © 2015 Simple-Site. All Rights Reserved',
 				'user'       => $this->user,
-				'route' => $this->route,
+				'route'      => $this->route,
 				'controller' => $this->request->controller(),
 				'action'     => $this->request->action(),
-				'category' => $this->category,
+				'category'   => $this->category,
 			);
 			foreach ($data as $key => $value) View::bind_global($key, $data[$key]);
 		} else {
@@ -136,11 +136,11 @@ class Controller_Manage_Template extends Controller_Template
 		foreach ($this->category as $k => $v) {
 			if (in_array($this->route, $v['route'])) {
 				$crumb[] = array('name' => $v['name'], 'description' => $v['description'], 'url' => $v['url']);
-				if(isset($v['subCategory'])){
+				if (isset($v['subCategory'])) {
 					foreach ($v['subCategory'] as $k2 => $c) {
 						if (in_array($this->route, $c['subRoute'])) {
 							$crumb[] = array('name' => $c['name'], 'description' => $c['description'], 'url' => $c['url']);
-							if(isset($c['subCategory'])){
+							if (isset($c['subCategory'])) {
 								foreach ($c['subCategory'] as $k3 => $d) {
 									if ($this->route == $d['route']) {
 										$crumb[] = array('name' => $d['name'], 'description' => $d['description'], 'url' => $d['url']);
@@ -153,12 +153,12 @@ class Controller_Manage_Template extends Controller_Template
 			}
 		}
 		$this->data['crumb'] = View::factory('manage/crumb', array('crumbs' => $crumb));
-		$view          = View::factory('manage/base');
-		$sites         = ORM::factory('Site')->getAll($this->user['id']);
-		$view->sidebar = View::factory('manage/sidebar', array('sites' => $sites, 'siteId' => $this->siteId));
-		$view->header  = View::factory('manage/header', array('user' => $this->user));
-		$view->meta    = View::factory('manage/meta');
-		$view->body    = View::factory('manage/' . $this->template, $this->data);
+		$view                = View::factory('manage/base');
+		$sites               = ORM::factory('Site')->getAll($this->user['id']);
+		$view->sidebar       = View::factory('manage/sidebar', array('sites' => $sites, 'siteId' => $this->siteId));
+		$view->header        = View::factory('manage/header', array('user' => $this->user));
+		$view->meta          = View::factory('manage/meta');
+		$view->body          = View::factory('manage/' . $this->template, $this->data);
 		$this->response->body($view);
 	}
 }
