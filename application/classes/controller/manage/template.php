@@ -62,7 +62,19 @@ class Controller_Manage_Template extends Controller_Template
 					'name' => '系统设置',
 					'icon' => 'cog',
 					'subCategory' => array(
-						0 => array('name' => '网站设置','route' => 'index', 'url' => URL::site('/manage/site/index')),
+						0 => array(
+							'name' => '网站设置',
+							'description' => '管理您所有的网站',
+							'route' => 'Manage_Site::index',
+							'url' => URL::site('/manage/site/index'),
+							'subCategory' => array(
+								0 => array(
+									'name' => '修改网站',
+									'description' => '修改网站参数信息',
+									'route' => 'Manage_Site::edit',
+								)
+							)
+						),
 						1 => array('name' => '个人设置','route' => 'index', 'url' => URL::site('/manage/profile/index'))
 					)
 				)
@@ -71,7 +83,14 @@ class Controller_Manage_Template extends Controller_Template
 			foreach($category as $k => $v){
 				if(isset($category[$k]['subCategory'])){
 					foreach($category[$k]['subCategory'] as $k2 => $c){
-						$category[$k]['route'][$k2] = $c['route'];
+						$category[$k]['route'][] = $c['route'];
+						$category[$k]['subCategory'][$k2]['subRoute'][] = $c['route'];
+						if(isset($c['subCategory'])){
+							foreach($c['subCategory'] as $k3 => $d){
+								$category[$k]['route'][] = $d['route'];
+								$category[$k]['subCategory'][$k2]['subRoute'][] = $d['route'];
+							}
+						}
 					}
 				}
 			}

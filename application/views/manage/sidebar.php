@@ -38,7 +38,7 @@
 							<?php if(isset($v['subCategory'])){ ?>
 							<ul class="nav lt">
 								<?php foreach($v['subCategory'] as $c){ ?>
-								<li <?php if($controller.'::'.$action == $c['route']){ ?> class="active" <?php } ?>>
+								<li  <?php if(in_array($route,$c['subRoute'])){ ?>class="active"<?php } ?>>
 									<a href="<?php p($c['url']); ?>">
 										<i class="fa fa-angle-right"></i>
 										<span><?php p($c['name']); ?></span>
