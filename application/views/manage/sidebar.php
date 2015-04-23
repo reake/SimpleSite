@@ -2,8 +2,8 @@
 	<section class="vbox">
 		<header class="header bg-primary lter text-center clearfix">
 			<div class="btn-group">
-				<button type="button" class="btn btn-sm btn-dark btn-icon" title="New project"><i
-						class="fa fa-dot-circle-o"></i></button>
+				<a href="<?php p($sites[$siteId]['url']); ?>" target="_blank" class="btn btn-sm btn-dark btn-icon" title="预览网站"><i
+						class="fa fa-eye"></i></a>
 				<div class="btn-group hidden-nav-xs">
 					<button type="button" class="btn btn-sm btn-primary dropdown-toggle"
 							data-toggle="dropdown"> <?php p($sites[$siteId]['name']); ?> <span class="caret"></span>
