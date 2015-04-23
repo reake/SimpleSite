@@ -30,3 +30,13 @@ $(".unLockScreen").on('click', function () {
         }
     }, 'JSON')
 });
+
+function changeSite(siteId){
+    $.post('/manage/common/changeSite',{siteId:siteId},function(result){
+        if(result.status == 1001){
+            window.location.reload();
+        }else{
+            alert(result.result.msg);
+        }
+    },'JSON');
+}

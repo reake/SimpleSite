@@ -14,13 +14,8 @@ class Controller_Manage_Template extends Controller_Template
 	{
 		if (Auth_ORM::instance()->logged_in()) {
 			$this->user = Auth_ORM::instance()->get_user()->as_array();
-			if ($this->request->query('siteId')) {
-				$siteId       = intval($this->request->query('siteId'));
-				$this->siteId = $siteId;
-				Session::instance()->set('siteId', $siteId);
-			} else {
-				$this->siteId = ORM::factory('Site')->getSiteId($this->user['id']);
-			}
+			$siteId = Session::instance()->get('siteId');
+			$this->siteId = (empty($siteId)) ? ORM::factory('Site')->getSiteId($this->user['id']) : $siteId;
 			$count = ORM::factory('site', array('uid' => $this->user['id']))->count_all();
 			if (empty($count) && $this->request->action() != 'step1') {
 				$this->redirect('/manage/create/step1');

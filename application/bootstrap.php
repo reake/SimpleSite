@@ -139,7 +139,7 @@ Route::set('user', '<action>', array('action' => '(login|logout|register|feature
 		'action'     => 'login',
 	));
 
-Route::set('common', 'manage/common(/<action>)', array('action' => '(sms|lock|404)'))
+Route::set('common', 'manage/common(/<action>)', array('action' => '(sms|lock|404|changeSite)'))
 	->defaults(array(
 		'controller' => 'manage_common',
 		'action'     => 'index',

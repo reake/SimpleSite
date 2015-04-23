@@ -11,7 +11,7 @@
 					<ul class="dropdown-menu text-left">
 						<?php foreach ($sites as $site) { ?>
 							<li>
-								<a href="<?php p($site['url']); ?>/manage/dashboard/index?siteId=<?php p($site['id']); ?>"><?php p($site['name']); ?></a>
+								<a onclick="changeSite(<?php p($site['id']); ?>);"><?php p($site['name']); ?></a>
 							</li>
 						<?php } ?>
 					</ul>

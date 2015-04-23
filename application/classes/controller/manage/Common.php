@@ -41,4 +41,16 @@ class Controller_Manage_Common extends Controller_Manage_Template
 			Tool_Utility::jsonReturn(1001);
 		}
 	}
+
+	public function action_changeSite()
+	{
+		if ($this->request->is_ajax()) {
+			$siteId       = intval($this->request->post('siteId'));
+			$this->siteId = $siteId;
+			Session::instance()->set('siteId', $siteId);
+			Tool_Utility::jsonReturn(1001);
+		} else {
+			$this->request->detect_uri(404);
+		}
+	}
 }
