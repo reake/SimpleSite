@@ -45,7 +45,26 @@ class Controller_Manage_Template extends Controller_Template
 					'icon'        => 'file-text',
 					'url'         => '',
 					'subCategory' => array(
-						0 => array('name' => '网站管理', 'description' => ' ', 'route' => 'Manage_Content::index', 'url' => URL::site('/manage/content/index')),
+						0 => array(
+							'name'        => '网站管理',
+							'description' => ' ',
+							'route'       => 'Manage_Content::index',
+							'url'         => URL::site('/manage/content/index'),
+							'subCategory' => array(
+								0 => array(
+									'name'        => '栏目列表',
+									'description' => '管理网站栏目',
+									'route'       => 'Manage_Category::index',
+									'url'         => URL::site('/manage/category/index')
+								),
+								1 => array(
+									'name'        => '设置栏目',
+									'description' => '设置栏目信息',
+									'route'       => 'Manage_Category::set',
+									'url'         => URL::site('/manage/category/index')
+								)
+							)
+						),
 						1 => array('name' => '微信管理', 'description' => ' ', 'route' => 'index', 'url' => URL::site('/manage/wx/index')),
 						2 => array('name' => '报名管理', 'description' => ' ', 'route' => 'index', 'url' => URL::site('/manage/su/index')),
 						3 => array('name' => '订单管理', 'description' => ' ', 'route' => 'index', 'url' => URL::site('/manage/order/index')),
@@ -81,13 +100,14 @@ class Controller_Manage_Template extends Controller_Template
 									'name'        => '修改网站',
 									'description' => '修改网站参数信息',
 									'route'       => 'Manage_Site::edit',
+									'url'         => URL::site('/manage/site/edit')
 								)
 							)
 						),
 						1 => array(
 							'name'        => '个人设置',
-							'description' => ' ',
-							'route'       => 'index',
+							'description' => '',
+							'route'       => 'Manage_Profile::index',
 							'url'         => URL::site('/manage/profile/index')
 						)
 					)

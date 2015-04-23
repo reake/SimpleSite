@@ -1,11 +1,5 @@
 <section class="scrollable padder">
-	<ul class="breadcrumb no-border no-radius b-b b-light pull-in">
-		<li><a href="<?php p($siteUrl); ?>/_assets/index.html"><i class="fa fa-home"></i> 简站(Simple-Site) </a></li>
-		<li class="active">网站栏目</li>
-	</ul>
-	<div class="m-b-md"><h3 class="m-b-none">网站栏目</h3>
-		<small>管理网站栏目</small>
-	</div>
+	<?php p($crumb); ?>
 	<div class="row">
 		<div class="col-sm-12">
 			<section class="panel panel-default">
