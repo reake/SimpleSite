@@ -7,58 +7,42 @@
 		<small>您可以在这里管理您所有的网站！</small>
 	</div>
 	<div class="row">
-		<div class="col-sm-12">
+		<?php foreach ($sites as $v) { ?>
+		<div class="col-sm-4">
 			<section class="panel panel-default">
-				<header class="panel-heading">
-					<a class="btn btn-sm btn-default pull-right" href="/manage/create/step1">增加网站</a>
-					管理网站
+				<header class="panel-heading bg-info lt no-border">
+					<div class="clearfix">
+						<a href="#" class="pull-left thumb avatar b-3x m-r">
+							<?php if(empty($v['logo'])){ ?>
+							<i class="fa fa-ban fa-3x"></i>
+							<?php }else{ ?>
+							<img src="/media/image/data/<?php p($v['logo']); ?>" class="img-circle">
+							<?php } ?>
+						</a>
+						<div class="clear">
+							<div class="h3 m-t-xs m-b-xs text-white"> <?php p($v['name']); ?>
+								<a href="/manage/site/edit?siteId=<?php p($v['id']); ?>" class="btn btn-info btn-xs"><i class="fa fa-cogs"></i> 编辑</a>
+								<i class="fa fa-circle text-white pull-right text-xs m-t-sm"></i>
+							</div>
+							<small class="text-muted"> <?php p($v['description']); ?></small>
+						</div>
+					</div>
 				</header>
-				<table class="table table-striped m-b-none">
-					<thead>
-					<tr>
-						<th>ID</th>
-						<th>网站状态</th>
-						<th>网站名称</th>
-						<th>网站介绍</th>
-						<th>创建时间</th>
-						<th width="70">操作</th>
-					</tr>
-					</thead>
-					<tbody>
-					<?php foreach($sites as $site){ ?>
-						<tr>
-							<td>
-								<?php p($site['id']); ?>
-							</td>
-							<td>
-								<?php p($site['status']); ?>
-							</td>
-							<td>
-								<?php p($site['name']); ?>
-							</td>
-							<td>
-								<?php p($site['description']); ?>
-							</td>
-							<td>
-								<?php p($site['created']); ?>
-							</td>
-							<td class="text-right">
-								<div class="btn-group">
-									<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-										<i class="fa fa-pencil"></i>
-									</a>
-									<ul class="dropdown-menu pull-right">
-										<li><a href="/manage/site/edit?siteId=<?php p($site['id']);?>">编辑</a></li>
-										<li class="divider"></li>
-										<li><a href="#">删除</a></li>
-									</ul>
-								</div>
-							</td>
-						</tr>
-					<?php } ?>
-					</tbody>
-				</table>
+				<div class="list-group no-radius alt">
+					<a class="list-group-item" href="#">
+						<span class="badge bg-success">良好</span>
+						<i class="fa fa-comment icon-muted"></i> 网站状态
+					</a>
+					<a class="list-group-item" href="#">
+						<span class="badge bg-info">16</span>
+						<i class="fa fa-envelope icon-muted"></i> 新消息 </a>
+					<a class="list-group-item" href="#">
+						<span class="badge bg-light">5</span>
+						<i class="fa fa-eye icon-muted"></i> 浏览量
+					</a>
+				</div>
 			</section>
 		</div>
+		<?php } ?>
 	</div>
 </section>
