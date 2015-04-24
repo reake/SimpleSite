@@ -38,6 +38,15 @@
 									   value="<?php p($cateInfo->name); ?>">
 							</div>
 						</div>
+						<div
+							class="inputUrl form-group">
+							<label class="col-lg-2 control-label">栏目链接</label>
+
+							<div class="col-lg-10">
+								<input type="text" name="url" class="form-control" placeholder=""
+									   value="<?php p($cateInfo->url); ?>">
+							</div>
+						</div>
 						<div class="form-group">
 							<label class="col-lg-2 control-label">栏目描述</label>
 
@@ -56,15 +65,6 @@
 											value="<?php p($k); ?>"><?php p($v); ?></option>
 									<?php } ?>
 								</select>
-							</div>
-						</div>
-						<div
-							class="inputUrl form-group" <?php if ($cateInfo->types != 2) p('style="display:none;"'); ?>>
-							<label class="col-lg-2 control-label">栏目链接</label>
-
-							<div class="col-lg-10">
-								<input type="text" name="url" class="form-control" placeholder=""
-									   value="<?php p($cateInfo->url); ?>">
 							</div>
 						</div>
 						<div class="form-group">
@@ -89,14 +89,6 @@
 </section>
 <script>
 	$(function () {
-		$("select[name=types]").on('change', function () {
-			if ($(this).val() == 2) {
-				$(".inputUrl").show();
-			} else {
-				$("input[name=url]").val('');
-				$(".inputUrl").hide();
-			}
-		})
 		$("form#category").submit(function (e) {
 			e.preventDefault();
 			$.post('/manage/category/set', $("form#category").serialize(), function (result) {

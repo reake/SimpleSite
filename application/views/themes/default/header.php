@@ -12,10 +12,9 @@
 		</div>
 		<div class="collapse navbar-collapse">
 			<ul class="nav navbar-nav navbar-right">
-				<li class="active"><a href="/">简站</a></li>
-				<li><a href="/feature">亮点</a></li>
-				<li><a href="/download">下载</a></li>
-				<li><a href="/news">动态</a></li>
+				<?php foreach ($category as $v) { ?>
+					<li><a href="<?php p($v->url); ?>"><?php p($v->name); ?></a></li>
+				<?php } ?>
 				<li>
 					<div class="m-t-sm">
 						<a href="/login" class="btn btn-sm btn-success m-l"><strong>注册/登陆</strong></a>

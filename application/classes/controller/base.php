@@ -4,10 +4,12 @@ class Controller_Base extends Controller_Template
 {
 	protected $data = array();
 	protected $theme;
+	protected $category;
 
 	public function before()
 	{
 		if($this->auto_render){
+			$this->category = ORM::factory('Category')->getAll(1);
 			$hostArr = explode('.', $_SERVER['HTTP_HOST']);
 			if ($hostArr[0] == 'www') {
 				$this->theme = 'themes/default/';
@@ -18,7 +20,8 @@ class Controller_Base extends Controller_Template
 					'description' => '描述',
 					'url'         => 'http://www.simple-site.cn',
 					'author'      => '简站(Simple-Site.cn) - 免费建站、微信网站、免费微信网站!',
-					'copyright'   => 'Copyright &copy; 2015 SimpleSite. All Rights Reserved'
+					'copyright'   => 'Copyright &copy; 2015 SimpleSite. All Rights Reserved',
+					'category' => $this->category
 				);
 			} else {
 				$site           = ORM::factory('Site')->where('domain', '=', $hostArr[0])->find()->as_array();
@@ -36,7 +39,11 @@ class Controller_Base extends Controller_Template
 	{
 		if($this->auto_render){
 			$view          = View::factory($this->theme . 'base');
-			$view->content = View::factory($this->theme . $this->template, array('subMenu' => View::factory($this->theme . 'subMenu')));
+			$subData = array(
+				'category' => $this->category,
+				'currentCategory' => ORM::factory('Category')->where('url','=',$this->request->uri())->find()
+			);
+			$view->content = View::factory($this->theme . $this->template, array('subMenu' => View::factory($this->theme . 'subMenu',$subData)));
 			$view->header  = View::factory($this->theme . 'header');
 			$view->footer  = View::factory($this->theme . 'footer');
 			if (!empty($this->data)) foreach ($this->data as $key => $value) $view->set($key, $value);
