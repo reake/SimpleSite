@@ -1,0 +1,6 @@
+[submodule "test"]
+	path = test
+	url = git://github.com/kohana/core.git
+[submodule "system"]
+	path = system
+	url = git://github.com/kohana/core.git
