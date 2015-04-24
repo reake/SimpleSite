@@ -1,10 +1,13 @@
 <?php
 
 /**
- * Simple-Site Index
- * @author Simple-Site Team
- * @email  < service[at]simple-site.cn >
- * @site   < http://www.simple-site.cn >
+ * SimpleSite Index
+ *
+ * @package   SimpleSite
+ * @author    SimpleSite Team
+ * @email     Service[at]simple-site.cn
+ * @copyright Copyright (C) 2015 SimpleSite. All Rights Reserved
+ * @license   http://www.simple-site.cn/license
  */
 $application = '../application';
 
@@ -54,7 +57,7 @@ if (!is_dir($system) AND is_dir(DOCROOT . $system))
 define('APPPATH', realpath($application) . DIRECTORY_SEPARATOR);
 define('MODPATH', realpath($modules) . DIRECTORY_SEPARATOR);
 define('SYSPATH', realpath($system) . DIRECTORY_SEPARATOR);
-define('DIR_IMAGE', DOCROOT. 'media' . DIRECTORY_SEPARATOR . 'image' . DIRECTORY_SEPARATOR . 'data' . DIRECTORY_SEPARATOR);
+define('DIR_IMAGE', DOCROOT . 'media' . DIRECTORY_SEPARATOR . 'image' . DIRECTORY_SEPARATOR . 'data' . DIRECTORY_SEPARATOR);
 
 // Required once function
 require_once(MODPATH . 'common/function.php');
