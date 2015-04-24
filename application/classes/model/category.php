@@ -35,14 +35,6 @@ class Model_Category extends ORM
 		);
 	}
 
-	private static $_instance;
-
-	public static function instance()
-	{
-		if (self::$_instance == NULL) self::$_instance = new self();
-		return self::$_instance;
-	}
-
 	public function getAll($siteId, $isTop = 0)
 	{
 		$categoryTop = $this->where('sid', '=', $siteId)->where('pid', '=', $isTop)->find_all();
