@@ -15,6 +15,7 @@ if (is_file(APPPATH . 'classes/Kohana' . EXT)) {
 
 /**
  * Set the default time zone.
+ *
  * @link http://kohanaframework.org/guide/using.configuration
  * @link http://www.php.net/manual/timezones
  */
@@ -22,6 +23,7 @@ date_default_timezone_set('Asia/Shanghai');
 
 /**
  * Set the default locale.
+ *
  * @link http://kohanaframework.org/guide/using.configuration
  * @link http://www.php.net/manual/function.setlocale
  */
@@ -29,6 +31,7 @@ setlocale(LC_ALL, 'en_US.utf-8');
 
 /**
  * Enable the Kohana auto-loader.
+ *
  * @link http://kohanaframework.org/guide/using.autoloading
  * @link http://www.php.net/manual/function.spl-autoload-register
  */
@@ -43,6 +46,7 @@ spl_autoload_register(array('Kohana', 'auto_load'));
 
 /**
  * Enable the Kohana auto-loader for unserialization.
+ *
  * @link http://www.php.net/manual/function.spl-autoload-call
  * @link http://www.php.net/manual/var.configuration#unserialize-callback-func
  */
@@ -50,6 +54,7 @@ ini_set('unserialize_callback_func', 'spl_autoload_call');
 
 /**
  * Set the mb_substitute_character to "none"
+ *
  * @link http://www.php.net/manual/function.mb-substitute-character.php
  */
 mb_substitute_character('none');
@@ -118,16 +123,18 @@ Kohana::modules(array(
 	'unittest' => MODPATH . 'unittest',   // Unit testing
 	'minion'   => MODPATH . 'minion',     // CLI Tasks
 	'orm'      => MODPATH . 'orm',        // Object Relationship Mapping
+	'email'    => MODPATH . 'email',        // Email
 	// 'userguide'  => MODPATH.'userguide',  // User guide and API documentation
 ));
 
 /**
  * Cookie Salt
+ *
  * @see  http://kohanaframework.org/3.3/guide/kohana/cookies
- * If you have not defined a cookie salt in your Cookie class then
- * uncomment the line below and define a preferrably long salt.
+ *       If you have not defined a cookie salt in your Cookie class then
+ *       uncomment the line below and define a preferrably long salt.
  */
- Cookie::$salt = 'asdfasdf';
+Cookie::$salt = 'asdfasdf';
 /**
  * Set the routes. Each route must have a minimum of a name, a URI and a set of
  * defaults for the URI.

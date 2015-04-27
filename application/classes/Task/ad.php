@@ -14,7 +14,17 @@ class Task_Ad extends Minion_Task
 	 */
 	protected function _execute(array $params)
 	{
-		var_dump($params);
-		echo 'foobar';
+		# TEXT
+		Email::factory('Hello, World', 'This is my body, it is nice.')
+			->to('wufeifei@wufeifei.com')
+			->from('ad@simple-site.cn', '简站AD(Simple-Site)')
+			->send();
+
+		# HTML
+		Email::factory('Hello, World', 'This is my body, it is nice.')
+			->to('wufeifei@wufeifei.com')
+			->from('ad@simple-site.cn', '简站AD(Simple-Site)')
+			->message('<h1>This is <em>my</em> body, it is <strong>nice</strong>.</h1>', 'text/html')
+			->send();
 	}
 }
