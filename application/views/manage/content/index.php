@@ -202,18 +202,21 @@
 						<i class="fa fa-eye fa-1x text"></i>
 						<i class="fa fa-eye-slash fa-1x text-active"></i>
 					</a>
+
 					<div class="btn-group pull-right">
-						<button class="btn btn-info btn-xs">保存</button>
+						<button class="btn btn-info btn-xs saveContent" data-id="">保存</button>
 						<button class="btn btn-danger btn-xs dropdown-toggle" data-toggle="dropdown">
 							<span class="caret"></span>
 						</button>
 						<ul class="dropdown-menu">
 							<li><a href="#">隐藏</a></li>
 							<li class="divider"></li>
-							<li><a href="#">删除</a></li>
+							<li><a class="delContent" data-id="">删除</a></li>
 						</ul>
 					</div>
-					<h4 class="m-n"> Kickoff meeting</h4>
+					<h4 class="m-n">
+						<input type="text" name="title" class="input-sm" style="border:1px solid #E1E1E1;width:50%;"/>
+					</h4>
 				</div>
 				<div class="row">
 					<div class="col-sm-4" style="border-right:1px solid #E1E1E1;min-height:238px;">
@@ -238,13 +241,14 @@
 							<form role="form">
 								<div class="form-group">
 									<label>关键词</label>
+
 									<div id="MyPillbox" class="pillbox clearfix">
-										<ul><input type="text" placeholder="添加关键词"></ul>
+										<ul><input type="text" name="keywords" placeholder="添加关键词"></ul>
 									</div>
 								</div>
 								<div class="form-group">
 									<label>来源</label>
-									<input class="input-sm input-s form-control" size="16" type="text" >
+									<input type="text" name="origin" class="input-sm input-s form-control">
 								</div>
 							</form>
 						</div>
@@ -254,26 +258,24 @@
 							<form role="form">
 								<div class="form-group">
 									<label>所属栏目</label>
-									<select name="account" class="form-control m-b">
-										<option>option 1</option>
-										<option>option 2</option>
-										<option>option 3</option>
-										<option>option 4</option>
+									<select name="cid" class="form-control m-b">
 									</select>
 								</div>
 								<div class="form-group">
 									<label>更新时间</label>
-									<input class="input-sm input-s datepicker-input form-control" size="16" type="text" value="2015-04-30" data-date-format="yyyy-mm-dd">
+									<input name="created" class="input-sm input-s datepicker-input form-control"
+										   size="16" type="text" value="2015-04-30" data-date-format="yyyy-mm-dd">
 								</div>
 								<div class="form-group">
 									<label>创建时间</label>
-									<input class="input-sm input-s datepicker-input form-control" size="16" type="text" value="2015-04-30" data-date-format="yyyy-mm-dd">
+									<input name="updated" class="input-sm input-s datepicker-input form-control"
+										   size="16" type="text" value="2015-04-30" data-date-format="yyyy-mm-dd">
 								</div>
 							</form>
 						</div>
 					</div>
 					<div class="text-sm col-sm-12">
-						<textarea id="editor" name="editor"></textarea>
+						<textarea id="editor" name="content"></textarea>
 					</div>
 				</div>
 			</section>
@@ -291,6 +293,54 @@
 <script src="<?php p($siteUrl); ?>/_assets/js/ckeditor/ckeditor.js"></script>
 
 <script>
+
+	function getDetail(id) {
+		$.post('/manage/content/index', {action: 'getDetail', id: id}, function (result) {
+			if (result.status == 1001) {
+				var saveContentButton = $("button.saveContent");
+				var content = result.result.data;
+				saveContentButton.attr('data-id', content.id);
+				$("input[name=title]").val(content.title);
+				$("input[name=keywords]").val(content.keywords);
+				$("input[name=origin]").val(content.origin);
+				$("input[name=description]").val(content.description);
+				$("input[name=created]").val(content.created);
+				$("input[name=updated]").val(content.updated);
+				var category = '';
+				for(var i =0;i < content.category.length;i++){
+					category += '<option value="' + content.category[i].id + '">' + content.category[i].name + '</option>';
+				}
+				$("select[name=cid]").html(category);
+				$("#editor").html(content.content);
+				$("#main-list").removeClass('show').addClass('hide');
+				$("#main-content").removeClass('hide').addClass('show');
+				saveContentButton.on('click', function () {
+					var data = {
+						'action': 'updateDetail',
+						'id': saveContentButton.attr('data-id'),
+						'cid': $("select[name=cid]").val(),
+						'title': $("input[name=title]").val(),
+						'origin': $("input[name=origin]").val(),
+						'keywords': $("input[name=keywords]").val(),
+						'description': $("input[name=description]").val(),
+						'content': $("#editor").html(),
+						'created': $("input[name=created]").val(),
+						'updated': $("input[name=updated]").val()
+					};
+					$.post('/manage/content/index', data, function (result) {
+						if (result.status == 1001) {
+							alert(result.result.msg);
+							window.location.href = '/manage/content/index';
+						} else {
+							alert(result.result.msg);
+						}
+					}, 'JSON');
+				});
+			} else {
+				alert(result.result.msg);
+			}
+		}, 'JSON');
+	}
 	$(function () {
 		CKEDITOR.replace('editor', {
 			height: 300,
@@ -335,12 +385,12 @@
 		$(".dd-list > .dd-item").on('click', function () {
 			$(".dd3-content").removeClass('active');
 			$(this).children('.dd3-content').addClass("active");
-			$.post('/manage/content/index', {cid: $(this).attr('data-id')}, function (result) {
+			$.post('/manage/content/index', {action: 'getList', cid: $(this).attr('data-id')}, function (result) {
 				if (result.status == 1001) {
 					var contents = '';
 					content = result.result.data;
 					for (var i = 0; i < content.length; i++) {
-						contents += '<li class="list-group-item" href="#main-content, #main-list" data-toggle="class:show,hide">' +
+						contents += '<li class="list-group-item" onclick="getDetail(' + content[i].id + ')">' +
 						'<a href="#" class="thumb-xs pull-left m-r-sm">' +
 						'<img src="" class="img-circle">' +
 						'</a>' +
@@ -356,6 +406,7 @@
 					alert(result.result.msg);
 				}
 			}, 'JSON');
-		})
+		});
+
 	})
 </script>

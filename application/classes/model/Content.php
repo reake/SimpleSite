@@ -7,6 +7,8 @@ class Model_Content extends ORM
 		'id'          => array('type' => 'int'),
 		'cid'         => array('type' => 'int'),
 		'title'       => array('type' => 'string'),
+		'keywords'       => array('type' => 'string'),
+		'origin'       => array('type' => 'string'),
 		'description' => array('type' => 'string'),
 		'content'     => array('type' => 'string'),
 		'thumb'       => array('type' => 'string'),
