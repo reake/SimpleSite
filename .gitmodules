@@ -49,6 +49,6 @@
 [submodule "modules/notices"]
 	path = modules/notices
 	url = https://github.com/synapsestudios/kohana-notices.git
-[submodule "modules/swiftmailer"]
-	path = modules/swiftmailer
+[submodule "application/vendor/swiftmailer"]
+	path = application/vendor/swiftmailer
 	url = https://github.com/swiftmailer/swiftmailer.git
