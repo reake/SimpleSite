@@ -27,13 +27,13 @@ class Controller_Manage_Site extends Controller_Manage_Template
 					->set('description', $post['description']);
 				try {
 					$site->save();
-					Tool_Utility::jsonReturn(1001, '修改成功!');
+					jsonReturn(1001, '修改成功!');
 				} catch (ORM_Validation_Exception $e) {
 					$errors = $e->errors('User');
-					Tool_Utility::jsonReturn(4444, '更新失败!');
+					jsonReturn(4444, '更新失败!');
 				}
 			} else {
-				Tool_Utility::jsonReturn(4444, '对不起，没有该网站或您无权管理！');
+				jsonReturn(4444, '对不起，没有该网站或您无权管理！');
 			}
 		}
 		$this->template = 'site/edit';
@@ -69,12 +69,12 @@ class Controller_Manage_Site extends Controller_Manage_Template
 				$site->set('logo', $file)
 					->set('updated', time())
 					->save();
-				Tool_Utility::jsonReturn(1001, '上传成功!', '/media/image/data/'.$file);
+				jsonReturn(1001, '上传成功!', '/media/image/data/'.$file);
 			} else {
-				Tool_Utility::jsonReturn(4444, '图片保存失败');
+				jsonReturn(4444, '图片保存失败');
 			}
 		} else {
-			Tool_Utility::jsonReturn(4444, '图片上传失败');
+			jsonReturn(4444, '图片上传失败');
 		}
 	}
 }

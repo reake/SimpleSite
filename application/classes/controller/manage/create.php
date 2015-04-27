@@ -15,7 +15,7 @@ class Controller_Manage_Create extends Controller_Manage_Template
 			$site->created = time();
 			$site->updated = time();
 			$site->save();
-			Tool_Utility::jsonReturn(1001,'创建成功','/manage/dashboard/index');
+			jsonReturn(1001,'创建成功','/manage/dashboard/index');
 		}
 		$this->template = 'step1';
 		$modules        = ORM::factory('Module')->getAll();

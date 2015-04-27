@@ -25,14 +25,14 @@ class Controller_Home extends Controller_Base
 				$user->updated  = time();
 				try {
 					$user->save();
-					Tool_Utility::jsonReturn(1001, '/login');
+					jsonReturn(1001, '/login');
 				} catch (ORM_Validation_Exception $e) {
 					foreach ($e->errors('models') as $v) {
-						Tool_Utility::jsonReturn(4444, $v);
+						jsonReturn(4444, $v);
 					}
 				}
 			} else {
-				Tool_Utility::jsonReturn($ret);
+				jsonReturn($ret);
 			}
 		}
 		$this->response->body(View::factory($this->theme . 'register', array('loginUrl' => '/login')));
@@ -52,9 +52,9 @@ class Controller_Home extends Controller_Base
 				$loginHistory->created   = time();
 				$loginHistory->updated   = time();
 				$loginHistory->save();
-				Tool_Utility::jsonReturn(1001, '登陆成功', '/manage/dashboard/index');
+				jsonReturn(1001, '登陆成功', '/manage/dashboard/index');
 			} else {
-				Tool_Utility::jsonReturn(1800);
+				jsonReturn(1800);
 			}
 		}
 		$this->response->body(View::factory($this->theme . 'login', array('registerUrl' => '/register', 'findPasswordUrl' => '/findPassword')));
@@ -94,7 +94,7 @@ class Controller_Home extends Controller_Base
 		$email = $this->request->post('email');
 		$find  = ORM::factory('Subscribe')->where('sid', '=', $this->siteId)->where('email', '=', $email)->find();
 		if ($find->loaded()) {
-			Tool_Utility::jsonReturn(1001, '您已经订阅过！');
+			jsonReturn(1001, '您已经订阅过！');
 		} else {
 			ORM::factory('Subscribe')
 				->set('sid', $this->siteId)
@@ -103,7 +103,7 @@ class Controller_Home extends Controller_Base
 				->set('created', time())
 				->set('updated', time())
 				->save();
-			Tool_Utility::jsonReturn(1001, '订阅成功！');
+			jsonReturn(1001, '订阅成功！');
 		}
 
 	}

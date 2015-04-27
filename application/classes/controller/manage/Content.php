@@ -12,7 +12,7 @@ class Controller_Manage_Content extends Controller_Manage_Template
 				case 'getList':
 					$cid  = $data['cid'];
 					$list = $content->getAll($cid, $this->siteId);
-					Tool_Utility::jsonReturn(1001, '成功', $list);
+					jsonReturn(1001, '成功', $list);
 					break;
 				case 'getDetail':
 					$id     = $data['id'];
@@ -21,9 +21,9 @@ class Controller_Manage_Content extends Controller_Manage_Template
 						$detail             = $detail->as_array();
 						$detail['created'] = date('Y-m-d H:i:s',$detail['created']);
 						$detail['updated'] = date('Y-m-d H:i:s',$detail['updated']);
-						Tool_Utility::jsonReturn(1001, '成功', $detail);
+						jsonReturn(1001, '成功', $detail);
 					} else {
-						Tool_Utility::jsonReturn(4444, '文章未找到');
+						jsonReturn(4444, '文章未找到');
 					}
 					break;
 				case 'updateDetail':
@@ -39,13 +39,13 @@ class Controller_Manage_Content extends Controller_Manage_Template
 							->set('created', strtotime($data['created']))
 							->set('content', $data['content'])
 							->save();
-						Tool_Utility::jsonReturn(1001, '保存成功');
+						jsonReturn(1001, '保存成功');
 					} else {
-						Tool_Utility::jsonReturn(4444, '保存失败');
+						jsonReturn(4444, '保存失败');
 					}
 					break;
 				default:
-					Tool_Utility::jsonReturn(4444, '错误');
+					jsonReturn(4444, '错误');
 					break;
 			}
 		} else {

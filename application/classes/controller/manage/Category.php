@@ -30,7 +30,7 @@ class Controller_Manage_Category extends Controller_Manage_Template
 						->set('created', time())
 						->set('updated', time())
 						->save();
-					Tool_Utility::jsonReturn(1001);
+					jsonReturn(1001);
 					break;
 				case 'edit':
 					$modelCategory->where('id', '=', $post['id'])->where('sid', '=', $this->siteId)->find();
@@ -44,14 +44,14 @@ class Controller_Manage_Category extends Controller_Manage_Template
 							->set('status', $post['status'])
 							->set('updated', time())
 							->save();
-						Tool_Utility::jsonReturn(1001);
+						jsonReturn(1001);
 					} else {
-						Tool_Utility::jsonReturn(4444, '在您网站下没有找到此栏目');
+						jsonReturn(4444, '在您网站下没有找到此栏目');
 					}
 					break;
 				case 'del':
 					$modelCategory->where('id', '=', $post['id'])->where('sid', '=', $this->siteId)->delete();
-					Tool_Utility::jsonReturn(1001);
+					jsonReturn(1001);
 					break;
 				default:
 					break;
