@@ -14,9 +14,9 @@
 							<div class="dd" id="category">
 								<ol class="dd-list">
 									<?php foreach ($category as $v) { ?>
-										<li class="dd-item dd3-item" data-id="<?php p($v->id); ?>">
+										<li class="dd-item dd3-item" data-id="<?php p($v['id']); ?>">
 											<div class="dd-handle dd3-handle">Drag</div>
-											<div class="dd3-content"><?php p($v->name); ?></div>
+											<div class="dd3-content"><?php p($v['name']); ?></div>
 										</li>
 									<?php } ?>
 									<li class="dd-item dd3-item" data-id="15">
@@ -74,109 +74,7 @@
 			</header>
 			<section class="scrollable hover">
 				<ul class="contents list-group no-radius m-b-none m-t-n-xxs list-group-alt list-group-lg">
-					<li class="list-group-item">
-						<a href="#" class="thumb-xs pull-left m-r-sm">
-							<img src="images/avatar_default.jpg" class="img-circle">
-						</a>
-						<a href="#" class="clear">
-							<small class="pull-right text-muted">3 minuts ago</small>
-							<strong>Drew Wllon</strong>
-							<span class="label label-sm bg-primary text-uc">work</span>
-							<span>Wellcome and play this web application template ... </span>
-						</a>
-					</li>
-					<li class="list-group-item animated fadeInRightBig" href="#main-content, #main-list"
-						data-toggle="class:show,hide"><a href="#" class="thumb-xs pull-left m-r-sm"> <img
-								src="images/avatar.jpg" class="img-circle"> </a> <a href="#" class="clear">
-							<small class="pull-right text-muted">1 hour ago</small>
-							<strong>Jonathan George</strong> <span>Morbi nec nunc condimentum...<span
-									class="text-danger">click me</span></span> </a></li>
-					<li class="list-group-item"><a href="#" class="thumb-xs pull-left m-r-sm"> <img
-								src="images/avatar.jpg" class="img-circle"> </a> <a href="#" class="clear">
-							<small class="pull-right text-muted">2 hours ago</small>
-							<strong>Josh Long</strong> <span>Vestibulum ullamcorper sodales nisi nec...</span> </a></li>
-					<li class="list-group-item"><a href="#" class="thumb-xs pull-left m-r-sm"> <img
-								src="images/avatar_default.jpg" class="img-circle"> </a> <a href="#" class="clear">
-							<small class="pull-right text-muted">1 day ago</small>
-							<strong>Jack Dorsty</strong> <span>Morbi nec nunc condimentum...</span> </a></li>
-					<li class="list-group-item"><a href="#" class="thumb-xs pull-left m-r-sm"> <img
-								src="images/avatar.jpg" class="img-circle"> </a> <a href="#" class="clear">
-							<small class="pull-right text-muted">3 days ago</small>
-							<strong>Morgen Kntooh</strong> <span>Mobile first web app for startup...</span> </a></li>
-					<li class="list-group-item"><a href="#" class="thumb-xs pull-left m-r-sm"> <img
-								src="images/avatar_default.jpg" class="img-circle"> </a> <a href="#" class="clear">
-							<small class="pull-right text-muted">Jun 21</small>
-							<strong>Yoha Omish</strong> <span class="label label-sm bg-danger text-uc">private</span>
-							<span>Morbi nec nunc condimentum...</span> </a></li>
-					<li class="list-group-item"><a href="#" class="thumb-xs pull-left m-r-sm"> <img
-								src="images/avatar.jpg" class="img-circle"> </a> <a href="#" class="clear">
-							<small class="pull-right text-muted">May 10</small>
-							<strong>Gole Lido</strong> <span>Vestibulum ullamcorper sodales nisi nec...</span> </a></li>
-					<li class="list-group-item"><a href="#" class="thumb-xs pull-left m-r-sm"> <img
-								src="images/avatar_default.jpg" class="img-circle"> </a> <a href="#" class="clear">
-							<small class="pull-right text-muted">Jan 2</small>
-							<strong>Jonthan Snow</strong> <span class="label label-sm bg-success text-uc">clients</span>
-							<span>Morbi nec nunc condimentum...</span> </a></li>
-					<li class="list-group-item" href="#main-content" data-toggle="class:show"><a href="#"
-																								 class="thumb-xs pull-left m-r-sm">
-							<img src="images/avatar_default.jpg" class="img-circle"> </a> <a href="#" class="clear">
-							<small class="pull-right text-muted">3 minuts ago</small>
-							<strong>Drew Wllon</strong> <span class="label label-sm bg-primary text-uc">work</span>
-							<span>Vestibulum ullamcorper sodales nisi nec sodales nisi nec sodales nisi nec...</span>
-						</a></li>
-					<li class="list-group-item"><a href="#" class="thumb-xs pull-left m-r-sm"> <img
-								src="images/avatar.jpg" class="img-circle"> </a> <a href="#" class="clear">
-							<small class="pull-right text-muted">1 hour ago</small>
-							<strong>Jonathan George</strong> <span>Morbi nec nunc condimentum...</span> </a></li>
-					<li class="list-group-item"><a href="#" class="thumb-xs pull-left m-r-sm"> <img
-								src="images/avatar.jpg" class="img-circle"> </a> <a href="#" class="clear">
-							<small class="pull-right text-muted">2 hours ago</small>
-							<strong>Josh Long</strong> <span>Vestibulum ullamcorper sodales nisi nec...</span> </a></li>
-					<li class="list-group-item"><a href="#" class="thumb-xs pull-left m-r-sm"> <img
-								src="images/avatar_default.jpg" class="img-circle"> </a> <a href="#" class="clear">
-							<small class="pull-right text-muted">1 day ago</small>
-							<strong>Jack Dorsty</strong> <span>Morbi nec nunc condimentum...</span> </a></li>
-					<li class="list-group-item"><a href="#" class="thumb-xs pull-left m-r-sm"> <img
-								src="images/avatar.jpg" class="img-circle"> </a> <a href="#" class="clear">
-							<small class="pull-right text-muted">3 days ago</small>
-							<strong>Morgen Kntooh</strong> <span>Mobile first web app for startup...</span> </a></li>
-					<li class="list-group-item"><a href="#" class="thumb-xs pull-left m-r-sm"> <img
-								src="images/avatar_default.jpg" class="img-circle"> </a> <a href="#" class="clear">
-							<small class="pull-right text-muted">Jun 21</small>
-							<strong>Yoha Omish</strong> <span class="label label-sm bg-danger text-uc">private</span>
-							<span>Morbi nec nunc condimentum...</span> </a></li>
-					<li class="list-group-item"><a href="#" class="thumb-xs pull-left m-r-sm"> <img
-								src="images/avatar.jpg" class="img-circle"> </a> <a href="#" class="clear">
-							<small class="pull-right text-muted">May 10</small>
-							<strong>Gole Lido</strong> <span>Vestibulum ullamcorper sodales nisi nec...</span> </a></li>
-					<li class="list-group-item"><a href="#" class="thumb-xs pull-left m-r-sm"> <img
-								src="images/avatar_default.jpg" class="img-circle"> </a> <a href="#" class="clear">
-							<small class="pull-right text-muted">Jan 2</small>
-							<strong>Jonthan Snow</strong> <span class="label label-sm bg-success text-uc">clients</span>
-							<span>Morbi nec nunc condimentum...</span> </a></li>
-					<li class="list-group-item" href="#main-content" data-toggle="class:show"><a href="#"
-																								 class="thumb-xs pull-left m-r-sm">
-							<img src="images/avatar_default.jpg" class="img-circle"> </a> <a href="#" class="clear">
-							<small class="pull-right text-muted">3 minuts ago</small>
-							<strong>Drew Wllon</strong> <span class="label label-sm bg-primary text-uc">work</span>
-							<span>Vestibulum ullamcorper sodales nisi nec sodales nisi nec sodales nisi nec...</span>
-						</a></li>
-					<li class="list-group-item"><a href="#" class="thumb-xs pull-left m-r-sm"> <img
-								src="images/avatar.jpg" class="img-circle"> </a> <a href="#" class="clear">
-							<small class="pull-right text-muted">1 hour ago</small>
-							<strong>Jonathan George</strong> <span>Morbi nec nunc condimentum...</span> </a></li>
-					<li class="list-group-item"><a href="#" class="thumb-xs pull-left m-r-sm"> <img
-								src="images/avatar.jpg" class="img-circle"> </a> <a href="#" class="clear">
-							<small class="pull-right text-muted">2 hours ago</small>
-							<strong>Josh Long</strong> <span>Vestibulum ullamcorper sodales nisi nec...</span> </a></li>
-					<li class="list-group-item"><a href="#" class="thumb-xs pull-left m-r-sm"> <img
-								src="images/avatar_default.jpg" class="img-circle"> </a> <a href="#" class="clear">
-							<small class="pull-right text-muted">1 day ago</small>
-							<strong>Jack Dorsty</strong> <span>Morbi nec nunc condimentum...</span> </a></li>
-					<li class="list-group-item"><a href="#" class="thumb-xs pull-left m-r-sm"> <img
-								src="images/avatar.jpg" class="img-circle"> </a> <a href="#" class="clear">
-							<small class="pull-right text-muted">3 days ago</small>
-							<strong>Morgen Kntooh</strong> <span>Mobile first web app for startup...</span> </a></li>
+
 				</ul>
 			</section>
 			<footer class="footer b-t bg-white-only">
@@ -241,10 +139,7 @@
 							<form role="form">
 								<div class="form-group">
 									<label>关键词</label>
-
-									<div id="MyPillbox" class="pillbox clearfix">
-										<ul><input type="text" name="keywords" placeholder="添加关键词"></ul>
-									</div>
+									<input type="text" name="keywords" class="input-sm input-s form-control" placeholder="添加关键词">
 								</div>
 								<div class="form-group">
 									<label>来源</label>
@@ -259,6 +154,9 @@
 								<div class="form-group">
 									<label>所属栏目</label>
 									<select name="cid" class="form-control m-b">
+										<?php foreach ($category as $v) { ?>
+											<option value="<?= $v['id'] ?>"><?= $v['name'] ?></option>
+										<?php } ?>
 									</select>
 								</div>
 								<div class="form-group">
@@ -300,18 +198,14 @@
 				var saveContentButton = $("button.saveContent");
 				var content = result.result.data;
 				saveContentButton.attr('data-id', content.id);
+				$("select[name=cid]").val(content.cid);
 				$("input[name=title]").val(content.title);
 				$("input[name=keywords]").val(content.keywords);
 				$("input[name=origin]").val(content.origin);
 				$("input[name=description]").val(content.description);
 				$("input[name=created]").val(content.created);
 				$("input[name=updated]").val(content.updated);
-				var category = '';
-				for(var i =0;i < content.category.length;i++){
-					category += '<option value="' + content.category[i].id + '">' + content.category[i].name + '</option>';
-				}
-				$("select[name=cid]").html(category);
-				$("#editor").html(content.content);
+				CKEDITOR.instances["editor"].setData(content.content);
 				$("#main-list").removeClass('show').addClass('hide');
 				$("#main-content").removeClass('hide').addClass('show');
 				saveContentButton.on('click', function () {
@@ -323,7 +217,7 @@
 						'origin': $("input[name=origin]").val(),
 						'keywords': $("input[name=keywords]").val(),
 						'description': $("input[name=description]").val(),
-						'content': $("#editor").html(),
+						'content': CKEDITOR.instances['editor'].getData(),
 						'created': $("input[name=created]").val(),
 						'updated': $("input[name=updated]").val()
 					};
@@ -383,25 +277,33 @@
 		$('#category').nestable();
 
 		$(".dd-list > .dd-item").on('click', function () {
+			$("#main-list").removeClass('hide').addClass('show');
+			$("#main-content").removeClass('show').addClass('hide');
 			$(".dd3-content").removeClass('active');
 			$(this).children('.dd3-content').addClass("active");
 			$.post('/manage/content/index', {action: 'getList', cid: $(this).attr('data-id')}, function (result) {
 				if (result.status == 1001) {
-					var contents = '';
-					content = result.result.data;
-					for (var i = 0; i < content.length; i++) {
-						contents += '<li class="list-group-item" onclick="getDetail(' + content[i].id + ')">' +
-						'<a href="#" class="thumb-xs pull-left m-r-sm">' +
-						'<img src="" class="img-circle">' +
-						'</a>' +
-						'<a href="#" class="clear">' +
-						'<small class="pull-right text-muted">' + content[i].created + '</small>' +
-						'<strong>' + content[i].title + '</strong>' +
-						'<p>' + content[i].description + '</p>' +
-						'</a>' +
-						'</li>';
+					if(result.result.data.length == 0){
+						var emptyNotice = '<div class="alert alert-warning alert-block"> <button type="button" class="close" data-dismiss="alert">×</button> <h4><i class="fa fa-bell-alt"></i>提示!</h4> <p>该栏目还没有内容，点击右上角添加内容!</p> </div>';
+						$(".contents").html(emptyNotice);
+					}else{
+						var contents = '';
+						content = result.result.data;
+						for (var i = 0; i < content.length; i++) {
+							contents += '<li class="list-group-item animated fadeInRightBig" onclick="getDetail(' + content[i].id + ')">' +
+							'<a href="#" class="thumb-xs pull-left m-r-sm">' +
+							'<img src="" class="img-circle">' +
+							'</a>' +
+							'<a href="#" class="clear">' +
+							'<small class="pull-right text-muted">' + content[i].created + '</small>' +
+							'<strong>' + content[i].title + '</strong>' +
+							'<p>' + content[i].description + '</p>' +
+							'</a>' +
+							'</li>';
+						}
+						$(".contents").html(contents);
 					}
-					$(".contents").html(contents);
+
 				} else {
 					alert(result.result.msg);
 				}

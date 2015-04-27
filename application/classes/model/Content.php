@@ -27,7 +27,6 @@ class Model_Content extends ORM
 			$v['created'] = date('Y-m-d H:i:s', $v['created']);
 			$contents[$k] = $v;
 		}
-
 		return $contents;
 	}
 }

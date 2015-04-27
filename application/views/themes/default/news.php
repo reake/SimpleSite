@@ -14,27 +14,41 @@
                                         <li data-target="#c-fade" data-slide-to="2" class=""></li>
                                     </ol>
                                     <div class="carousel-inner">
-                                        <div class="item active text-center"><span class="h2"><i
-                                                class="fa fa-clock-o fa-5x m-t icon-muted"></i></span>
+                                        <div class="item active text-center">
+											<span class="h2">
+												<i class="fa fa-clock-o fa-5x m-t icon-muted"></i>
+											</span>
 
-                                            <p class="text-muted m-t m-b-lg">Time saving</p></div>
-                                        <div class="item text-center"><span class="h2"><i
-                                                class="fa fa-file-o fa-5x m-t icon-muted"></i></span>
+                                            <p class="text-muted m-t m-b-lg">Time saving</p>
+										</div>
+                                        <div class="item text-center">
+											<span class="h2">
+												<i class="fa fa-file-o fa-5x m-t icon-muted"></i>
+											</span>
 
-                                            <p class="text-muted m-t m-b-lg">Full documents</p></div>
-                                        <div class="item text-center"><span class="h2"><i
-                                                class="fa fa-mobile fa-5x m-t icon-muted"></i></span>
+                                            <p class="text-muted m-t m-b-lg">Full documents</p>
+										</div>
+                                        <div class="item text-center">
+											<span class="h2">
+												<i class="fa fa-mobile fa-5x m-t icon-muted"></i>
+											</span>
 
-                                            <p class="text-muted m-t m-b-lg">Mobile/Tablet/Desktop</p></div>
+                                            <p class="text-muted m-t m-b-lg">Mobile/Tablet/Desktop</p>
+										</div>
                                     </div>
-                                    <a class="left carousel-control" href="#c-fade" data-slide="prev"> <i
-                                            class="fa fa-angle-left"></i> </a> <a class="right carousel-control"
-                                                                                  href="#c-fade" data-slide="next"> <i
-                                        class="fa fa-angle-right"></i> </a></div>
+                                    <a class="left carousel-control" href="#c-fade" data-slide="prev">
+										<i class="fa fa-angle-left"></i>
+									</a>
+									<a class="right carousel-control" href="#c-fade" data-slide="next">
+										<i class="fa fa-angle-right"></i>
+									</a>
+								</div>
                             </section>
                         </div>
-                        <div class="caption wrapper-lg"><h2 class="post-title"><a href="#">7 things you need to know
-                            about the flat design</a></h2>
+                        <div class="caption wrapper-lg">
+							<h2 class="post-title">
+								<a href="#">7 things you need to knowabout the flat design</a>
+							</h2>
 
                             <div class="post-sum"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id
                                 neque quam. Aliquam sollicitudin venenatis ipsum ac feugiat. Vestibulum ullamcorper
@@ -43,14 +57,17 @@
                                 consectetur. Integer eleifend, nisl venenatis consequat iaculis, lectus arcu malesuada
                                 sem, dapibus porta quam lacus eu neque.</p></div>
                             <div class="line line-lg"></div>
-                            <div class="text-muted"><i class="fa fa-user icon-muted"></i> by <a href="#" class="m-r-sm">Admin</a>
+                            <div class="text-muted">
+								<i class="fa fa-user icon-muted"></i> by <a href="#" class="m-r-sm">Admin</a>
                                 <i class="fa fa-clock-o icon-muted"></i> Feb 20, 2013 <a href="#" class="m-l-sm"><i
                                         class="fa fa-comment-o icon-muted"></i> 2 comments</a></div>
                         </div>
                     </div>
                     <div class="post-item">
-                        <div class="caption wrapper-lg"><h2 class="post-title"><a href="#">Bootstrap 3: What you need to
-                            know</a></h2>
+                        <div class="caption wrapper-lg">
+							<h2 class="post-title">
+								<a href="#">Bootstrap 3: What you need toknow</a>
+							</h2>
 
                             <div class="post-sum"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id
                                 neque quam. Aliquam sollicitudin venenatis ipsum ac feugiat. Vestibulum ullamcorper
@@ -104,8 +121,10 @@
 
                 <div class="line line-dashed"></div>
                 <div>
-                    <article class="media"><a class="pull-left thumb thumb-wrapper m-t-xs"> <img
-                            src="images/thumb_1.png"> </a>
+                    <article class="media">
+						<a class="pull-left thumb thumb-wrapper m-t-xs">
+							<img src="images/thumb_1.png">
+						</a>
 
                         <div class="media-body"><a href="#" class="font-semibold">Bootstrap 3: What you need to know</a>
 
@@ -124,11 +143,13 @@
                         </div>
                     </article>
                     <div class="line"></div>
-                    <article class="media m-t-none"><a class="pull-left thumb thumb-wrapper m-t-xs"> <img
-                            src="images/thumb_3.png"> </a>
+                    <article class="media m-t-none">
+						<a class="pull-left thumb thumb-wrapper m-t-xs">
+							<img src="images/thumb_3.png">
+						</a>
 
-                        <div class="media-body"><a href="#" class="font-semibold">Sed diam nonummy nibh euismod
-                            tincidunt ut laoreet</a>
+                        <div class="media-body">
+							<a href="#" class="font-semibold">Sed diam nonummy nibh euismodtincidunt ut laoreet</a>
 
                             <div class="text-xs block m-t-xs"><a href="#">MFC</a> 1 week ago</div>
                         </div>
