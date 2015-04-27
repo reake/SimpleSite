@@ -13,7 +13,7 @@
 		<div class="collapse navbar-collapse">
 			<ul class="nav navbar-nav navbar-right">
 				<?php foreach ($category as $v) { ?>
-					<li><a href="<?php p($v->url); ?>"><?php p($v->name); ?></a></li>
+					<li><a href="<?= $v['url'] ?>"><?= $v['name'] ?></a></li>
 				<?php } ?>
 				<li>
 					<div class="m-t-sm">

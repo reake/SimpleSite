@@ -24,8 +24,8 @@
 								<select name="pid" class="form-control m-b">
 									<option value="0">顶级栏目</option>
 									<?php foreach ($category as $k => $v) { ?>
-										<option <?php if ($cateInfo->pid == $v->id) p("selected"); ?>
-											value="<?php p($v->id); ?>"><?php p($v->name); ?></option>
+										<option <?php if ($cateInfo->pid == $v['id']) p("selected"); ?>
+											value="<?= $v['id'] ?>"><?= $v['name'] ?></option>
 									<?php } ?>
 								</select>
 							</div>

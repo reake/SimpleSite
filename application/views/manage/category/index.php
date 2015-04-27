@@ -24,25 +24,25 @@
 					<?php foreach ($category as $k => $v) { ?>
 						<tr>
 							<td>
-								<?php p($v->id); ?>
+								<?= $v['id'] ?>
 							</td>
 							<td>
-								<?php p($v->status); ?>
+								<?= $v['status'] ?>
 							</td>
 							<td>
-								<?php p($v->name); ?>
+								<?= $v['name'] ?>
 							</td>
 							<td>
-								<?php p($v->url); ?>
+								<?= $v['url'] ?>
 							</td>
 							<td>
-								<?php p($v->types); ?>
+								<?= $v['types'] ?>
 							</td>
 							<td>
-								<?php p($v->status); ?>
+								<?= $v['status'] ?>
 							</td>
 							<td>
-								<?php p($v->created); ?>
+								<?= $v['created'] ?>
 							</td>
 							<td class="text-right">
 								<div class="btn-group">
@@ -50,9 +50,9 @@
 										<i class="fa fa-pencil"></i>
 									</a>
 									<ul class="dropdown-menu pull-right">
-										<li><a href="/manage/category/set?id=<?php p($v->id); ?>">编辑</a></li>
+										<li><a href="/manage/category/set?id=<?= $v['id'] ?>">编辑</a></li>
 										<li class="divider"></li>
-										<li><a onclick="delCategory(<?php p($v->id); ?>">删除</a></li>
+										<li><a onclick="delCategory(<?= $v['id'] ?>">删除</a></li>
 									</ul>
 								</div>
 							</td>
