@@ -3,23 +3,12 @@
     <div>
         <div class="container m-t-xl">
             <div class="row">
-                <div class="col-sm-7"><h2 class="font-thin m-b-lg">Fully Responsive on <span
-                        class="text-primary">Mobile</span>, <span class="text-primary">Tablet</span> and <span
-                        class="text-primary">Desktop</span></h2>
+                <div class="col-sm-7">
+					<h2 class="font-thin m-b-lg"><span class="text-primary">简站(Simple-Site)</span> - 简单建站！</h2>
 
-                    <p class="h4 m-b-lg l-h-1x">Your application will works no matter where you are, You can use your
-                        application at anywhere in the world. This template works on mobile device too. </p>
-
-                    <div class="row m-b-xl">
-                        <div class="col-sm-6"><i class="fa fa-fw fa-angle-right"></i>Have Any Number of Columns</div>
-                        <div class="col-sm-6"><i class="fa fa-fw fa-angle-right"></i>Scales to Any Width</div>
-                        <div class="col-sm-6"><i class="fa fa-fw fa-angle-right"></i>It's Smart and Easy</div>
-                        <div class="col-sm-6"><i class="fa fa-fw fa-angle-right"></i>It Fits In with You</div>
-                        <div class="col-sm-6"><i class="fa fa-fw fa-angle-right"></i>Take What You Need</div>
-                        <div class="col-sm-6"><i class="fa fa-fw fa-angle-right"></i>Flexible way to create a responsive
-                            layout
-                        </div>
-                    </div>
+                    <p class="h4 m-b-lg l-h-1x">
+						简站(Simple-Site)是一套开源的建站系统，它能够同时管理PC网站和移动网站，并拥有各类强大的功能模块。无论您是企业、政府、组织或者个人，您无需任何技术即可在几分钟内搭建好一个属于自己的微网站！
+					</p>
                     <p class="clearfix">&nbsp;</p>
 
                     <div class="row m-b-xl">
@@ -54,19 +43,19 @@
         <div class="container">
             <div class="row m-t-xl m-b-xl">
                 <div class="col-sm-5 text-center clearfix m-t-xl" data-ride="animated" data-animation="fadeInLeftBig">
-                    <div class="h1 font-bold m-t-xl m-b-xl"><span class="fa-2x icon-muted">{less}</span></div>
+                    <div class="h1 font-bold m-t-xl m-b-xl"><span class="fa-2x icon-muted">{Code}</span></div>
                 </div>
-                <div class="col-sm-7"><h2 class="font-thin m-b-lg">Using LESS</h2>
+                <div class="col-sm-7"><h2 class="font-thin m-b-lg">开放源码</h2>
 
-                    <p class="h4 m-b-lg l-h-1x">This file provide Less css files, You can compiled the less to css files
-                        with lessphp, it provides the following mechanisms: variables, nesting, mixins, operators and
-                        functions. </p>
+                    <p class="h4 m-b-lg l-h-1x">
+						无需担心数据安全性问题，您可以将系统部署到您自己的服务器上运行。系统拥有高度扩展性，可以方便的融入任何功能，完善的二次开发文档与高质量的代码，使您可以方便快速的开发更加符合您业务需求的功能。
+					</p>
 
-                    <p class="m-b-xl">We make the less files as Bootstrap way. you can config the variables in one
-                        place, like colors: @brand-primary, @brand-success, @border-color. and you can get the unlimited
-                        colors for your application.</p>
+                    <p class="m-b-xl">
+						每周一个版本快速迭代，后台自动更新，您无需为升级或打补丁而操心！您的任何意见或建议都会得到回复并处理。
+					</p>
 
-                    <p class="m-t-xl m-b-xl h4"><i class="fa fa-quote-left fa-fw fa-1x icon-muted"></i> Less is More</p>
+                    <p class="m-t-xl m-b-xl h4"><i class="fa fa-quote-left fa-fw fa-1x icon-muted"></i> 使您无后顾之忧，专注您专业的事情！</p>
                 </div>
             </div>
         </div>
@@ -74,12 +63,13 @@
     <div class="b-t b-light">
         <div class="container m-t-xl">
             <div class="row">
-                <div class="col-sm-7"><h2 class="font-thin m-b-lg">Application Layout</h2>
+                <div class="col-sm-7"><h2 class="font-thin m-b-lg">强力驱动</h2>
 
-                    <p class="h4 m-b-lg l-h-1x">We provide .hbox and .vbox to create the application layout. it let you
-                        create complicated layout as you want. </p>
+                    <p class="h4 m-b-lg l-h-1x">
+						由功能强大、稳定性高的系统在背后强力驱动，使你可以更加专注业务！
+					</p>
 
-                    <p class="m-b-xl"><a href="index.html" class="btn btn-sm btn-primary font-bold">Try it now</a></p>
+                    <p class="m-b-xl"><a href="/system" class="btn btn-sm btn-primary font-bold">系统介绍 >></a></p>
                 </div>
                 <div class="col-sm-5 text-center" data-ride="animated" data-animation="fadeInUp">
                     <section class="panel bg-dark m-t-lg m-r-n-lg m-b-n-lg no-border device animated fadeInUp">
@@ -100,14 +90,15 @@
                             class="fa fa-circle text-warning fa-2x"></i> <i class="fa fa-circle text-danger fa-2x"></i>
                         <i class="fa fa-circle text-dark fa-2x"></i> <i class="fa fa-circle text-light fa-2x"></i></div>
                 </div>
-                <div class="col-sm-7"><h2 class="font-thin m-b-lg">Rich Components & Widgets</h2>
-
-                    <p class="h4 m-b-lg l-h-1x">We create many components and widgets for your real application, we
-                        provide 8 default color palettes for you to create the colorful components. </p>
+                <div class="col-sm-7">
+					<h2 class="font-thin m-b-lg">众多主题模板与功能插件</h2>
+                    <p class="h4 m-b-lg l-h-1x">
+						系统本身自带多款漂亮的通用型网站模板供您免费使用，并拥有众多功能插件，随时添加删除插件！
+					</p>
                     <ul class="m-b-xl fa-ul">
-                        <li><i class="fa fa-li fa-check text-muted"></i>369 Fontawesome icons</li>
-                        <li><i class="fa fa-li fa-check text-muted"></i>+30 Jquery Components</li>
-                        <li><i class="fa fa-li fa-check text-muted"></i>Application pages</li>
+                        <li><i class="fa fa-li fa-check text-muted"></i>369+ 主题模板</li>
+                        <li><i class="fa fa-li fa-check text-muted"></i>30+ 插件</li>
+                        <li><i class="fa fa-li fa-check text-muted"></i>230043+ 网站使用中</li>
                     </ul>
                 </div>
             </div>
@@ -116,17 +107,21 @@
     <div class="b-t b-light">
         <div class="container m-t-xl">
             <div class="row">
-                <div class="col-sm-7"><h2 class="font-thin m-b-lg">Backbone Notes with Mysql & RESTful API</h2>
-
-                    <p class="h4 m-b-lg l-h-1x"> We built a Backbone Note application for your inspiration, It supports
-                        local storage and mysql data save. We also created a RESTful api to Get, Post, Put and Delete
-                        the data. </p>
-
-                    <p class="m-b-xl"><a href="../../manage/notebook.html" class="btn btn-dark font-bold">Try it now</a></p></div>
+                <div class="col-sm-7">
+					<h2 class="font-thin m-b-lg">PC网站 + 手机网站 + 微网站</h2>
+                    <p class="h4 m-b-lg l-h-1x">
+						同时拥有并管理三个网站，无需为每个网站添加内容。
+					</p>
+                    <p class="m-b-xl">
+						<a href="/website" class="btn btn-dark font-bold">详细介绍 >></a>
+					</p>
+				</div>
                 <div class="col-sm-5 text-center" data-ride="animated" data-animation="fadeInRightBig">
                     <section class="panel bg-light m-t-lg m-r-n-lg m-b-n-lg no-border device animated fadeInUp">
-                        <header class="panel-heading text-left"><i class="fa fa-circle fa-fw icon-muted"></i> <i
-                                class="fa fa-circle fa-fw icon-muted"></i> <i class="fa fa-circle fa-fw icon-muted"></i>
+                        <header class="panel-heading text-left">
+							<i class="fa fa-circle fa-fw icon-muted"></i>
+							<i class="fa fa-circle fa-fw icon-muted"></i>
+							<i class="fa fa-circle fa-fw icon-muted"></i>
                         </header>
                         <img src="<?php echo p($url); ?>/_assets/images/app.png" class="img-full"></section>
                 </div>
@@ -134,6 +129,6 @@
         </div>
     </div>
     <div class="b-t b-light pos-rlt bg-white">
-        <div class="container"><p class="m-t-xl m-b-xl">Much more features will be added in. </p></div>
+        <div class="container"><p class="m-t-xl m-b-xl">简站(Simple-Site) - 专注您更专业的事情! </p></div>
     </div>
 </section>

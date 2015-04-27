@@ -72,6 +72,9 @@ class Controller_Home extends Controller_Base
 
 	public function action_news()
 	{
+		$data = array(
+			'news' => ORM::factory('Content')->getAll()
+		);
 		$this->template = 'news';
 	}
 
@@ -84,5 +87,24 @@ class Controller_Home extends Controller_Base
 	public function action_findPassword()
 	{
 		$this->template = 'findPassword';
+	}
+
+	public function action_subscribe()
+	{
+		$email = $this->request->post('email');
+		$find  = ORM::factory('Subscribe')->where('sid', '=', $this->siteId)->where('email', '=', $email)->find();
+		if ($find->loaded()) {
+			Tool_Utility::jsonReturn(1001, '您已经订阅过！');
+		} else {
+			ORM::factory('Subscribe')
+				->set('sid', $this->siteId)
+				->set('email', $email)
+				->set('status', 1)
+				->set('created', time())
+				->set('updated', time())
+				->save();
+			Tool_Utility::jsonReturn(1001, '订阅成功！');
+		}
+
 	}
 }

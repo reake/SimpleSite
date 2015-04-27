@@ -148,16 +148,15 @@
 		</div>
 	</div>
 	<div id="newsletter" class="bg-white clearfix wrapper-lg">
-		<div class="container text-center m-t-xl m-b-xl" data-ride="animated" data-animation="fadeIn"><h2>
-				订阅消息</h2>
-
+		<div class="container text-center m-t-xl m-b-xl" data-ride="animated" data-animation="fadeIn">
+			<h2>订阅消息</h2>
 			<p>想关注我们的最新消息？输入邮箱订阅</p>
-
 			<form class="form-inline m-t-xl m-b-xl">
-				<div class="form-group"><input class="form-control input-lg" placeholder="您的邮箱"
+				<div class="form-group">
+					<input name="email" class="form-control input-lg" placeholder="您的邮箱"
 											   data-ride="animated" data-animation="fadeInLeftBig" data-delay="300">
 				</div>
-				<button type="submit" class="btn btn-default btn-lg" data-ride="animated"
+				<button type="submit" class="btn btn-default btn-lg subscribe" data-ride="animated"
 						data-animation="fadeInRightBig" data-delay="600">订阅
 				</button>
 			</form>
