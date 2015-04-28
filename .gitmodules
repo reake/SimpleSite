@@ -52,3 +52,6 @@
 [submodule "application/vendor/swiftmailer"]
 	path = application/vendor/swiftmailer
 	url = https://github.com/swiftmailer/swiftmailer.git
+[submodule "modules/captcha"]
+	path = modules/captcha
+	url = https://github.com/kolanos/kohana-captcha.git
