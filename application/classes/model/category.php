@@ -2,9 +2,14 @@
 
 class Model_Category extends ORM
 {
-	const TYPES_CID_MAIN = 1;
-	const TYPES_CID_SUB  = 2;
-	const TYPES_LINK     = 0;
+	const TYPES_NEWS_LIST   = 1;
+	const TYPES_NEWS_DETAIL = 2;
+	const TYPES_SINGLE_PAGE = 3;
+	const TYPES_LINK        = 0;
+
+	const STATUS_SHOW = 1;
+	const STATUS_HIDE = 0;
+
 	protected $_table_name    = 'Category';
 	protected $_table_columns = array(
 		'id'          => array('type' => 'int'),
@@ -13,7 +18,7 @@ class Model_Category extends ORM
 		'name'        => array('type' => 'string'),
 		'description' => array('type' => 'string'),
 		'types'       => array('type' => 'int'),
-		'url'         => array('type' => 'string'),
+		'uri'         => array('type' => 'string'),
 		'orders'      => array('type' => 'int'),
 		'status'      => array('type' => 'int'),
 		'created'     => array('type' => 'int'),
@@ -21,9 +26,10 @@ class Model_Category extends ORM
 	);
 
 	private static $types = array(
-		0 => '文章列表',
-		1 => '单篇文章',
-		2 => '超链接',
+		1 => '文章列表',
+		2 => '文章详情',
+		3 => '单篇文章',
+		0 => '超链接',
 	);
 
 	public function filters()
@@ -35,17 +41,46 @@ class Model_Category extends ORM
 		);
 	}
 
-	public function getAll($siteId, $isTop = 0)
+	public function getAll($siteId, $status = NULL)
 	{
-		$category    = $this->where('sid', '=', $siteId)->where('pid', '=', $isTop)->find_all();
+		$category = $this->getCategory($siteId, $status);
+		foreach ($category as $k => $v) {
+			$category[$k]['subCategory'] = $this->getCategory($siteId, $status, $v['id']);
+		}
+
+		return $category;
+	}
+
+	private function getCategory($siteId, $status = NULL, $pid = 0)
+	{
+		$this->where('sid', '=', $siteId)->where('pid', '=', $pid);
+		if ($status !== NULL) $this->where('status', '=', $status);
+		$category    = $this->find_all();
 		$categoryArr = array();
 		foreach ($category as $k => $v) {
 			$v               = $v->as_array();
-			$v['created'] = date('Y-m-d H:i:s', $v['created']);
+			$v['created']    = date('Y-m-d H:i:s', $v['created']);
 			$categoryArr[$k] = $v;
 		}
 
 		return $categoryArr;
+	}
+
+	public function getData($category)
+	{
+		if (!is_object($category)) return FALSE;
+		switch ($category->types) {
+			case self::TYPES_NEWS_LIST:
+				$contents = ORM::factory('Content')->getAll($category->id, $category->sid);
+
+				return array(
+					'contents' => $contents,
+				);
+				break;
+			default:
+				return array();
+				break;
+		}
 	}
 
 	public function getTypes($types = NULL)

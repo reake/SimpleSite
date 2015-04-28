@@ -140,21 +140,9 @@ Cookie::$salt = 'asdfasdf';
  * defaults for the URI.
  */
 
-Route::set('user', '<action>', array('action' => '(login|logout|register|feature|download|news|subscribe)'))
-	->defaults(array(
-		'controller' => 'home',
-		'action'     => 'login',
-	));
-
 Route::set('common', 'manage/common(/<action>)', array('action' => '(sms|lock|404|changeSite)'))
 	->defaults(array(
 		'controller' => 'manage_common',
-		'action'     => 'index',
-	));
-
-Route::set('home', '(<controller>(/<action>))')
-	->defaults(array(
-		'controller' => 'home',
 		'action'     => 'index',
 	));
 
@@ -198,4 +186,16 @@ Route::set('create', 'manage/create(/<action>)')
 	->defaults(array(
 		'controller' => 'manage_create',
 		'action'     => 'step1',
+	));
+
+Route::set('other', '<action>', array('action' => '(register|login|findpassword|subscribe)'))
+	->defaults(array(
+		'controller' => 'home',
+		'action'     => 'index',
+	));
+
+Route::set('home', '<page>', array('page' => '.*'))
+	->defaults(array(
+		'controller' => 'home',
+		'action'     => 'index',
 	));

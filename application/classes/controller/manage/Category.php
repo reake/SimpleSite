@@ -24,7 +24,7 @@ class Controller_Manage_Category extends Controller_Manage_Template
 						->set('name', $post['name'])
 						->set('description', $post['description'])
 						->set('types', $post['types'])
-						->set('url', $post['url'])
+						->set('uri', $post['uri'])
 						->set('orders', $post['orders'])
 						->set('status', $post['status'])
 						->set('created', time())
@@ -39,7 +39,7 @@ class Controller_Manage_Category extends Controller_Manage_Template
 							->set('name', $post['name'])
 							->set('description', $post['description'])
 							->set('types', $post['types'])
-							->set('url', $post['url'])
+							->set('uri', $post['uri'])
 							->set('orders', $post['orders'])
 							->set('status', $post['status'])
 							->set('updated', time())
@@ -76,7 +76,7 @@ class Controller_Manage_Category extends Controller_Manage_Template
 					'name'        => '',
 					'description' => '',
 					'types'       => 0,
-					'url'         => '',
+					'uri'         => '',
 					'orders'      => 0,
 					'status'      => FALSE
 				);

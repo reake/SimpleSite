@@ -4,10 +4,27 @@ class Controller_Home extends Controller_Base
 {
 	public function action_index()
 	{
-		$this->template = 'index';
-		$this->data     = array(
-			'loginUrl' => '/login'
+		$uri      = $this->request->uri();
+		$category = array();
+		$data     = array();
+		$view     = 'index';
+		if ($uri != '/') {
+			$modelCategory = ORM::factory('Category');
+			$category      = $modelCategory->where('sid', '=', $this->siteId)->where('uri', '=', $uri)->find();
+			if ($category->loaded()) {
+				$view = $uri;
+				$data = $modelCategory->getData($category);
+			} else {
+				$view = '404';
+			}
+		}
+		$categoryInfo = array(
+			'category'        => $this->category,
+			'currentCategory' => $category
 		);
+		$data         = array_merge($data, $categoryInfo);
+		$viewHtml     = View::factory($this->theme . $view, $data);
+		$this->response->body($viewHtml);
 	}
 
 	public function action_register()
@@ -60,33 +77,10 @@ class Controller_Home extends Controller_Base
 		$this->response->body(View::factory($this->theme . 'login', array('registerUrl' => '/register', 'findPasswordUrl' => '/findPassword')));
 	}
 
-	public function action_feature()
-	{
-		$this->template = 'feature';
-	}
-
-	public function action_download()
-	{
-		$this->template = 'download';
-	}
-
-	public function action_news()
-	{
-		$data = array(
-			'news' => ORM::factory('Content')->getAll()
-		);
-		$this->template = 'news';
-	}
-
 	public function action_logout()
 	{
 		Auth::instance()->logout();
 		$this->redirect('/login');
-	}
-
-	public function action_findPassword()
-	{
-		$this->template = 'findPassword';
 	}
 
 	public function action_subscribe()

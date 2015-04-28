@@ -1,3 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title><?= $title ?></title>
+	<meta name="description" content="<?= $keywords ?>"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+	<link rel="stylesheet" href="<?= $url ?>/_assets/css/font.css" type="text/css"/>
+	<link rel="stylesheet" href="<?= $url ?>/_assets/css/landing.css" type="text/css"/>
+	<link rel="stylesheet" href="<?= $url ?>/_assets/css/app.v1.css" type="text/css"/>
+	<!--[if lt IE 9]>
+	<script src="<?=$url?>/_assets/js/ie/html5shiv.js"></script>
+	<script src="<?=$url?>/_assets/js/ie/respond.min.js"></script>
+	<script src="<?=$url?>/_assets/js/ie/excanvas.js"></script>
+	<![endif]-->
+</head>
+<body class="">
+<!-- header -->
+<?php include('header.php'); ?>
+<!-- / header -->
 <section id="content">
 	<div class="bg-primary dk">
 		<div class="text-center wrapper">
@@ -154,7 +174,7 @@
 			<form class="form-inline m-t-xl m-b-xl">
 				<div class="form-group">
 					<input name="email" class="form-control input-lg" placeholder="您的邮箱"
-											   data-ride="animated" data-animation="fadeInLeftBig" data-delay="300">
+						   data-ride="animated" data-animation="fadeInLeftBig" data-delay="300">
 				</div>
 				<button type="submit" class="btn btn-default btn-lg subscribe" data-ride="animated"
 						data-animation="fadeInRightBig" data-delay="600">订阅
@@ -163,3 +183,14 @@
 		</div>
 	</div>
 </section>
+<!-- footer -->
+<?php include('footer.php'); ?>
+<!-- / footer -->
+<!-- Bootstrap --> <!-- App -->
+<script src="<?= $url ?>/_assets/js/app.v1.js"></script>
+<script src="<?= $url ?>/_assets/js/appear/jquery.appear.js"></script>
+<script src="<?= $url ?>/_assets/js/scroll/smoothscroll.js"></script>
+<script src="<?= $url ?>/_assets/js/landing.js"></script>
+<script src="<?= $url ?>/_assets/js/app.plugin.js"></script>
+</body>
+</html>

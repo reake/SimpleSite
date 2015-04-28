@@ -43,8 +43,8 @@
 							<label class="col-lg-2 control-label">栏目链接</label>
 
 							<div class="col-lg-10">
-								<input type="text" name="url" class="form-control" placeholder=""
-									   value="<?php p($cateInfo->url); ?>">
+								<input type="text" name="uri" class="form-control" placeholder=""
+									   value="<?php p($cateInfo->uri); ?>">
 							</div>
 						</div>
 						<div class="form-group">
@@ -56,7 +56,7 @@
 							</div>
 						</div>
 						<div class="form-group">
-							<label class="col-lg-2 control-label">栏目类型</label>
+							<label class="col-lg-2 control-label">选择栏目类型</label>
 
 							<div class="col-lg-10">
 								<select name="types" class="form-control m-b">
@@ -82,6 +82,13 @@
 							</div>
 						</div>
 					</form>
+				</div>
+			</section>
+		</div>
+		<div class="col-sm-6">
+			<section class="panel panel-default">
+				<header class="panel-heading font-bold">栏目类型</header>
+				<div class="panel-body">
 				</div>
 			</section>
 		</div>
