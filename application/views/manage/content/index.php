@@ -16,27 +16,19 @@
 									<?php foreach ($category as $v) { ?>
 										<li class="dd-item dd3-item" data-id="<?php p($v['id']); ?>">
 											<div class="dd-handle dd3-handle">Drag</div>
-											<div class="dd3-content"><?php p($v['name']); ?></div>
+											<div class="dd3-content"><?= $v['name'] ?></div>
+											<?php if(isset($v['subCategory'])){ ?>
+												<ol class="dd-list">
+													<?php foreach ($v['subCategory'] as $v) { ?>
+													<li class="dd-item dd3-item" data-id="<?= $v['id'] ?>">
+														<div class="dd-handle dd3-handle">Drag</div>
+														<div class="dd3-content"><?= $v['name'] ?></div>
+													</li>
+													<?php } ?>
+												</ol>
+											<?php } ?>
 										</li>
 									<?php } ?>
-									<li class="dd-item dd3-item" data-id="15">
-										<div class="dd-handle dd3-handle">Drag</div>
-										<div class="dd3-content">Item 15</div>
-										<ol class="dd-list">
-											<li class="dd-item dd3-item" data-id="16">
-												<div class="dd-handle dd3-handle">Drag</div>
-												<div class="dd3-content">Item 16</div>
-											</li>
-											<li class="dd-item dd3-item" data-id="17">
-												<div class="dd-handle dd3-handle">Drag</div>
-												<div class="dd3-content">Item 17</div>
-											</li>
-											<li class="dd-item dd3-item" data-id="18">
-												<div class="dd-handle dd3-handle">Drag</div>
-												<div class="dd3-content">Item 18</div>
-											</li>
-										</ol>
-									</li>
 								</ol>
 							</div>
 						</div>
@@ -125,8 +117,7 @@
 										 data-bar-color="#4cc0c1" data-track-color="#f5f5f5" data-scale-color="false"
 										 data-size="130" data-line-cap="butt" data-animate="1000"
 										 style="width: 130px; height: 130px; line-height: 130px;">
-										<div class="thumb-lg"><img src="images/avatar.jpg" class="img-circle"></div>
-										<canvas width="130" height="130"></canvas>
+										<div class="thumb-lg"><img src="images/avatar.jpg" class="img-circle"><input type="button" id="uploadThumb" value="上传LOGO"></div>
 									</div>
 									<div class="h4 m-t m-b-xs">文章主图</div>
 									<small class="text-muted m-b">点击图片更换</small>
@@ -181,15 +172,15 @@
 	</aside>
 	<!-- /.aside -->
 </section>
-<link rel="stylesheet" href="<?php p($siteUrl); ?>/_assets/js/fuelux/fuelux.css" type="text/css"/>
-<script src="<?php p($siteUrl); ?>/_assets/js/fuelux/fuelux.js"></script>
+<link rel="stylesheet" href="<?= $siteUrl ?>/_assets/js/fuelux/fuelux.css" type="text/css"/>
+<script src="<?= $siteUrl ?>/_assets/js/fuelux/fuelux.js"></script>
 <!-- datepicker -->
-<script src="<?php p($siteUrl); ?>/_assets/js/datepicker/bootstrap-datepicker.js"></script>
-<link rel="stylesheet" href="<?php p($siteUrl); ?>/_assets/js/nestable/nestable.css" type="text/css"/>
-<script src="<?php p($siteUrl); ?>/_assets/js/sortable/jquery.sortable.js"></script>
-<script src="<?php p($siteUrl); ?>/_assets/js/nestable/jquery.nestable.js"></script>
-<script src="<?php p($siteUrl); ?>/_assets/js/ckeditor/ckeditor.js"></script>
-
+<script src="<?= $siteUrl ?>/_assets/js/datepicker/bootstrap-datepicker.js"></script>
+<link rel="stylesheet" href="<?= $siteUrl ?>/_assets/js/nestable/nestable.css" type="text/css"/>
+<script src="<?= $siteUrl ?>/_assets/js/sortable/jquery.sortable.js"></script>
+<script src="<?= $siteUrl ?>/_assets/js/nestable/jquery.nestable.js"></script>
+<script src="<?= $siteUrl ?>/_assets/js/ckeditor/ckeditor.js"></script>
+<script src="<?= $siteUrl ?>/_assets/js/ajaxupload.js"></script>
 <script>
 
 	function getDetail(id) {
@@ -275,6 +266,25 @@
 			}
 		});
 		$('#category').nestable();
+
+		new AjaxUpload('#uploadThumb', {
+			action: '/manage/site/upload',
+			name: 'image',
+			autoSubmit: true,
+			responseType: 'json',
+			onChange: function (file, extension) {
+			},
+			onSubmit: function (file, extension) {
+				//alert('submiting');
+			},
+			onComplete: function (file, data) {
+				if (data.status == 1001) {
+					$('#logo').attr('src', data.result.data);
+				} else {
+					alert(data.result.msg);
+				}
+			}
+		});
 
 		$(".dd-list > .dd-item").on('click', function () {
 			$("#main-list").removeClass('hide').addClass('show');

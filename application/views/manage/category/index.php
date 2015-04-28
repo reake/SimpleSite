@@ -11,11 +11,10 @@
 					<thead>
 					<tr>
 						<th>ID</th>
-						<th>友链状态</th>
-						<th>友链名称</th>
-						<th>友情链接</th>
-						<th>友链介绍</th>
-						<th>友链图片</th>
+						<th>是否显示</th>
+						<th>栏目名称</th>
+						<th>栏目链接</th>
+						<th>栏目类型</th>
 						<th>创建时间</th>
 						<th width="70">操作</th>
 					</tr>
@@ -39,9 +38,6 @@
 								<?= $v['types'] ?>
 							</td>
 							<td>
-								<?= $v['status'] ?>
-							</td>
-							<td>
 								<?= $v['created'] ?>
 							</td>
 							<td class="text-right">
@@ -57,6 +53,42 @@
 								</div>
 							</td>
 						</tr>
+						<?php if (isset($v['subCategory'])) { ?>
+							<?php foreach ($v['subCategory'] as $j => $q) { ?>
+								<tr>
+									<td>
+										<?= $q['id'] ?>
+									</td>
+									<td>
+										<?= $q['status'] ?>
+									</td>
+									<td>
+										|-- <?= $q['name'] ?>
+									</td>
+									<td>
+										<?= $q['uri'] ?>
+									</td>
+									<td>
+										<?= $q['types'] ?>
+									</td>
+									<td>
+										<?= $q['created'] ?>
+									</td>
+									<td class="text-right">
+										<div class="btn-group">
+											<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+												<i class="fa fa-pencil"></i>
+											</a>
+											<ul class="dropdown-menu pull-right">
+												<li><a href="/manage/category/set?id=<?= $q['id'] ?>">编辑</a></li>
+												<li class="divider"></li>
+												<li><a onclick="delCategory(<?= $q['id'] ?>">删除</a></li>
+											</ul>
+										</div>
+									</td>
+								</tr>
+							<?php } ?>
+						<?php } ?>
 					<?php } ?>
 					</tbody>
 				</table>

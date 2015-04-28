@@ -45,7 +45,11 @@ class Model_Category extends ORM
 	{
 		$category = $this->getCategory($siteId, $status);
 		foreach ($category as $k => $v) {
-			$category[$k]['subCategory'] = $this->getCategory($siteId, $status, $v['id']);
+			$subCategory = $this->getCategory($siteId, $status, $v['id']);
+			$count       = count($subCategory);
+			if (!empty($count)) {
+				$category[$k]['subCategory'] = $subCategory;
+			}
 		}
 
 		return $category;
