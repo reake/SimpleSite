@@ -42,7 +42,10 @@ class Model_Site extends ORM
 	{
 		$siteId = Session::instance()->get('siteId');
 		$sites  = $this->getAll($userId);
-		if(empty($siteId)) return current($sites)['id'];
+        if(empty($siteId)){
+            $site = current($sites);
+            return $site['id'];
+        }
 		foreach ($sites as $key => $value) {
 			if ($key == $siteId) return $siteId;
 		}
