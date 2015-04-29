@@ -6,7 +6,7 @@ class Controller_Manage_Profile extends Controller_Manage_Template
 	{
 		$this->template = 'profile';
 		$loginHistory   = ORM::factory('User_LoginHistory')->getAll($this->user['id']);
-		$ipAddress      = Tool_Utility::getAddressByIP(clientIP());
+		$ipAddress      = getAddressByIP(clientIP());
 		$currentLogin   = $ipAddress['country'] . $ipAddress['area'] . $ipAddress['region'] . $ipAddress['city'] . $ipAddress['county'] . $ipAddress['isp'];
 		$array          = array(
 			'loginHistory' => $loginHistory,

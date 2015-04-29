@@ -1,9 +1,8 @@
 <footer id="footer">
 	<div class="bg-primary text-center">
 		<div class="container wrapper">
-			<div class="m-t-xl m-b"> 重新定义建站 - 让您专注您更专业的事情
-				<a href="/download" target="_blank" class="btn btn-lg btn-dark b-white bg-empty m-sm">下载源码</a>
-				<a href="/login" target="_blank" class="btn btn-lg btn-warning b-white bg-empty m-sm">在线试用</a>
+			<div class="m-t-xl m-b"> 专注您更专业的事情!
+				<a href="/#newsletter" class="btn btn-lg btn-dark b-white bg-empty m-sm">订阅开放消息 - 6月1号开放源码下载以及在线平台！</a>
 			</div>
 		</div>
 		<i class="fa fa-caret-down fa-4x text-primary m-b-n-lg block"></i>
@@ -32,7 +31,7 @@
 					<h5 class="text-uc m-b m-t-lg">加入我们</h5>
 
 					<p class="text-sm">
-						<a href="mailto:hey@example.com">developer@simple-site.cn</a>
+						<a href="mailto:hey@example.com">service@simple-site.cn</a>
 					</p>
 				</div>
 			</div>

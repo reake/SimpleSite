@@ -38,8 +38,7 @@
 				<div class="h4 text-muted m-t-sm">重新定义建站 - 让您专注您更专业的事情</div>
 			</div>
 			<p class="text-center m-b-xl">
-				<a href="/download" target="_blank" class="btn btn-lg btn-dark m-sm">下载源码</a>
-				<a href="/login" target="_blank" class="btn btn-lg btn-warning b-white bg-empty m-sm">在线试用</a>
+				<a href="/#newsletter" class="btn btn-lg btn-warning b-white bg-empty m-sm">6月1号开放 - 敬请期待！</a>
 			</p>
 		</div>
 		<div class="padder">
@@ -52,7 +51,7 @@
 							</header>
 							<div>
 								<div class="m-l-xs m-r-xs">
-									<img src="<?php echo p($url); ?>/_assets/images/phone-2.png" class="img-full">
+									<img src="<?php echo p($url); ?>/_assets/images/phone-1.png" class="img-full">
 								</div>
 							</div>
 						</section>
@@ -65,18 +64,19 @@
 							<i class="fa fa-circle fa-fw"></i>
 							<i class="fa fa-circle fa-fw"></i>
 						</header>
-						<img src="<?php echo p($url); ?>/_assets/images/main.png" class="img-full">
+						<img src="<?php echo p($url); ?>/_assets/images/main.gif" class="img-full">
 					</section>
 				</aside>
 				<aside class="col-md-3 v-bottom">
 					<div class="hidden-sm hidden-xs">
-						<section class="panel bg-light m-b-n-lg m-l-n-lg aside no-border device phone animated fadeInRightBig">
+						<section
+							class="panel bg-light m-b-n-lg m-l-n-lg aside no-border device phone animated fadeInRightBig">
 							<header class="panel-heading text-center">
 								<i class="fa fa-minus fa-2x text-white m-b-n-xs block"></i>
 							</header>
 							<div class="">
 								<div class="m-l-xs m-r-xs">
-									<img src="<?php echo p($url); ?>/_assets/images/phone-1.png" class="img-full">
+									<img src="<?php echo p($url); ?>/_assets/images/phone-2.png" class="img-full">
 								</div>
 							</div>
 						</section>
@@ -86,54 +86,54 @@
 		</div>
 		<div class="dker pos-rlt">
 			<div class="container wrapper">
-				<div class="m-t-lg m-b-lg text-center"> 一套系统满足您所有的需求</div>
+				<div class="m-t-lg m-b-lg text-center"> 一套系统满足您所有网站需求</div>
 			</div>
 		</div>
 	</div>
 	<div id="about">
 		<div class="container">
 			<div class="m-t-xl m-b-xl text-center wrapper">
-				<h3>Responsive web application and admin dashboardtemplate</h3>
-				<p class="text-muted">This web based app template give you much power to build your great
-					application.</p>
+				<h3>谁更适合使用这套系统?</h3>
+
+				<p class="text-muted">这套系统能非常简单的帮助您在几分钟内建设一个令人惊讶的网站，而这并不需要您会任何技术，只需要会简单的操作电脑！</p>
 			</div>
 			<div class="row m-t-xl m-b-xl text-center">
 				<div class="col-sm-4" data-ride="animated" data-animation="fadeInLeft" data-delay="300">
 					<p class="h3 m-b-lg">
-						<i class="fa fa-lightbulb-o fa-3x text-info"></i>
+						<i class="fa fa-desktop fa-3x text-info"></i>
 					</p>
+
 					<div class="">
-						<h4 class="m-t-none">开放全部源码</h4>
-						<p class="text-muted m-t-lg">Many mobile app widgets and components, it's fully responsive, it
-							can run on all the size of the screens. Start work on your great idea today!</p>
+						<h4 class="m-t-none">各行业公司/组织</h4>
+
+						<p class="text-muted m-t-lg">
+							企业、品牌、媒体资讯、政府机构、工厂、金融、保险、楼盘、汽车4S店、婚庆、摄影、酒店、医疗保健、旅游景区、地方生活、教育培训机构、家装建材、公益组织、小区物业、超市商场、个体工商户</p>
 					</div>
 				</div>
 				<div class="col-sm-4" data-ride="animated" data-animation="fadeInLeft" data-delay="600">
 					<p class="h3 m-b-lg">
-						<i class="fa fa-signal fa-3x text-info"></i>
+						<i class="fa fa-code fa-3x text-info"></i>
 					</p>
+
 					<div class="">
-						<h4 class="m-t-none">模块化开发</h4>
-						<p class="text-muted m-t-lg">It also can be used as admin dashboard, it has tables, charts and
-							other useful components for system management, graph data shows and analysis.</p>
+						<h4 class="m-t-none">开发者/建站服务公司</h4>
+
+						<p class="text-muted m-t-lg">
+							系统可以作为对某一个网站的管理（应用型），也可以管理非常多的网站（平台型）。源代码开放，因此开发者或建站公司可以在此套系统基础上扩展更多功能，以更加贴近实现业务需求。有效降低客户网站维护成本！</p>
 					</div>
 				</div>
-				<div class="col-sm-4" data-ride="animated" data-animation="fadeInLeft" data-delay="900"><p
-						class="h3 m-b-lg"><i class="fa fa-rocket fa-3x text-info"></i></p>
+				<div class="col-sm-4" data-ride="animated" data-animation="fadeInLeft" data-delay="900">
+					<p class="h3 m-b-lg">
+						<i class="fa fa-group fa-3x text-info"></i>
+					</p>
 
-					<div class=""><h4 class="m-t-none">极速搭建</h4>
+					<div class="">
+						<h4 class="m-t-none">个人站长/热爱互联网人员</h4>
 
-						<p class="text-muted m-t-lg">This template also have a front end site that for your application
-							landing, It have the features introduction, blog section, and a price table included.</p>
+						<p class="text-muted m-t-lg">
+							系统提供了众多行业网站模板主题与强大功能模块，个人站长可以方便快速的搭建各种类型网站和微信公众服务。并可以免费使用互动营销（游戏比赛、活动抽奖）、微社区、智能客服等功能。</p>
 					</div>
 				</div>
-			</div>
-			<div class="m-t-xl m-b-xl text-center wrapper">
-				<p class="h5">您可以使用此系统搭建
-					<span class="text-primary">官网网站</span>,
-					<span class="text-primary">微信公众平台</span>,
-					<span class="text-primary">微网站</span>...
-				</p>
 			</div>
 		</div>
 	</div>
@@ -141,36 +141,100 @@
 		<div class="text-center">
 			<div class="container">
 				<div class="m-t-xl m-b-xl wrapper">
-					<h3 class="text-white">一套系统管理所有网站</h3>
-					<p>You can use your application at anywhere in the world. <br>This template works on <span
-							class="text-primary text-ul">mobile device</span> too.</p></div>
+					<h3 class="text-white">有什么功能？</h3>
+
+					<p>拒绝大而空，抛弃不切实际的功能。回归出发点，为用户带来实际作用。您真正需要的才是我们要做的！</div>
 				<div class="row m-t-xl m-b-xl">
-					<div class="col-sm-4 wrapper-xl" data-ride="animated" data-animation="fadeInLeft" data-delay="300">
-						<p class="text-center h2 m-b-lg m-t-lg"><span class="fa-stack fa-2x"> <i
-									class="fa fa-circle fa-stack-2x text-dark"></i> <i
-									class="fa fa-mobile fa-stack-1x text-muted"></i> </span></p>
+					<div class="col-sm-3 wrapper-xl" data-ride="animated" data-animation="fadeInLeft" data-delay="300">
+						<p class="text-center h1 m-b-lg">
+							<span class="fa-stack fa-2x">
+								<i class="fa fa-circle fa-stack-2x text-dark"></i>
+								<i class="fa fa-comments-o fa-stack-1x text-muted"></i>
+							</span>
+						</p>
 
-						<p>微信</p></div>
-					<div class="col-sm-4 wrapper-xl" data-ride="animated" data-animation="fadeInLeft" data-delay="600">
-						<p class="text-center h1 m-b-lg"><span class="fa-stack fa-2x"> <i
-									class="fa fa-circle fa-stack-2x text-dark"></i> <i
-									class="fa fa-tablet fa-stack-1x text-muted"></i> </span></p>
+						<p>微网站</p>
+					</div>
+					<div class="col-sm-3 wrapper-xl" data-ride="animated" data-animation="fadeInLeft" data-delay="300">
+						<p class="text-center h1 m-b-lg">
+							<span class="fa-stack fa-2x">
+								<i class="fa fa-circle fa-stack-2x text-dark"></i>
+								<i class="fa fa-laptop fa-stack-1x text-muted"></i>
+							</span>
+						</p>
 
-						<p>移动网站</p></div>
-					<div class="col-sm-4 wrapper-xl" data-ride="animated" data-animation="fadeInLeft" data-delay="900">
-						<p class="text-center h2 m-b-lg m-t-lg"><span class="fa-stack fa-2x"> <i
-									class="fa fa-circle fa-stack-2x text-dark"></i> <i
-									class="fa fa-desktop fa-stack-1x text-muted text-md"></i> </span></p>
+						<p>PC网站</p>
+					</div>
+					<div class="col-sm-3 wrapper-xl" data-ride="animated" data-animation="fadeInLeft" data-delay="600">
+						<p class="text-center h1 m-b-lg">
+							<span class="fa-stack fa-2x">
+								<i class="fa fa-circle fa-stack-2x text-dark"></i>
+								<i class="fa fa-comments fa-stack-1x text-muted"></i>
+							</span>
+						</p>
 
-						<p>PC网站</p></div>
+						<p>微信内容管理</p>
+					</div>
+					<div class="col-sm-3 wrapper-xl" data-ride="animated" data-animation="fadeInLeft" data-delay="600">
+						<p class="text-center h1 m-b-lg">
+							<span class="fa-stack fa-2x">
+								<i class="fa fa-circle fa-stack-2x text-dark"></i>
+								<i class="fa fa-picture-o fa-stack-1x text-muted"></i>
+							</span>
+						</p>
+
+						<p>模板主题</p>
+					</div>
+					<div class="col-sm-3 wrapper-xl" data-ride="animated" data-animation="fadeInLeft" data-delay="600">
+						<p class="text-center h1 m-b-lg">
+							<span class="fa-stack fa-2x">
+								<i class="fa fa-circle fa-stack-2x text-dark"></i>
+								<i class="fa fa-puzzle-piece fa-stack-1x text-muted"></i>
+							</span>
+						</p>
+
+						<p>功能插件</p>
+					</div>
+					<div class="col-sm-3 wrapper-xl" data-ride="animated" data-animation="fadeInLeft" data-delay="300">
+						<p class="text-center h1 m-b-lg">
+							<span class="fa-stack fa-2x">
+								<i class="fa fa-circle fa-stack-2x text-dark"></i>
+								<i class="fa fa-user fa-stack-1x text-muted"></i>
+							</span>
+						</p>
+
+						<p>智能客服</p>
+					</div>
+					<div class="col-sm-3 wrapper-xl" data-ride="animated" data-animation="fadeInLeft" data-delay="600">
+						<p class="text-center h1 m-b-lg">
+							<span class="fa-stack fa-2x">
+								<i class="fa fa-circle fa-stack-2x text-dark"></i>
+								<i class="fa fa-trophy fa-stack-1x text-muted"></i>
+							</span>
+						</p>
+
+						<p>互动营销</p>
+					</div>
+					<div class="col-sm-3 wrapper-xl" data-ride="animated" data-animation="fadeInLeft" data-delay="600">
+						<p class="text-center h1 m-b-lg">
+							<span class="fa-stack fa-2x">
+								<i class="fa fa-circle fa-stack-2x text-dark"></i>
+								<i class="fa fa-users fa-stack-1x text-muted"></i>
+							</span>
+						</p>
+
+						<p>微社区</p>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 	<div id="newsletter" class="bg-white clearfix wrapper-lg">
 		<div class="container text-center m-t-xl m-b-xl" data-ride="animated" data-animation="fadeIn">
-			<h2>订阅消息</h2>
-			<p>想关注我们的最新消息？输入邮箱订阅</p>
+			<h2>订阅最新动态</h2>
+
+			<p>获取第一手简站（Simple-Site）消息？马上填写邮箱订阅！</p>
+
 			<form class="form-inline m-t-xl m-b-xl">
 				<div class="form-group">
 					<input name="email" class="form-control input-lg" placeholder="您的邮箱"

@@ -42,21 +42,24 @@
 				</div>
 				<div class="col-sm-5 text-center">
 					<section class="panel bg-dark inline aside-md no-border device phone animated fadeInRightBig">
-						<header class="panel-heading text-center"><i
-								class="fa fa-minus fa-2x icon-muted m-b-n-xs block"></i></header>
+						<header class="panel-heading text-center">
+							<i class="fa fa-minus fa-2x icon-muted m-b-n-xs block"></i>
+						</header>
 						<div class="m-l-xs m-r-xs">
 							<div class="carousel auto slide" id="c-fade" data-interval="3000">
 								<div class="carousel-inner">
-									<div class="item active text-center"><img
-											src="<?= $url ?>/_assets/images/phone-2.png" class="img-full">
+									<div class="item active text-center">
+										<img src="<?= $url ?>/_assets/images/phone-2.png" class="img-full">
 									</div>
-									<div class="item text-center"><img src="<?= $url ?>/_assets/images/phone-1.png"
-																	   class="img-full"></div>
+									<div class="item text-center">
+										<img src="<?= $url ?>/_assets/images/phone-1.png" class="img-full">
+									</div>
 								</div>
 							</div>
 						</div>
-						<footer class="bg-dark text-center panel-footer no-border"><i
-								class="fa fa-circle icon-muted fa-lg"></i></footer>
+						<footer class="bg-dark text-center panel-footer no-border">
+							<i class="fa fa-circle icon-muted fa-lg"></i>
+						</footer>
 					</section>
 				</div>
 			</div>
@@ -71,15 +74,8 @@
 				<div class="col-sm-7"><h2 class="font-thin m-b-lg">开放源码</h2>
 
 					<p class="h4 m-b-lg l-h-1x">
-						无需担心数据安全性问题，您可以将系统部署到您自己的服务器上运行。系统拥有高度扩展性，可以方便的融入任何功能，完善的二次开发文档与高质量的代码，使您可以方便快速的开发更加符合您业务需求的功能。
+						您可以将系统部署到您自己的服务器上运行，系统拥有高度扩展性，可以方便的融入任何功能。完善的二次开发文档与高质量的代码，使您可以方便快速的开发更加符合您业务需求的功能。
 					</p>
-
-					<p class="m-b-xl">
-						每周一个版本快速迭代，后台自动更新，您无需为升级或打补丁而操心！您的任何意见或建议都会得到回复并处理。
-					</p>
-
-					<p class="m-t-xl m-b-xl h4"><i class="fa fa-quote-left fa-fw fa-1x icon-muted"></i>
-						使您无后顾之忧，专注您专业的事情！</p>
 				</div>
 			</div>
 		</div>
@@ -87,20 +83,18 @@
 	<div class="b-t b-light">
 		<div class="container m-t-xl">
 			<div class="row">
-				<div class="col-sm-7"><h2 class="font-thin m-b-lg">强力驱动</h2>
-
+				<div class="col-sm-7">
+					<h2 class="font-thin m-b-lg">更好的架构</h2>
 					<p class="h4 m-b-lg l-h-1x">
-						由功能强大、稳定性高的系统在背后强力驱动，使你可以更加专注业务！
+						极致的面向对象（MVC）开发，模块化功能实现确保扩展性。通用基础组件（路由、数据操作、数据库、缓存、任务、测试等）封装为系统的稳定性、安全性提供有力保障。让你更加专注业务！
 					</p>
-
-					<p class="m-b-xl"><a href="/system" class="btn btn-sm btn-primary font-bold">系统介绍 >></a></p>
 				</div>
 				<div class="col-sm-5 text-center" data-ride="animated" data-animation="fadeInUp">
 					<section class="panel bg-dark m-t-lg m-r-n-lg m-b-n-lg no-border device animated fadeInUp">
 						<header class="panel-heading text-left"><i class="fa fa-circle fa-fw icon-muted"></i> <i
 								class="fa fa-circle fa-fw icon-muted"></i> <i class="fa fa-circle fa-fw icon-muted"></i>
 						</header>
-						<img src="<?= $url ?>/_assets/images/main.png" class="img-full"></section>
+						<img src="<?= $url ?>/_assets/images/main.gif" class="img-full"></section>
 				</div>
 			</div>
 		</div>
@@ -118,13 +112,8 @@
 					<h2 class="font-thin m-b-lg">众多主题模板与功能插件</h2>
 
 					<p class="h4 m-b-lg l-h-1x">
-						系统本身自带多款漂亮的通用型网站模板供您免费使用，并拥有众多功能插件，随时添加删除插件！
+						系统自带多款漂亮的通用型网站模板供免费使用，并能简单快速的将您现在的网站移植到本系统中。众多功能插件，一键添加删除，自由选择适合自己的！
 					</p>
-					<ul class="m-b-xl fa-ul">
-						<li><i class="fa fa-li fa-check text-muted"></i>369+ 主题模板</li>
-						<li><i class="fa fa-li fa-check text-muted"></i>30+ 插件</li>
-						<li><i class="fa fa-li fa-check text-muted"></i>230043+ 网站使用中</li>
-					</ul>
 				</div>
 			</div>
 		</div>
@@ -133,14 +122,10 @@
 		<div class="container m-t-xl">
 			<div class="row">
 				<div class="col-sm-7">
-					<h2 class="font-thin m-b-lg">PC网站 + 手机网站 + 微网站</h2>
+					<h2 class="font-thin m-b-lg">平台型 VS 应用型</h2>
 
 					<p class="h4 m-b-lg l-h-1x">
-						同时拥有并管理三个网站，无需为每个网站添加内容。
-					</p>
-
-					<p class="m-b-xl">
-						<a href="/website" class="btn btn-dark font-bold">详细介绍 >></a>
+						使用本系统可以管理公司一个网站（应用型），也可以在同一套系统内开一百个账号给一百个公司管理一千个网站（平台型）。并且由于系统极好的扩展性，它可以从简单到只有数个栏目的企业官网到数百类目的新闻资讯网站都从容处理！
 					</p>
 				</div>
 				<div class="col-sm-5 text-center" data-ride="animated" data-animation="fadeInRightBig">
@@ -150,7 +135,7 @@
 							<i class="fa fa-circle fa-fw icon-muted"></i>
 							<i class="fa fa-circle fa-fw icon-muted"></i>
 						</header>
-						<img src="<?= $url ?>/_assets/images/app.png" class="img-full"></section>
+						<img src="<?= $url ?>/_assets/images/app.gif" class="img-full"></section>
 				</div>
 			</div>
 		</div>

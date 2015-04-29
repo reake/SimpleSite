@@ -4,7 +4,8 @@ class Controller_Home extends Controller_Base
 {
 	public function action_index()
 	{
-		$uri      = $this->request->uri();
+		$uri = $this->request->uri();
+		preg_match_all('#[^/.,;?\n]++#', $uri, $matches);
 		$category = array();
 		$data     = array();
 		$view     = 'index';
@@ -86,7 +87,8 @@ class Controller_Home extends Controller_Base
 	public function action_subscribe()
 	{
 		$email = $this->request->post('email');
-		$find  = ORM::factory('Subscribe')->where('sid', '=', $this->siteId)->where('email', '=', $email)->find();
+		if (filter_var($email, FILTER_VALIDATE_EMAIL) === FALSE) jsonReturn(4444, '请输入正确的邮箱!');
+		$find = ORM::factory('Subscribe')->where('sid', '=', $this->siteId)->where('email', '=', $email)->find();
 		if ($find->loaded()) {
 			jsonReturn(1001, '您已经订阅过！');
 		} else {
