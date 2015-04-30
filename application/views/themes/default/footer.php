@@ -37,14 +37,8 @@
 			</div>
 			<div class="m-t-xl m-b-xl">
 				<p>
-					<a href="#" class="btn btn-icon btn-rounded btn-facebook bg-empty m-sm">
-						<i class="fa fa-github"></i>
-					</a>
-					<a href="#" class="btn btn-icon btn-rounded btn-twitter bg-empty m-sm">
+					<a href="http://weibo.com/5599609156" class="btn btn-icon btn-rounded btn-twitter bg-empty m-sm">
 						<i class="fa fa-weibo"></i>
-					</a>
-					<a href="#" class="btn btn-icon btn-rounded btn-gplus bg-empty m-sm">
-						<i class="fa fa-qrcode"></i>
 					</a>
 				</p>
 

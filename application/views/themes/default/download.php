@@ -5,6 +5,8 @@
 	<title><?= $title ?></title>
 	<meta name="description" content="<?= $keywords ?>"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="<?= $url ?>/_assets/images/favicon.ico" type="image/x-icon" />
 	<link rel="stylesheet" href="<?= $url ?>/_assets/css/font.css" type="text/css"/>
 	<link rel="stylesheet" href="<?= $url ?>/_assets/css/landing.css" type="text/css"/>
 	<link rel="stylesheet" href="<?= $url ?>/_assets/css/app.v1.css" type="text/css"/>
