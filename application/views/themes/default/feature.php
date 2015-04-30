@@ -51,10 +51,10 @@
 							<div class="carousel auto slide" id="c-fade" data-interval="3000">
 								<div class="carousel-inner">
 									<div class="item active text-center">
-										<img src="<?= $url ?>/_assets/images/phone-2.png" class="img-full">
+										<img src="<?= $url ?>/_assets/images/phone-2.jpg" class="img-full">
 									</div>
 									<div class="item text-center">
-										<img src="<?= $url ?>/_assets/images/phone-1.png" class="img-full">
+										<img src="<?= $url ?>/_assets/images/phone-1.jpg" class="img-full">
 									</div>
 								</div>
 							</div>
