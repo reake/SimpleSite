@@ -53,7 +53,7 @@
 							</header>
 							<div>
 								<div class="m-l-xs m-r-xs">
-									<img src="<?php echo p($url); ?>/_assets/images/phone-1.png" class="img-full">
+									<img src="<?php echo p($url); ?>/_assets/images/phone-1.jpg" class="img-full">
 								</div>
 							</div>
 						</section>
@@ -78,7 +78,7 @@
 							</header>
 							<div class="">
 								<div class="m-l-xs m-r-xs">
-									<img src="<?php echo p($url); ?>/_assets/images/phone-2.png" class="img-full">
+									<img src="<?php echo p($url); ?>/_assets/images/phone-2.jpg" class="img-full">
 								</div>
 							</div>
 						</section>
