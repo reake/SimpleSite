@@ -29,7 +29,7 @@ return array(
 	'options' => array(
 		'hostname'   => 'smtp.exmail.qq.com',
 		'username'   => 'ad@simple-site.cn',
-		'password'   => 'dK+L|mUwZ~t1!UA;Qp^G=~',
+		'password'   => '123456',
 		'port'       => 465,
 		'encryption' => 'ssl'
 	)
