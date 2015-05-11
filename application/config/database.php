@@ -18,7 +18,7 @@ return array
 			 */
 			'dsn'        => 'mysql:host=localhost;dbname=simple_site',
 			'username'   => 'root',
-			'password'   => '133285.+/*-',
+			'password'   => '123456',
 			'persistent' => FALSE,
 		),
 		'table_prefix' => '',
@@ -41,7 +41,7 @@ return array
 			 */
 			'dsn'        => 'mysql:host=localhost;dbname=simple_site',
 			'username'   => 'root',
-			'password'   => '133285',
+			'password'   => '123456',
 			'persistent' => FALSE,
 		),
 		'table_prefix' => '',
