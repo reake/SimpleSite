@@ -10,10 +10,10 @@ class Extension_QQLogin
 	const openid_url       = "https://graph.qq.com/oauth2.0/me";
 	const user_info_url    = "https://graph.qq.com/user/get_user_info";
 	#Config
-	private $appid    = '100457409';
+	private $appid    = '';
 	private $callback = "http://www.grw.name/admin.php?c=Grw&a=login";
 	private $scope    = "get_user_info";
-	private $appkey   = 'b560e1bb743eab2a6e177555de50405d';
+	private $appkey   = '';
 
 	private $access_token, $openid;
 
