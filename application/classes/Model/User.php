@@ -2,11 +2,11 @@
 
 class Model_User extends ORM
 {
-	protected $_table_name = 'User';
+	protected $_table_name    = 'User';
 	protected $_table_columns = array(
-		'id' => array(
-			'type' => 'int',
-			'is_nullable' => false
+		'id'       => array(
+			'type'        => 'int',
+			'is_nullable' => FALSE
 		),
 		'username' => array(
 			'type'        => 'string',
@@ -25,7 +25,7 @@ class Model_User extends ORM
 			'is_nullable' => FALSE,
 		)
 	);
-	protected $_has_many = array(
+	protected $_has_many      = array(
 		'roles' => array('through' => 'roles_users')
 	);
 
@@ -82,11 +82,13 @@ class Model_User extends ORM
 		return TRUE;
 	}
 
-	public static function complete_login(){
+	public static function complete_login()
+	{
 
 	}
 
-	public function unique_key(){
+	public function unique_key()
+	{
 		return 'mobile';
 	}
 }
