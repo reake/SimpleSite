@@ -5,10 +5,10 @@ print_r($result);
 
 class domain
 {
-	const USER_NAME = 'syrdxb';
-	const USER_PASSWORD = 'wufei134679.+';
-	const USER_EMAIL = 'syrdxb@126.com';
-	const API_URL = 'http://api.cndns.com/domains/';
+	const USER_NAME = 'xxx';
+	const USER_PASSWORD = 'xxx';
+	const USER_EMAIL = 'xxx@xxx.com';
+	const API_URL = 'http://api.xxx.com/xxx/';
 
 	# Post Data
 	private $data = array();
