@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Metheor | Single Post No Sidebar</title>
+
+  <!--SEO Meta Tags-->
+  <meta name="description" content="Metheor - Multi-Purpose App Showcase Template" />
+  <meta name="keywords" content="multipurpose, app showcase, mobile, blog, business, corporate, startup, landing, shortcodes, html5, css3, jquery, js, gallery, slider, touch, creative" />
+  <meta name="author" content="Rokathemes" />
+
+  <!--Mobile Specific Meta Tag-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <!-- All Theme Styles including Bootstrap, Bourbon, Pixeden, etc. compiled from styles.scss-->
+  <link href="css/styles.min.css" rel="stylesheet" media="screen">
+
+  <!--Color Scheme-->
+  <link class="color-scheme" href="css/colors/color-ff3366.css" rel="stylesheet" media="screen">
+
+  <!--Color Switcher-->
+  <link href="color-switcher/color-switcher.css" rel="stylesheet" media="screen">
+
+  <!--Modernizr / Detectizr-->
+  <script src="js/vendor/modernizr.custom.js"></script>
+
+  <!-- Page Preloader (Pace) -->
+  <script src="js/vendor/pace.min.js"></script>
+</head>
+
+<!-- Body -->
+<!-- ".is-preloader" class is used for page preloading animation. Please note if you do not want preloading you need to remove this class along with pace.min.js link in the <head> of the document.-->
+<!-- Adding/Removing class ".parallax" is enabling/disabling background parallax effect on elements with background images and attributes data-stellar-background-ratio applied to them. Make sure you also added/removed link to stellar.js script before </body>. -->
+<body class="is-preloader parallax">
+  
+  <!-- Page Wrapper -->
+  <div class="page-wrapper">
+  
+    <!--Color Switcher-->
+    <div class="color-switcher">
+      <div class="toggle"><i class="pe-7s-paint"></i></div>
+      <div class="color">
+        <a class="current" style="background-color: #ff3366;" href="#" data-color="ff3366"></a>
+        <span>#ff3366</span>
+      </div>
+      <div class="color">
+        <a style="background-color: #2196f3;" href="#" data-color="2196f3"></a>
+        <span>#2196f3</span>
+      </div>
+      <div class="color">
+        <a style="background-color: #b26ff6;" href="#" data-color="b26ff6"></a>
+        <span>#b26ff6</span>
+      </div>
+      <div class="color">
+        <a style="background-color: #00bcd4;" href="#" data-color="00bcd4"></a>
+        <span>#00bcd4</span>
+      </div>
+    </div><!--Color Switcher End-->
+
+    <!-- Navbar -->
+    <!-- Remove ".navbar-fixed" class to make navigation bar scrollable with the page. Another modifier calss is ".submenu-dark" to alter submenu appearance. -->
+    <header class="navbar navbar-fixed">
+      <div class="container">
+        <div class="inner">
+
+          <!-- Site Logo -->
+          <a href="index.html" class="site-logo">
+            <img src="img/logo.svg" alt="Metheor">
+          </a><!-- .site-logo -->
+          
+          <!-- Mobile Dropdown -->
+          <div class="mobile-dropdown">
+
+            <!-- Mobile Tools -->
+            <div class="mobile-tools">
+              <form method="post" class="search-box">
+                <input type="text" placeholder="Enter your search query">
+                <button type="submit"><i class="pe-7s-search"></i></button>
+              </form><!-- .search-box -->
+              <div class="social-bar text-center">
+                <a href="#" class="sb-facebook"><i class="fa fa-facebook"></i></a>
+                <a href="#" class="sb-twitter"><i class="fa fa-twitter"></i></a>
+                <a href="#" class="sb-google-plus"><i class="fa fa-google-plus"></i></a>
+                <a href="#" class="sb-instagram"><i class="fa fa-instagram"></i></a>
+              </div><!-- .social-bar -->
+            </div><!-- .mobile-tools -->
+            
+            <!-- Main Navigation -->
+            <nav class="main-navigation">
+              <ul class="menu">
+                <li class="menu-item-has-children">
+                  <a href="#">Home<span>&#8211;</span></a>
+                  <ul class="sub-menu">
+                    <li><a href="index.html">Home Version 1</a></li>
+                    <li><a href="home-v2.html">Home Version 2</a></li>
+                    <li><a href="home-v3.html">Home Version 3</a></li>
+                    <li><a href="index.html">Home Version 4</a></li>
+                  </ul>
+                </li>
+                <li class="menu-item-has-children current-menu-item">
+                  <a href="#">Blog<span>&#8211;</span></a>
+                  <ul class="sub-menu">
+                    <li><a href="blog-grid-boxed.html">Blog Grid Boxed</a></li>
+                    <li><a href="blog-grid-fullwidth.html">Blog Grid Full Width</a></li>
+                    <li><a href="blog-list-rs.html">Blog List Right Sidebar</a></li>
+                    <li><a href="blog-list-ls.html">Blog List Left Sidebar</a></li>
+                    <li><a href="blog-list-ns.html">Blog List No Sidebar</a></li>
+                    <li><a href="single-rs.html">Single Post Right Sidebar</a></li>
+                    <li><a href="single-ls.html">Single Post Left Sidebar</a></li>
+                    <li class="current-menu-item"><a href="single-ns.html">Single Post No Sidebar</a></li>
+                  </ul>
+                </li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li class="menu-item-has-children">
+                  <a href="#">Pages<span>&#8211;</span></a>
+                  <ul class="sub-menu">
+                    <li><a href="help-center.html">Help Center</a></li>
+                    <li><a href="contacts.html">Contacts</a></li>
+                    <li><a href="404.html">404</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="components.html">Components</a>
+                </li>
+              </ul><!-- .menu -->
+            </nav><!-- .main-navigation -->
+          </div><!-- .mobile-dropdown -->
+
+          <!-- Toolbar -->
+          <div class="toolbar">
+            <div class="search-btn">
+              <i class="pe-7s-search"></i>
+              <form method="post" class="search-box">
+                <input type="text" placeholder="Enter your search query">
+                <button type="submit"><i class="pe-7s-search"></i></button>
+              </form>
+            </div>
+            <span class="divider"></span>
+            <div class="share-btn">
+              <i class="pe-7s-share"></i>
+              <ul class="dropdown">
+                <li><a href="#" class="sb-facebook"><i class="fa fa-facebook"></i>Facebook</a></li>
+                <li><a href="#" class="sb-twitter"><i class="fa fa-twitter"></i>Twitter</a></li>
+                <li><a href="#" class="sb-google-plus"><i class="fa fa-google-plus"></i>Google+</a></li>
+                <li><a href="#" class="sb-instagram"><i class="fa fa-instagram"></i>Instagram</a></li>
+              </ul>
+            </div>
+            <a href="#" class="btn btn-sm btn-primary btn-icon-left">
+              <i class="pe-7s-download"></i>Get App
+            </a>
+            <!-- Mobile Menu Toggle -->
+            <div class="nav-toggle"><span></span></div>
+          </div><!-- .toolbar -->
+        </div><!-- .container -->
+      </div><!-- .container -->
+    </header><!-- .navbar.navbar-fixed -->
+
+    <!-- Page Title -->
+    <!-- Use modifier class ".pt-dark" to switch to dark skin. "pt-parallax" to enable css parallax effect. -->
+    <div class="page-title pt-dark" style="background-image: url(img/page-title/single-post.jpg);" data-stellar-background-ratio="0.65">
+      <span class="overlay ie-gradient" style="opacity: .85;"></span>
+      <div class="container">
+        <div class="inner">
+          <div class="title">
+            <span class="back-btn icon-arrow-left" onclick="goBack()"></span>
+            <h1>Single Post No Sidebar</h1>
+            <p class="page-description">Optional page subtitle used for description</p>
+          </div><!-- .title -->
+          <div class="breadcrumbs">
+            <a href="index.html">Home</a>
+            <a href="blog-list-ns.html">Blog</a>
+            <span>Single Post</span>
+          </div><!-- .breadcrumbs -->
+        </div><!-- .inner -->
+      </div><!-- .container -->
+    </div><!-- .page-title -->
+
+    <!-- Filters -->
+    <div class="container">
+      <nav class="filters-bar blog-filters space-bottom-3x">
+        <div class="column">
+          <ul class="nav-filters">
+            <li><a href="#">&larr;&nbsp;&nbsp;Prev post</a></li>
+            <li><a href="#">Next post&nbsp;&nbsp;&rarr;</a></li>
+          </ul>
+        </div>
+        <div class="column">
+          <ul class="nav-filters">
+            <li>
+              <a href="#"><i class="pe-7s-keypad"></i>Authors<span></span></a>
+              <div class="dropdown">
+                <div class="widget widget_authors">
+                  <div class="author-row">
+                    <a href="#" class="author">
+                      <div class="ava">
+                        <img src="img/widgets/authors/01.jpg" alt="Author 1">
+                      </div>
+                      <h4>James Barton</h4>
+                      <span>UX Engeneer</span>
+                    </a><!-- .author -->
+                    <a href="#" class="author">
+                      <div class="ava">
+                        <img src="img/widgets/authors/02.jpg" alt="Author 2">
+                      </div>
+                      <h4>Ketty Young</h4>
+                      <span>UX Engeneer</span>
+                    </a><!-- .author -->
+                  </div><!-- .author-row -->
+                  <div class="author-row">
+                    <a href="#" class="author">
+                      <div class="ava">
+                        <img src="img/widgets/authors/03.jpg" alt="Author 3">
+                      </div>
+                      <h4>Monica Bell</h4>
+                      <span>Journalist</span>
+                    </a><!-- .author -->
+                    <a href="#" class="author">
+                      <div class="ava">
+                        <img src="img/widgets/authors/04.jpg" alt="Author 4">
+                      </div>
+                      <h4>John Doe</h4>
+                      <span>Ruby Dev</span>
+                    </a><!-- .author -->
+                  </div><!-- .author-row -->
+                </div><!-- .widget.widget_authors -->
+              </div><!-- .dropdown -->
+            </li><!-- filter authors -->
+            <li>
+              <a href="#"><i class="pe-7s-comment"></i>Comments<span></span></a>
+              <div class="dropdown">
+                <div class="widget widget_recent_comments">
+                  <ul>
+                    <li>
+                      <a href="#">Hello World!</a>
+                      <span class="comment-meta">
+                        <span>by Jessie Pinkman</span>
+                        <span>10/02/15</span>
+                      </span>
+                    </li>
+                    <li>
+                      <a href="#">New App Theme</a>
+                      <span class="comment-meta">
+                        <span>by John Doe</span>
+                        <span>09/13/15</span>
+                      </span>
+                    </li>
+                    <li>
+                      <a href="#">Latest IT News</a>
+                      <span class="comment-meta">
+                        <span>by Susanna Davis</span>
+                        <span>08/24/15</span>
+                      </span>
+                    </li>
+                  </ul>
+                </div><!-- .widget.widget_recent_comments -->
+              </div><!-- .dropdown -->
+            </li><!-- filter recent comments -->
+            <li>
+              <a href="#"><i class="pe-7s-ticket"></i>Tags<span></span></a>
+              <div class="dropdown">
+                <div class="widget widget_tags">
+                  <a href="#" class="tag">Software<span>5</span></a>
+                  <a href="#" class="tag">PSD<span>123</span></a>
+                  <a href="#" class="tag">WordPress<span>9</span></a>
+                  <a href="#" class="tag">Apps<span>46</span></a>
+                  <a href="#" class="tag">Nature<span>77</span></a>
+                  <a href="#" class="tag">Photo<span>184</span></a>
+                  <a href="#" class="tag">Development<span>16</span></a>
+                </div><!-- .widget.widget_tags -->
+              </div><!-- .dropdown -->
+            </li><!-- filter tags -->
+            <li>
+              <a href="#"><i class="icon-list"><span></span></i>Categories<span></span></a>
+              <div class="dropdown">
+                <div class="widget widget_categories">
+                  <ul>
+                    <li><a href="#">WordPress <span class="count">6</span></a></li>
+                    <li class="current-cat"><a href="#">Mobile Applications <span class="count">4</span></a></li>
+                    <li><a href="#">Photography <span class="count">23</span></a></li>
+                    <li><a href="#">Web Design <span class="count">117</span></a></li>
+                  </ul>
+                </div><!-- .widget.widget_categories -->
+              </div><!-- .dropdown -->
+            </li><!-- filter categories -->
+          </ul>
+        </div>
+      </nav><!-- .filters-bar -->
+    </div><!-- .container -->
+
+    <!-- Content -->
+    <div class="content-no-sidebar padding-bottom">
+      <h3>Single post featuring carousel and video</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+
+      <!-- Image Carousel -->
+      <!-- Data API:
+        data-loop="true/false" enable/disable looping
+        data-autoplay="true/false" enable/disable carousel autoplay
+        data-interval="3000" autoplay interval timeout in miliseconds 
+        data-autoheight="true/false" enable/disable autoheight with transition
+        data-dots="true/false" enable/disable bullet navigation
+        Simply add necessary data attribute to the ".image-carousel" with appropriate value to adjust carousel functionality.
+        Add ".light-controls" class to change skin of carousel controls to light version. e.x. for dark images.
+       -->
+      <div class="image-carousel space-top-2x space-bottom" data-dots="true">
+        <div class="inner">
+          <img src="img/blog/carousel/01.jpg" alt="Image">
+          <img src="img/blog/carousel/02.jpg" alt="Image">
+          <img src="img/blog/carousel/03.jpg" alt="Image">
+        </div>
+      </div><!-- .image-carousel -->
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi.</p>
+      <blockquote>
+        <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+        <cite>James Cameron</cite>
+      </blockquote>
+      <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+      <div class="embed-responsive embed-responsive-16by9 space-top-2x space-bottom-2x">
+        <iframe src="https://player.vimeo.com/video/33984473?color=ff3366&amp;title=0&amp;byline=0&amp;portrait=0" class="embed-responsive-item"></iframe>
+      </div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+      <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+      <div class="single-post-toolbar space-top-2x space-bottom-2x">
+        <div class="column">
+          <span class="post-date"><a href="#">October 08, 2015</a></span>
+          <span class="post-author"><a href="#">by Admin</a></span>
+          <span class="delimiter">|</span>
+          <span class="post-taxonomy">
+          in
+          <a href="#"> App Showcase,</a>
+          <a href="#"> Technology</a>
+          </span>
+        </div>
+        <div class="column">
+          <div class="post-share-btn dropup-right">
+            <div class="share-dropup">
+              <a href="#"><i class="fa fa-facebook"></i></a>
+              <a href="#"><i class="fa fa-google-plus"></i></a>
+              <a href="#"><i class="fa fa-twitter"></i></a>
+              <a href="#"><i class="fa fa-instagram"></i></a>
+            </div>
+            <a href="#"><i class="pe-7s-share"></i></a>
+          </div>
+        </div>
+      </div><!-- .single-post-toolbar -->
+
+      <!-- Post Author -->
+      <div class="tile post-author-tile">
+        <div class="tile-body">
+          <h3>About author</h3>
+          <div class="inner">
+            <div class="author-ava">
+              <img src="img/blog/post-author.jpg" alt="Paul Nidleman">
+            </div>
+            <div class="author-info">
+              <h3 class="author-name">Paul Nidleman</h3>
+              <span class="author-position">Java Developer</span>
+              <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae.</p>
+              <div class="social-bar">
+                <a href="#" class="sb-facebook" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a>
+                <a href="#" class="sb-google-plus" data-toggle="tooltip" data-placement="top" title="Google+"><i class="fa fa-google-plus"></i></a>
+                <a href="#" class="sb-instagram" data-toggle="tooltip" data-placement="top" title="Instagram"><i class="fa fa-instagram"></i></a>
+              </div><!-- .social-bar -->
+            </div>
+          </div>
+        </div>
+      </div><!-- .tile.post-author-tile -->
+
+      <!-- Comment Area -->
+      <div class="comments-area space-top-3x" id="comments">
+        <h3 class="comments-title">
+          Comments
+          <span class="comments-count">3</span>
+        </h3><!-- .comments-title -->
+        
+        <!-- Comment -->
+        <div class="comment">
+          <div class="inner">
+            <div class="comment-author-ava">
+              <img src="img/blog/comments/01.jpg" alt="Susanna Davis">
+            </div>
+            <div class="comment-body">
+              <div class="comment-meta">
+                <div class="column">
+                  <h4 class="comment-author-name">Susanna Davis</h4>
+                </div>
+                <div class="column">
+                  <span class="comment-date">October 08, 2015</span>
+                  <a href="#" class="comment-like active"><i class="pe-7s-like"></i>2</a>
+                  <a href="#" class="comment-like"><i class="pe-7s-back"></i>Reply</a>
+                </div>
+              </div>
+              <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae.</p>
+            </div>
+          </div><!-- .inner -->
+
+          <!-- Comment Reply -->
+          <div class="comment depth-2">
+            <div class="inner">
+              <div class="comment-author-ava">
+                <img src="img/blog/comments/02.jpg" alt="Donald Murphy">
+              </div>
+              <div class="comment-body">
+                <div class="comment-meta">
+                  <div class="column">
+                    <h4 class="comment-author-name">Donald Murphy</h4>
+                  </div>
+                  <div class="column">
+                    <span class="comment-date">October 11, 2015</span>
+                    <a href="#" class="comment-like active"><i class="pe-7s-like"></i>3</a>
+                  </div>
+                </div>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae.</p>
+              </div>
+            </div><!-- .inner -->
+          </div>
+        </div><!-- .comment -->
+        
+        <!-- Comment -->
+        <div class="comment">
+          <div class="inner">
+            <div class="comment-author-ava">
+              <img src="img/blog/comments/03.jpg" alt="Jessie James">
+            </div>
+            <div class="comment-body">
+              <div class="comment-meta">
+                <div class="column">
+                  <h4 class="comment-author-name">Jessie James</h4>
+                </div>
+                <div class="column">
+                  <span class="comment-date">September 13, 2015</span>
+                  <a href="#" class="comment-like"><i class="pe-7s-like"></i></a>
+                  <a href="#" class="comment-like"><i class="pe-7s-back"></i>Reply</a>
+                </div>
+              </div>
+              <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae.</p>
+            </div>
+          </div><!-- .inner -->
+        </div><!-- .comment -->
+
+        <!-- Comment Reply -->
+        <div class="comment-respond space-top space-bottom">
+          <div class="tile" id="ask-question">
+            <form method="post" autocomplete="off">
+              <h3>Leave a comment</h3>
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="form-control">
+                    <i class="pe-7s-user"></i>
+                    <input type="text" placeholder="Name">
+                  </div><!-- .form-control -->
+                </div><!-- .col-sm-6 -->
+                <div class="col-sm-6">
+                  <div class="form-control">
+                    <i class="pe-7s-mail"></i>
+                    <input type="email" placeholder="Email">
+                  </div><!-- .form-control -->
+                </div><!-- .col-sm-6 -->
+              </div><!-- .row -->
+              <div class="form-control">
+                <i class="pe-7s-comment"></i>
+                <textarea rows="3" placeholder="Comment"></textarea>
+              </div><!-- .form-control -->
+              <div class="text-right">
+                <button type="submit" class="btn btn-ghost btn-primary">Submit comment</button>
+              </div><!-- .col-sm-6.text-right -->
+            </form><!-- .contact-form -->
+          </div><!-- .tile -->
+        </div><!-- .comments-reply -->
+      </div><!-- .comments-area -->
+    </div><!-- .content-no-sidebar -->
+
+    <!-- Scroll To Top Button -->
+    <a href="#" class="scroll-to-top-btn">
+      <i class="icon-arrow-up"></i> 
+    </a><!-- .scroll-to-top-btn -->
+
+    <!-- Footer -->
+    <!-- Use modifier class ".footer-dark" to switch to dark skin. -->
+    <footer class="footer space-top-3x">
+      <div class="container">
+        <form action="//rokaux.us12.list-manage.com/subscribe/post?u=c7103e2c981361a6639545bd5&amp;id=1194bb7544" method="post" class="row subscription validate" target="_blank" novalidate>
+          <div class="col-sm-9">
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="form-control">
+                  <i class="pe-7s-user"></i>
+                  <input type="text" name="FNAME" placeholder="Name">
+                </div>
+              </div>
+              <div class="col-sm-6">
+              <div class="form-control">
+                <i class="pe-7s-mail"></i>
+                <input type="email" name="EMAIL" placeholder="Email">
+              </div>
+              </div>
+            </div>
+          </div><!-- .col-sm-9 -->
+          <div class="col-sm-3">
+            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_c7103e2c981361a6639545bd5_1194bb7544" tabindex="-1" value=""></div>
+            <button type="submit" class="btn btn-primary btn-block">Subscribe *</button>
+          </div><!-- .col-sm-3 -->
+          <div class="col-sm-12">
+            <span class="text-muted">* Be the first to know about latest updates and new features.</span>
+          </div><!-- .col-sm-12 -->
+        </form><!-- .row.subscription -->
+        <div class="padding-top-3x padding-bottom-2x text-center">
+          <h6 class="text-thin">Application available on:</h6>
+          <a href="#" class="app-store-btn"></a>
+          <a href="#" class="google-play-btn"></a>
+          <a href="#" class="windows-btn"></a>
+          <a href="#" class="amazon-btn"></a>
+          <div class="market-counter">
+            <i class="pe-7s-download"></i>
+            <span>133K</span>
+            downloads
+          </div><!-- .market-counter -->
+        </div><!-- .padding-top-3x.padding-bottom-2x.text-center -->
+
+        <!-- Copyright -->
+        <div class="copyright">
+          <div class="inner">
+            <div class="column">
+              <a href="index.html" class="site-logo">
+                <img src="img/footer-logo-def.svg" alt="Metheor">
+              </a>
+              <span class="copy-text">&copy; 2015. All rights reserved</span>
+            </div><!-- .column -->
+            <div class="column">
+              <nav class="footer-nav">
+                <ul>
+                  <li><a href="#">Terms of service</a></li>
+                  <li><a href="#">Privacy policy</a></li>
+                  <li><a href="contacts.html">Contacts</a></li>
+                  <li><a href="help-center.html">Support</a></li>
+                </ul>
+              </nav><!-- .footer-nav -->
+            </div><!-- .column -->
+            <div class="column">
+              <div class="social-bar">
+                <a href="#" class="sb-facebook" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a>
+                <a href="#" class="sb-twitter" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a>
+                <a href="#" class="sb-google-plus" data-toggle="tooltip" data-placement="top" title="Google+"><i class="fa fa-google-plus"></i></a>
+                <a href="#" class="sb-instagram"><i class="fa fa-instagram"></i></a>
+              </div><!-- .social-bar -->
+            </div><!-- .column -->
+          </div><!-- .inner -->
+        </div><!-- .copyright -->
+      </div><!-- .container -->
+    </footer><!-- .footer -->
+  </div><!-- .page-wrapper -->
+
+  <!-- JavaScript (jQuery) libraries, plugins and custom scripts -->
+  <script src="js/vendor/jquery-2.1.4.min.js"></script>
+  <script src="js/vendor/bootstrap.min.js"></script>
+  <script src="js/vendor/placeholder.js"></script>
+  <script src="js/vendor/smoothscroll.js"></script>
+  <script src="js/vendor/jquery.stellar.min.js"></script>
+  <script src="js/vendor/velocity.min.js"></script>
+  <script src="js/vendor/owl.carousel.min.js"></script>
+  <script src="js/scripts.js"></script>
+  <script src="color-switcher/color-switcher.js"></script>
+
+</body><!-- <body> -->
+
+</html>

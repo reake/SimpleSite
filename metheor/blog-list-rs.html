@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Metheor | Blog List Right Sidebar</title>
+
+  <!--SEO Meta Tags-->
+  <meta name="description" content="Metheor - Multi-Purpose App Showcase Template" />
+  <meta name="keywords" content="multipurpose, app showcase, mobile, blog, business, corporate, startup, landing, shortcodes, html5, css3, jquery, js, gallery, slider, touch, creative" />
+  <meta name="author" content="Rokathemes" />
+
+  <!--Mobile Specific Meta Tag-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <!-- All Theme Styles including Bootstrap, Bourbon, Pixeden, etc. compiled from styles.scss-->
+  <link href="css/styles.min.css" rel="stylesheet" media="screen">
+
+  <!--Color Scheme-->
+  <link class="color-scheme" href="css/colors/color-ff3366.css" rel="stylesheet" media="screen">
+
+  <!--Color Switcher-->
+  <link href="color-switcher/color-switcher.css" rel="stylesheet" media="screen">
+
+  <!--Modernizr / Detectizr-->
+  <script src="js/vendor/modernizr.custom.js"></script>
+
+  <!-- Page Preloader (Pace) -->
+  <script src="js/vendor/pace.min.js"></script>
+</head>
+
+<!-- Body -->
+<!-- ".is-preloader" class is used for page preloading animation. Please note if you do not want preloading you need to remove this class along with pace.min.js link in the <head> of the document.-->
+<!-- Adding/Removing class ".parallax" is enabling/disabling background parallax effect on elements with background images and attributes data-stellar-background-ratio applied to them. Make sure you also added/removed link to stellar.js script before </body>. -->
+<body class="is-preloader parallax">
+  
+  <!-- Page Wrapper -->
+  <div class="page-wrapper">
+  
+    <!--Color Switcher-->
+    <div class="color-switcher">
+      <div class="toggle"><i class="pe-7s-paint"></i></div>
+      <div class="color">
+        <a class="current" style="background-color: #ff3366;" href="#" data-color="ff3366"></a>
+        <span>#ff3366</span>
+      </div>
+      <div class="color">
+        <a style="background-color: #2196f3;" href="#" data-color="2196f3"></a>
+        <span>#2196f3</span>
+      </div>
+      <div class="color">
+        <a style="background-color: #b26ff6;" href="#" data-color="b26ff6"></a>
+        <span>#b26ff6</span>
+      </div>
+      <div class="color">
+        <a style="background-color: #00bcd4;" href="#" data-color="00bcd4"></a>
+        <span>#00bcd4</span>
+      </div>
+    </div><!--Color Switcher End-->
+
+    <!-- Navbar -->
+    <!-- Remove ".navbar-fixed" class to make navigation bar scrollable with the page. Another modifier calss is ".submenu-dark" to alter submenu appearance. -->
+    <header class="navbar navbar-fixed">
+      <div class="container">
+        <div class="inner">
+
+          <!-- Site Logo -->
+          <a href="index.html" class="site-logo">
+            <img src="img/logo.svg" alt="Metheor">
+          </a><!-- .site-logo -->
+          
+          <!-- Mobile Dropdown -->
+          <div class="mobile-dropdown">
+
+            <!-- Mobile Tools -->
+            <div class="mobile-tools">
+              <form method="post" class="search-box">
+                <input type="text" placeholder="Enter your search query">
+                <button type="submit"><i class="pe-7s-search"></i></button>
+              </form><!-- .search-box -->
+              <div class="social-bar text-center">
+                <a href="#" class="sb-facebook"><i class="fa fa-facebook"></i></a>
+                <a href="#" class="sb-twitter"><i class="fa fa-twitter"></i></a>
+                <a href="#" class="sb-google-plus"><i class="fa fa-google-plus"></i></a>
+                <a href="#" class="sb-instagram"><i class="fa fa-instagram"></i></a>
+              </div><!-- .social-bar -->
+            </div><!-- .mobile-tools -->
+            
+            <!-- Main Navigation -->
+            <nav class="main-navigation">
+              <ul class="menu">
+                <li class="menu-item-has-children">
+                  <a href="#">Home<span>&#8211;</span></a>
+                  <ul class="sub-menu">
+                    <li><a href="index.html">Home Version 1</a></li>
+                    <li><a href="home-v2.html">Home Version 2</a></li>
+                    <li><a href="home-v3.html">Home Version 3</a></li>
+                    <li><a href="home-v4.html">Home Version 4</a></li>
+                  </ul>
+                </li>
+                <li class="menu-item-has-children current-menu-item">
+                  <a href="#">Blog<span>&#8211;</span></a>
+                  <ul class="sub-menu">
+                    <li><a href="blog-grid-boxed.html">Blog Grid Boxed</a></li>
+                    <li><a href="blog-grid-fullwidth.html">Blog Grid Full Width</a></li>
+                    <li class="current-menu-item"><a href="blog-list-rs.html">Blog List Right Sidebar</a></li>
+                    <li><a href="blog-list-ls.html">Blog List Left Sidebar</a></li>
+                    <li><a href="blog-list-ns.html">Blog List No Sidebar</a></li>
+                    <li><a href="single-rs.html">Single Post Right Sidebar</a></li>
+                    <li><a href="single-ls.html">Single Post Left Sidebar</a></li>
+                    <li><a href="single-ns.html">Single Post No Sidebar</a></li>
+                  </ul>
+                </li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li class="menu-item-has-children">
+                  <a href="#">Pages<span>&#8211;</span></a>
+                  <ul class="sub-menu">
+                    <li><a href="help-center.html">Help Center</a></li>
+                    <li><a href="contacts.html">Contacts</a></li>
+                    <li><a href="404.html">404</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="components.html">Components</a>
+                </li>
+              </ul><!-- .menu -->
+            </nav><!-- .main-navigation -->
+          </div><!-- .mobile-dropdown -->
+
+          <!-- Toolbar -->
+          <div class="toolbar">
+            <div class="search-btn">
+              <i class="pe-7s-search"></i>
+              <form method="post" class="search-box">
+                <input type="text" placeholder="Enter your search query">
+                <button type="submit"><i class="pe-7s-search"></i></button>
+              </form>
+            </div>
+            <span class="divider"></span>
+            <div class="share-btn">
+              <i class="pe-7s-share"></i>
+              <ul class="dropdown">
+                <li><a href="#" class="sb-facebook"><i class="fa fa-facebook"></i>Facebook</a></li>
+                <li><a href="#" class="sb-twitter"><i class="fa fa-twitter"></i>Twitter</a></li>
+                <li><a href="#" class="sb-google-plus"><i class="fa fa-google-plus"></i>Google+</a></li>
+                <li><a href="#" class="sb-instagram"><i class="fa fa-instagram"></i>Instagram</a></li>
+              </ul>
+            </div>
+            <a href="#" class="btn btn-sm btn-primary btn-icon-left">
+              <i class="pe-7s-download"></i>Get App
+            </a>
+            <!-- Mobile Menu Toggle -->
+            <div class="nav-toggle"><span></span></div>
+          </div><!-- .toolbar -->
+        </div><!-- .container -->
+      </div><!-- .container -->
+    </header><!-- .navbar.navbar-fixed -->
+
+    <!-- Page Title -->
+    <!-- Use modifier class ".pt-dark" to switch to dark skin. "pt-parallax" to enable css parallax effect. -->
+    <div class="page-title pt-dark" style="background-image: url(img/page-title/blog-list.jpg);" data-stellar-background-ratio="0.65">
+      <span class="overlay ie-gradient" style="opacity: .85;"></span>
+      <div class="container">
+        <div class="inner">
+          <div class="title">
+            <span class="back-btn icon-arrow-left" onclick="goBack()"></span>
+            <h1>Blog List Right Sidebar</h1>
+            <p class="page-description">Optional page subtitle used for description</p>
+          </div><!-- .title -->
+          <div class="breadcrumbs">
+            <a href="index.html">Home</a>
+            <span>Blog List Right Sidebar</span>
+          </div><!-- .breadcrumbs -->
+        </div><!-- .inner -->
+      </div><!-- .container -->
+    </div><!-- .page-title -->
+
+    <!-- Container -->
+    <div class="container space-bottom-2x">
+      <div class="row">
+
+        <!-- Content -->
+        <div class="col-lg-9 col-md-8 col-sm-7">
+          
+          <!-- Post -->
+          <article class="tile post-tile format-image">
+            <div class="post-thumb">
+              <a href="single-rs.html"><img src="img/blog/blog-list/post01.jpg" alt="Post 1"></a>
+              <div class="post-meta">
+                <span class="post-date">
+                  <a href="single-rs.html">October 18, 2015</a>
+                </span>
+                <span class="comments-count">
+                  <a href="single-rs.html#comments">22 Comments</a>
+                </span>
+              </div>
+              <div class="post-share-btn">
+                <div class="share-dropup">
+                  <a href="#"><i class="fa fa-facebook"></i></a>
+                  <a href="#"><i class="fa fa-google-plus"></i></a>
+                  <a href="#"><i class="fa fa-twitter"></i></a>
+                  <a href="#"><i class="fa fa-instagram"></i></a>
+                </div>
+                <a href="#"><i class="pe-7s-share"></i></a>
+              </div>
+            </div>
+            <div class="tile-body post-body">
+              <div class="post-format"></div>
+              <h3 class="post-title"><a href="single-rs.html">Stairway to heaven</a></h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam quis  nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur...</p>
+              <div class="post-meta">
+                <span class="post-author"><a href="#">by Admin</a></span>
+                <span class="delimiter">|</span>
+                <span class="post-taxonomy">
+                in
+                <a href="#"> Countries,</a>
+                <a href="#"> Nature</a>
+                </span>
+              </div>
+              <a href="single-rs.html" class="btn btn-ghost btn-primary btn-sm">Read More</a>
+            </div>
+          </article><!-- .tile.post-tile -->
+          
+          <!-- Post -->
+          <article class="tile post-tile">
+            <div class="tile-body post-body">
+              <div class="post-meta">
+                <span class="post-date">
+                  <a href="single-rs.html">September 26, 2015</a>
+                </span>
+                <span class="comments-count">
+                  <a href="single-rs.html#comments">0 Comments</a>
+                </span>
+              </div>
+              <h3 class="post-title"><a href="single-rs.html">No featured image</a></h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam quis  nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur...</p>
+              <div class="post-meta">
+                <span class="post-author"><a href="#">by Admin</a></span>
+                <span class="delimiter">|</span>
+                <span class="post-taxonomy">
+                in
+                <a href="#"> WordPress</a>
+                </span>
+              </div>
+              <a href="single-rs.html" class="btn btn-ghost btn-primary btn-sm">Read More</a>
+            </div>
+          </article><!-- .tile.post-tile -->
+          
+          <!-- Post -->
+          <article class="tile post-tile format-video">
+            <div class="post-thumb">
+              <a href="single-rs.html"><img src="img/blog/blog-list/post02.jpg" alt="Post 2"></a>
+              <div class="post-meta">
+                <span class="post-date">
+                  <a href="single-rs.html">September 23, 2015</a>
+                </span>
+                <span class="comments-count">
+                  <a href="single-rs.html#comments">13 Comments</a>
+                </span>
+              </div>
+              <div class="post-share-btn">
+                <div class="share-dropup">
+                  <a href="#"><i class="fa fa-facebook"></i></a>
+                  <a href="#"><i class="fa fa-google-plus"></i></a>
+                  <a href="#"><i class="fa fa-twitter"></i></a>
+                  <a href="#"><i class="fa fa-instagram"></i></a>
+                </div>
+                <a href="#"><i class="pe-7s-share"></i></a>
+              </div>
+            </div>
+            <div class="tile-body post-body">
+              <div class="post-format"></div>
+              <h3 class="post-title"><a href="single-rs.html">Post with video</a></h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam quis  nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur...</p>
+              <div class="post-meta">
+                <span class="post-author"><a href="#">by Admin</a></span>
+                <span class="delimiter">|</span>
+                <span class="post-taxonomy">
+                in
+                <a href="#"> Video,</a>
+                <a href="#"> Travel</a>
+                </span>
+              </div>
+              <a href="single-rs.html" class="btn btn-ghost btn-primary btn-sm">Read More</a>
+            </div>
+          </article><!-- .tile.post-tile -->
+
+          <!-- Pagination -->
+          <nav class="pagination">
+            <div class="nav-links">
+              <a class="prev page-numbers" href="#">
+                <i class="icon-arrow-left"></i>
+                Prev
+              </a>
+              <a class="page-numbers" href="#">1</a>
+              <span class="page-numbers current">2</span>
+              <a class="page-numbers" href="#">3</a>
+              <a class="page-numbers" href="#">4</a>
+              <a class="page-numbers" href="#">5</a>
+              <span class="page-numbers dots">...</span>
+              <a class="page-numbers" href="#">10</a>
+              <a class="next page-numbers" href="#">
+              Next
+               <i class="icon-arrow-right"></i> 
+              </a>
+            </div>
+          </nav><!-- .pagination -->
+        </div><!-- .col-lg-9.col-md-8.col-sm-7 -->
+
+        <!-- Sidebar -->
+        <div class="padding-top visible-xs"></div>
+        <div class="col-lg-3 col-md-4 col-sm-5">
+          <aside class="sidebar space-bottom">
+
+            <!-- Categories Widget -->
+            <section class="widget widget_categories">
+              <h3 class="widget-title">
+                <i class="icon-list"><span></span></i>
+                Categories
+              </h3>
+              <ul>
+                <li><a href="#">WordPress <span class="count">6</span></a></li>
+                <li class="current-cat"><a href="#">Mobile Applications <span class="count">4</span></a></li>
+                <li><a href="#">Photography <span class="count">23</span></a></li>
+                <li><a href="#">Web Design <span class="count">117</span></a></li>
+              </ul>
+            </section><!-- .widget.widget_categories -->
+
+            <!-- Calendar Widget -->
+            <section class="widget widget_calendar">
+              <h3 class="widget-title">
+                <i class="pe-7s-date"></i>
+                Calendar
+              </h3>
+              <div id="calendar_wrap">
+                <table id="wp-calendar">
+                  <caption>January 2016</caption>
+                  <thead>
+                  <tr>
+                    <th scope="col" title="Monday">M</th>
+                    <th scope="col" title="Tuesday">T</th>
+                    <th scope="col" title="Wednesday">W</th>
+                    <th scope="col" title="Thursday">T</th>
+                    <th scope="col" title="Friday">F</th>
+                    <th scope="col" title="Saturday">S</th>
+                    <th scope="col" title="Sunday">S</th>
+                  </tr>
+                  </thead>
+                  <tfoot>
+                  <tr>
+                    <td colspan="3" id="prev"><a href="#">December</a></td>
+                    <td class="pad">&nbsp;</td>
+                    <td colspan="3" id="next" class="pad"></td>
+                  </tr>
+                  </tfoot>
+                  <tbody>
+                  <tr>
+                    <td colspan="4" class="pad">&nbsp;</td><td>1</td><td>2</td><td>3</td>
+                  </tr>
+                  <tr>
+                    <td>4</td><td>5</td><td>6</td><td>7</td><td><a href="#">8</a></td><td>9</td><td>10</td>
+                  </tr>
+                  <tr>
+                    <td>11</td><td>12</td><td id="today">13</td><td>14</td><td>15</td><td>16</td><td>17</td>
+                  </tr>
+                  <tr>
+                    <td>18</td><td>19</td><td>20</td><td>21</td><td><a href="#">22</a></td><td><a href="#">23</a></td><td>24</td>
+                  </tr>
+                  <tr>
+                    <td>25</td><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td><td>31</td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section><!-- .widget.widget_calendar -->
+
+            <!-- Comments Widget -->
+            <section class="widget widget_recent_comments">
+              <h3 class="widget-title">
+                <i class="pe-7s-comment"></i>
+                Comments
+              </h3>
+              <ul>
+                <li>
+                  <a href="#">Hello World!</a>
+                  <span class="comment-meta">
+                    <span>by Jessie Pinkman</span>
+                    <span>10/02/15</span>
+                  </span>
+                </li>
+                <li>
+                  <a href="#">New App Theme</a>
+                  <span class="comment-meta">
+                    <span>by John Doe</span>
+                    <span>09/13/15</span>
+                  </span>
+                </li>
+                <li>
+                  <a href="#">Latest IT News</a>
+                  <span class="comment-meta">
+                    <span>by Susanna Davis</span>
+                    <span>08/24/15</span>
+                  </span>
+                </li>
+              </ul>
+            </section><!-- .widget.widget_recent_comments -->
+
+            <!-- Instagram Widget -->
+            <section class="widget widget_instagram">
+              <h3 class="widget-title">
+                <i class="fa fa-instagram"></i>
+                Instagram Feed
+              </h3>
+              <div class="instagram-feed">
+               <a href="#">
+                  <i class="pe-7s-search"></i>
+                  <img src="img/widgets/instagram/01.jpg" alt="Inst01">
+                </a>
+                <a href="#">
+                  <i class="pe-7s-search"></i>
+                  <img src="img/widgets/instagram/02.jpg" alt="Inst02">
+                </a>
+                <a href="#">
+                  <i class="pe-7s-search"></i>
+                  <img src="img/widgets/instagram/03.jpg" alt="Inst03">
+                </a>
+                <a href="#">
+                  <i class="pe-7s-search"></i>
+                  <img src="img/widgets/instagram/04.jpg" alt="Inst04">
+                </a>
+                <a href="#">
+                  <i class="pe-7s-search"></i>
+                  <img src="img/widgets/instagram/05.jpg" alt="Inst05">
+                </a>
+                <a href="#">
+                  <i class="pe-7s-search"></i>
+                  <img src="img/widgets/instagram/06.jpg" alt="Inst06">
+                </a>
+              </div>
+             </section><!-- .widget.widget_instagram -->
+
+            <!-- Tags Widget -->
+            <section class="widget widget_tags">
+              <h3 class="widget-title">
+                <i class="pe-7s-ticket"></i>
+                Tags
+              </h3>
+              <a href="#" class="tag">Software<span>5</span></a>
+              <a href="#" class="tag">PSD<span>123</span></a>
+              <a href="#" class="tag">WordPress<span>9</span></a>
+              <a href="#" class="tag">Apps<span>46</span></a>
+              <a href="#" class="tag">Nature<span>77</span></a>
+              <a href="#" class="tag">Photo<span>184</span></a>
+              <a href="#" class="tag">Development<span>16</span></a>
+            </section><!-- .widget.widget_tags -->
+          </aside><!-- .sidebar -->
+        </div><!-- .col-lg-3.col-md-4.col-sm-5 -->
+      </div><!-- .row -->
+    </div><!-- .container -->
+
+    <!-- Scroll To Top Button -->
+    <a href="#" class="scroll-to-top-btn">
+      <i class="icon-arrow-up"></i> 
+    </a><!-- .scroll-to-top-btn -->
+
+    <!-- Footer -->
+    <!-- Use modifier class ".footer-dark" to switch to dark skin. -->
+    <footer class="footer space-top-3x">
+      <div class="container">
+        <form action="//rokaux.us12.list-manage.com/subscribe/post?u=c7103e2c981361a6639545bd5&amp;id=1194bb7544" method="post" class="row subscription validate" target="_blank" novalidate>
+          <div class="col-sm-9">
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="form-control">
+                  <i class="pe-7s-user"></i>
+                  <input type="text" name="FNAME" placeholder="Name">
+                </div>
+              </div>
+              <div class="col-sm-6">
+              <div class="form-control">
+                <i class="pe-7s-mail"></i>
+                <input type="email" name="EMAIL" placeholder="Email">
+              </div>
+              </div>
+            </div>
+          </div><!-- .col-sm-9 -->
+          <div class="col-sm-3">
+            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_c7103e2c981361a6639545bd5_1194bb7544" tabindex="-1" value=""></div>
+            <button type="submit" class="btn btn-primary btn-block">Subscribe *</button>
+          </div><!-- .col-sm-3 -->
+          <div class="col-sm-12">
+            <span class="text-muted">* Be the first to know about latest updates and new features.</span>
+          </div><!-- .col-sm-12 -->
+        </form><!-- .row.subscription -->
+        <div class="padding-top-3x padding-bottom-2x text-center">
+          <h6 class="text-thin">Application available on:</h6>
+          <a href="#" class="app-store-btn"></a>
+          <a href="#" class="google-play-btn"></a>
+          <a href="#" class="windows-btn"></a>
+          <a href="#" class="amazon-btn"></a>
+          <div class="market-counter">
+            <i class="pe-7s-download"></i>
+            <span>133K</span>
+            downloads
+          </div><!-- .market-counter -->
+        </div><!-- .padding-top-3x.padding-bottom-2x.text-center -->
+
+        <!-- Copyright -->
+        <div class="copyright">
+          <div class="inner">
+            <div class="column">
+              <a href="index.html" class="site-logo">
+                <img src="img/footer-logo-def.svg" alt="Metheor">
+              </a>
+              <span class="copy-text">&copy; 2015. All rights reserved</span>
+            </div><!-- .column -->
+            <div class="column">
+              <nav class="footer-nav">
+                <ul>
+                  <li><a href="#">Terms of service</a></li>
+                  <li><a href="#">Privacy policy</a></li>
+                  <li><a href="contacts.html">Contacts</a></li>
+                  <li><a href="help-center.html">Support</a></li>
+                </ul>
+              </nav><!-- .footer-nav -->
+            </div><!-- .column -->
+            <div class="column">
+              <div class="social-bar">
+                <a href="#" class="sb-facebook" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a>
+                <a href="#" class="sb-twitter" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a>
+                <a href="#" class="sb-google-plus" data-toggle="tooltip" data-placement="top" title="Google+"><i class="fa fa-google-plus"></i></a>
+                <a href="#" class="sb-instagram"><i class="fa fa-instagram"></i></a>
+              </div><!-- .social-bar -->
+            </div><!-- .column -->
+          </div><!-- .inner -->
+        </div><!-- .copyright -->
+      </div><!-- .container -->
+    </footer><!-- .footer -->
+  </div><!-- .page-wrapper -->
+
+  <!-- JavaScript (jQuery) libraries, plugins and custom scripts -->
+  <script src="js/vendor/jquery-2.1.4.min.js"></script>
+  <script src="js/vendor/bootstrap.min.js"></script>
+  <script src="js/vendor/placeholder.js"></script>
+  <script src="js/vendor/smoothscroll.js"></script>
+  <script src="js/vendor/jquery.stellar.min.js"></script>
+  <script src="js/vendor/velocity.min.js"></script>
+  <script src="js/scripts.js"></script>
+  <script src="color-switcher/color-switcher.js"></script>
+
+</body><!-- <body> -->
+
+</html>

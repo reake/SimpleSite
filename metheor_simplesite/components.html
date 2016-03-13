@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Metheor | Components</title>
+
+  <!--SEO Meta Tags-->
+  <meta name="description" content="Metheor - Multi-Purpose App Showcase Template" />
+  <meta name="keywords" content="multipurpose, app showcase, mobile, blog, business, corporate, startup, landing, shortcodes, html5, css3, jquery, js, gallery, slider, touch, creative" />
+  <meta name="author" content="Rokathemes" />
+
+  <!--Mobile Specific Meta Tag-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <!-- All Theme Styles including Bootstrap, Bourbon, Pixeden, etc. compiled from styles.scss-->
+  <link href="css/styles.min.css" rel="stylesheet" media="screen">
+
+  <!--Color Scheme-->
+  <link class="color-scheme" href="css/colors/color-ff3366.css" rel="stylesheet" media="screen">
+
+  <!--Color Switcher-->
+  <link href="color-switcher/color-switcher.css" rel="stylesheet" media="screen">
+
+  <!--Modernizr / Detectizr-->
+  <script src="js/vendor/modernizr.custom.js"></script>
+  
+  <!-- Page Preloader (Pace) -->
+  <script src="js/vendor/pace.min.js"></script>
+</head>
+
+<!-- Body -->
+<!-- ".is-preloader" class is used for page preloading animation. Please note if you do not want preloading you need to remove this class along with pace.min.js link in the <head> of the document.-->
+<body class="is-preloader">
+  
+  <!-- Page Wrapper -->
+  <div class="page-wrapper">
+  
+    <!--Color Switcher-->
+    <div class="color-switcher">
+      <div class="toggle"><i class="pe-7s-paint"></i></div>
+      <div class="color">
+        <a class="current" style="background-color: #ff3366;" href="#" data-color="ff3366"></a>
+        <span>#ff3366</span>
+      </div>
+      <div class="color">
+        <a style="background-color: #2196f3;" href="#" data-color="2196f3"></a>
+        <span>#2196f3</span>
+      </div>
+      <div class="color">
+        <a style="background-color: #b26ff6;" href="#" data-color="b26ff6"></a>
+        <span>#b26ff6</span>
+      </div>
+      <div class="color">
+        <a style="background-color: #00bcd4;" href="#" data-color="00bcd4"></a>
+        <span>#00bcd4</span>
+      </div>
+    </div><!--Color Switcher End-->
+
+    <!-- Navbar -->
+    <!-- Remove ".navbar-fixed" class to make navigation bar scrollable with the page. Another modifier calss is ".submenu-dark" to alter submenu appearance. -->
+    <header class="navbar navbar-fixed">
+      <div class="container">
+        <div class="inner">
+
+          <!-- Site Logo -->
+          <a href="index.html" class="site-logo">
+            <img src="img/logo.svg" alt="Metheor">
+          </a><!-- .site-logo -->
+          
+          <!-- Mobile Dropdown -->
+          <div class="mobile-dropdown">
+
+            <!-- Mobile Tools -->
+            <div class="mobile-tools">
+              <form method="post" class="search-box">
+                <input type="text" placeholder="Enter your search query">
+                <button type="submit"><i class="pe-7s-search"></i></button>
+              </form><!-- .search-box -->
+              <div class="social-bar text-center">
+                <a href="#" class="sb-facebook"><i class="fa fa-facebook"></i></a>
+                <a href="#" class="sb-twitter"><i class="fa fa-twitter"></i></a>
+                <a href="#" class="sb-google-plus"><i class="fa fa-google-plus"></i></a>
+                <a href="#" class="sb-instagram"><i class="fa fa-instagram"></i></a>
+              </div><!-- .social-bar -->
+            </div><!-- .mobile-tools -->
+            
+            <!-- Main Navigation -->
+            <nav class="main-navigation">
+              <ul class="menu">
+                <li class="menu-item-has-children">
+                  <a href="#">Home<span>&#8211;</span></a>
+                  <ul class="sub-menu">
+                    <li><a href="index.html">Home Version 1</a></li>
+                    <li><a href="home-v2.html">Home Version 2</a></li>
+                    <li><a href="home-v3.html">Home Version 3</a></li>
+                    <li><a href="index.html">Home Version 4</a></li>
+                  </ul>
+                </li>
+                <li class="menu-item-has-children">
+                  <a href="#">Blog<span>&#8211;</span></a>
+                  <ul class="sub-menu">
+                    <li><a href="blog-grid-boxed.html">Blog Grid Boxed</a></li>
+                    <li><a href="blog-grid-fullwidth.html">Blog Grid Full Width</a></li>
+                    <li><a href="blog-list-rs.html">Blog List Right Sidebar</a></li>
+                    <li><a href="blog-list-ls.html">Blog List Left Sidebar</a></li>
+                    <li><a href="blog-list-ns.html">Blog List No Sidebar</a></li>
+                    <li><a href="single-rs.html">Single Post Right Sidebar</a></li>
+                    <li><a href="single-ls.html">Single Post Left Sidebar</a></li>
+                    <li><a href="single-ns.html">Single Post No Sidebar</a></li>
+                  </ul>
+                </li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li class="menu-item-has-children">
+                  <a href="#">Pages<span>&#8211;</span></a>
+                  <ul class="sub-menu">
+                    <li><a href="help-center.html">Help Center</a></li>
+                    <li><a href="contacts.html">Contacts</a></li>
+                    <li><a href="404.html">404</a></li>
+                  </ul>
+                </li>
+                <li class="current-menu-item">
+                  <a href="components.html">Components</a>
+                </li>
+              </ul><!-- .menu -->
+            </nav><!-- .main-navigation -->
+          </div><!-- .mobile-dropdown -->
+
+          <!-- Toolbar -->
+          <div class="toolbar">
+            <div class="search-btn">
+              <i class="pe-7s-search"></i>
+              <form method="post" class="search-box">
+                <input type="text" placeholder="Enter your search query">
+                <button type="submit"><i class="pe-7s-search"></i></button>
+              </form>
+            </div>
+            <span class="divider"></span>
+            <div class="share-btn">
+              <i class="pe-7s-share"></i>
+              <ul class="dropdown">
+                <li><a href="#" class="sb-facebook"><i class="fa fa-facebook"></i>Facebook</a></li>
+                <li><a href="#" class="sb-twitter"><i class="fa fa-twitter"></i>Twitter</a></li>
+                <li><a href="#" class="sb-google-plus"><i class="fa fa-google-plus"></i>Google+</a></li>
+                <li><a href="#" class="sb-instagram"><i class="fa fa-instagram"></i>Instagram</a></li>
+              </ul>
+            </div>
+            <a href="#" class="btn btn-sm btn-primary btn-icon-left">
+              <i class="pe-7s-download"></i>Get App
+            </a>
+            <!-- Mobile Menu Toggle -->
+            <div class="nav-toggle"><span></span></div>
+          </div><!-- .toolbar -->
+        </div><!-- .container -->
+      </div><!-- .container -->
+    </header><!-- .navbar.navbar-fixed -->
+
+    <!-- Page Title -->
+    <!-- Use modifier class ".pt-dark" to switch to dark skin. -->
+    <div class="page-title">
+      <div class="container">
+        <div class="inner">
+          <div class="title">
+            <span class="back-btn icon-arrow-left" onclick="goBack()"></span>
+            <h1>Components</h1>
+            <p class="page-description">Optional page subtitle used for description</p>
+          </div><!-- .title -->
+          <div class="breadcrumbs">
+            <a href="index.html">Home</a>
+            <span>Components</span>
+          </div><!-- .breadcrumbs -->
+        </div><!-- .inner -->
+      </div><!-- .container -->
+    </div><!-- .page-title -->
+
+    <!-- Content -->
+    <div class="container">
+
+      <!-- Typography -->
+      <div class="row">
+        <div class="col-sm-3 space-bottom-2x">
+          <h5 class="text-uppercase text-gray text-thin space-bottom">Headings</h5>
+          <h1>H1. Heading</h1>
+          <h2>H2. Heading</h2>
+          <h3>H3. Heading</h3>
+          <h4>H4. Heading</h4>
+          <h5>H5. Heading</h5>
+          <h6>H6. Heading</h6>
+        </div><!-- .col-sm-3 -->
+        <div class="col-sm-5 space-bottom-2x">
+          <h5 class="text-uppercase text-gray text-thin space-bottom">Body Copy</h5>
+          <p class="lead"><strong>Lead.</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+          <p class="text-lg"><strong>Large.</strong> Lorem ipsum <a href="#">link here</a> dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+          <p><strong>Normal.</strong> Lorem ipsum <a href="#">link here</a> dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+          <p class="text-sm"><strong>Small.</strong> Lorem ipsum <a href="#">link here</a> dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore occaecat cupidatat.</p>
+          <p class="text-xs"><strong>Extra small.</strong> Lorem ipsum <a href="#">link here</a> dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore occaecat cupidatat.</p>
+        </div><!-- .col-sm-5 -->
+        <div class="col-sm-4 space-bottom-2x">
+          <h5 class="text-uppercase text-gray text-thin space-bottom">Lists</h5>
+          <ul class="list-featured">
+            <li>Neque porro quisquam est, qui dolorem ipsum</li>
+            <li>Lorem <a href="#">ipsum dolor sit</a> amet, consectetur</li>
+            <li>Excepteur sint occaecat cupidatat non</li>
+            <li>Duis aute irure dolor in reprehenderit</li>
+            <li>Nemo enim ipsam voluptatem quia voluptas</li>
+          </ul>
+          <ol>
+            <li>Neque porro quisquam est, qui dolorem ipsum</li>
+            <li>Lorem <a href="#">ipsum dolor sit</a> amet, consectetur</li>
+            <li>Excepteur sint occaecat cupidatat non</li>
+            <li>Duis aute irure dolor in reprehenderit</li>
+            <li>Nemo enim ipsam voluptatem quia voluptas</li>
+          </ol>
+        </div><!-- .col-sm-4 -->
+      </div><!-- .row -->
+      <div class="row">
+        <div class="col-sm-5 space-bottom-2x">
+          <h5 class="text-uppercase text-gray text-thin space-bottom">Contextual Colors</h5>
+          <ul class="list-unstyled">
+            <li class="text-muted"><strong>Muted text.</strong> Sed ut perspiciatis unde omnis iste natus voluptatem.</li>
+            <li class="text-primary"><strong>Primary text.</strong> Maecenas sed diam eget risus varius blandit amet.</li>
+            <li class="text-success"><strong>Success text.</strong> Et harum quidem rerum facilis est expedita natus.</li>
+            <li class="text-info"><strong>Info text.</strong> Sed ut perspiciatis unde omnis iste natus voluptatem.</li>
+            <li class="text-warning"><strong>Warning text.</strong> Maecenas sed diam eget risus varius blandit amet.</li>
+            <li class="text-danger"><strong>Danger text.</strong> Et harum quidem rerum facilis est expedita natus.</li>
+          </ul>
+        </div>
+        <div class="col-sm-7 space-bottom-2x">
+          <h5 class="text-uppercase text-gray text-thin space-bottom">Contextual Backgrounds</h5>
+          <p><span class="bg-primary">Lorem ipsum dolor sit amet,</span> primary background consectetur adipisicing elit. Nemo enim ipsam voluptatem quia voluptas sit. Success background <span class="bg-default">non,sequi amet obcaecati</span> quos <span class="bg-success">soluta quisquam harum</span> dolor ab veniam <span class="bg-info">molestias info background excepturi</span> ut vitae warning background rerum repellendus aut quaerat deleniti recusandae. Nemo enim ipsam voluptatem quia voluptas sit. Quas nam quod <span class="bg-warning">dolorem, ipsam impedit</span> danger background, saepe, <span class="bg-danger">expedita necessitatibus reprehenderit,</span> ratione modi a quis magnam. Sint vero fuga totam repellendus quae! Lorem ipsum dolor sit amet.</p>
+        </div>
+      </div><!-- .row -->
+
+      <!-- Quotations -->
+      <h5 class="text-uppercase text-gray text-thin space-bottom">Quotations</h5>
+      <div class="row">
+        <div class="col-sm-6 space-bottom-2x">
+          <blockquote>
+            <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem.</p>
+            <cite>James Cameron</cite>
+          </blockquote>
+        </div><!-- .col-sm-6 -->
+        <div class="col-sm-6 space-bottom-2x">
+          <blockquote class="blockquote-reverse">
+            <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem.</p>
+            <cite>James Cameron</cite>
+          </blockquote>
+        </div><!-- .col-sm-6 -->
+      </div><!-- .row -->
+
+      <!-- Normal Buttons -->
+      <div class="space-bottom-2x">
+        <h5 class="text-uppercase text-gray text-thin space-bottom">Normal Buttons</h5>
+        <a href="#" class="btn btn-default">Default button</a>
+        <a href="#" class="btn btn-primary">Primary button</a>
+        <a href="#" class="btn btn-info">Info button</a>
+        <a href="#" class="btn btn-success">Success button</a>
+        <a href="#" class="btn btn-warning">Warning button</a>
+        <a href="#" class="btn btn-danger">Danger button</a>
+        <a href="#" class="btn btn-sm btn-default">Small button</a>
+      </div><!-- .space-bottom-2x -->
+      <div class="space-bottom-2x">
+        <h5 class="text-uppercase text-gray text-thin space-bottom">Ghost Buttons</h5>
+        <a href="#" class="btn btn-ghost btn-default">Default button</a>
+        <a href="#" class="btn btn-ghost btn-primary">Primary button</a>
+        <a href="#" class="btn btn-ghost btn-info">Info button</a>
+        <a href="#" class="btn btn-ghost btn-success">Success button</a>
+        <a href="#" class="btn btn-ghost btn-warning">Warning button</a>
+        <a href="#" class="btn btn-ghost btn-danger">Danger button</a>
+        <a href="#" class="btn btn-ghost btn-sm btn-default">Small button</a>
+      </div><!-- .space-bottom-2x -->
+      <div class="space-bottom-2x">
+        <h5 class="text-uppercase text-gray text-thin space-bottom">Buttons with Icons</h5>
+        <a href="#" class="btn btn-default btn-icon-left"><i class="pe-7s-config"></i>Left icon</a>
+        <a href="#" class="btn btn-info btn-icon-right">Right icon<i class="pe-7s-cart"></i></a>
+        <a href="#" class="btn btn-ghost btn-default btn-icon-left"><i class="pe-7s-bell"></i>Left icon</a>
+        <a href="#" class="btn btn-ghost btn-info btn-icon-right">Right icon<i class="pe-7s-anchor"></i></a>
+        <a href="#" class="btn btn-sm btn-default btn-icon-left"><i class="pe-7s-download"></i>Left icon</a>
+        <a href="#" class="btn btn-sm btn-info btn-icon-right">Right icon<i class="pe-7s-like"></i></a>
+      </div><!-- .space-bottom-2x -->
+
+      <!-- Block Buttons -->
+      <div class="space-bottom-2x">
+        <h5 class="text-uppercase text-gray text-thin space-bottom">Block Buttons</h5>
+        <div class="row">
+          <div class="col-sm-3">
+            <a href="#" class="btn btn-block btn-default">Default button</a>
+          </div><!-- .col-sm-3 -->
+          <div class="col-sm-3">
+            <a href="#" class="btn btn-block btn-primary btn-icon-right">Primary button</a>
+          </div><!-- .col-sm-3 -->
+          <div class="col-sm-3">
+            <a href="#" class="btn btn-block btn-ghost btn-default">Default button</a>
+          </div><!-- .col-sm-3 -->
+          <div class="col-sm-3">
+            <a href="#" class="btn btn-block btn-ghost btn-primary">Primary button</a>
+          </div><!-- .col-sm-3 -->
+        </div><!-- .row -->
+      </div><!-- .space-bottom-2x -->
+
+      <!-- Market Buttons -->
+      <h5 class="text-uppercase text-gray text-thin space-bottom">Market Buttons</h5>
+      <div class="space-bottom-3x">
+        <a href="#" class="app-store-btn"></a>
+        <a href="#" class="google-play-btn"></a>
+        <a href="#" class="windows-btn"></a>
+        <a href="#" class="amazon-btn"></a>
+      </div><!-- .space-bottom-3x -->
+
+      <!-- Form Controls -->
+      <h5 class="text-uppercase text-gray text-thin space-bottom">Form Controls</h5>
+      <div class="row space-bottom-2x">
+        <div class="col-sm-6">
+          <div class="form-control">
+            <i class="pe-7s-user"></i>
+            <input type="text" placeholder="Name">
+          </div>
+          <div class="form-control">
+            <i class="pe-7s-mail"></i>
+            <input type="email" class="valid" placeholder="Valid field">
+          </div>
+          <div class="form-control">
+            <i class="pe-7s-call"></i>
+            <input type="text" class="error" placeholder="Error field">
+          </div>
+          <div class="form-control">
+            <i class="pe-7s-comment"></i>
+            <textarea rows="3" placeholder="Textarea"></textarea>
+          </div>
+        </div><!-- .col-sm-6 -->
+        <div class="col-sm-6">
+          <div class="row space-bottom">
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label class="checkbox">
+                  <input type="checkbox"> Checkbox
+                </label>
+                <label class="checkbox">
+                  <input type="checkbox" checked> Checkbox
+                </label>
+                <label class="checkbox disabled">
+                  <input type="checkbox" disabled> Checkbox
+                </label>
+                <label class="checkbox disabled">
+                  <input type="checkbox" checked disabled> Checkbox
+                </label>
+              </div>
+            </div><!-- .col-sm-6 -->
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label class="radio">
+                  <input type="radio" name="rad_demo_1"> Radio
+                </label>
+                <label class="radio">
+                  <input type="radio" name="rad_demo_1" checked> Radio
+                </label>
+                <label class="radio disabled">
+                  <input type="radio" disabled> Radio
+                </label>
+                <label class="radio disabled">
+                  <input type="radio" checked disabled> Radio
+                </label>
+              </div>
+            </div><!-- .col-sm-6 -->
+          </div><!-- .row -->
+          <div class="form-group">
+            <label class="checkbox checkbox-inline">
+              <input type="checkbox"> Checkbox
+            </label>
+            <label class="checkbox checkbox-inline">
+              <input type="checkbox" checked> Checkbox
+            </label>
+            <label class="checkbox checkbox-inline disabled">
+              <input type="checkbox" disabled> Checkbox
+            </label>
+            <label class="checkbox checkbox-inline disabled">
+              <input type="checkbox" checked disabled> Checkbox
+            </label>
+          </div>
+          <div class="form-group">
+            <label class="radio radio-inline">
+              <input type="radio" name="rad_demo_2"> Radio
+            </label>
+            <label class="radio radio-inline">
+              <input type="radio" name="rad_demo_2" checked> Radio
+            </label>
+            <label class="radio radio-inline disabled">
+              <input type="radio" disabled> Radio
+            </label>
+            <label class="radio radio-inline disabled">
+              <input type="radio" checked disabled> Radio
+            </label>
+          </div>
+        </div><!-- .col-sm-6 -->
+      </div><!-- .row -->
+
+      <!-- Tables -->
+      <h5 class="text-uppercase text-gray text-thin space-bottom">Tables</h5>
+      <div class="table-responsive">
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Position</th>
+              <th>Username</th>
+              <th>Phone</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Johnathan</td>
+              <td>Doe</td>
+              <td>CEO, Founder</td>
+              <td>@johny</td>
+              <td>+3 555 68 70</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Anna</td>
+              <td>Cabana</td>
+              <td>Designer</td>
+              <td>@cabana</td>
+              <td>+3 434 65 93</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>Kale</td>
+              <td>Thornton</td>
+              <td>Developer</td>
+              <td>@thornton</td>
+              <td>+3 285 42 88</td>
+            </tr>
+            <tr>
+              <th scope="row">4</th>
+              <td>Jane</td>
+              <td>Birkins</td>
+              <td>Support</td>
+              <td>@birkins</td>
+              <td>+3 774 28 50</td>
+            </tr>
+          </tbody>
+        </table>
+      </div><!-- .table-responsive -->
+      <div class="table-responsive space-bottom-2x">
+        <table class="table-striped">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Position</th>
+              <th>Username</th>
+              <th>Phone</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Johnathan</td>
+              <td>Doe</td>
+              <td>CEO, Founder</td>
+              <td>@johny</td>
+              <td>+3 555 68 70</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Anna</td>
+              <td>Cabana</td>
+              <td>Designer</td>
+              <td>@cabana</td>
+              <td>+3 434 65 93</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>Kale</td>
+              <td>Thornton</td>
+              <td>Developer</td>
+              <td>@thornton</td>
+              <td>+3 285 42 88</td>
+            </tr>
+            <tr>
+              <th scope="row">4</th>
+              <td>Jane</td>
+              <td>Birkins</td>
+              <td>Support</td>
+              <td>@birkins</td>
+              <td>+3 774 28 50</td>
+            </tr>
+          </tbody>
+        </table>
+      </div><!-- .table-responsive.space-bottom-2x -->
+
+      <div class="row padding-bottom">
+        <div class="col-md-6 space-bottom">
+
+          <!-- Side Navigation -->
+          <h5 class="text-uppercase text-gray text-thin space-bottom">Side Navigation</h5>
+          <div class="row">
+            <div class="col-sm-6">
+              <nav class="side-nav">
+                <ul>
+                  <li><a href="#">Account</a></li>
+                  <li class="active"><a href="#">Mobile App</a></li>
+                  <li><a href="#">Payment &amp; Billing</a></li>
+                  <li><a href="#">Other Information</a></li>
+                  <li><a href="#">Ask Your Question</a></li>
+                  <li><a href="#">Submit Support Ticket</a></li>
+                </ul>
+              </nav><!-- .side-nav -->
+            </div><!-- .col-md-6 -->
+            <div class="col-sm-6">
+              <nav class="side-nav dark-skin">
+                <ul>
+                  <li><a href="#">Account</a></li>
+                  <li class="active"><a href="#">Mobile App</a></li>
+                  <li><a href="#">Payment &amp; Billing</a></li>
+                  <li><a href="#">Other Information</a></li>
+                  <li><a href="#">Ask Your Question</a></li>
+                  <li><a href="#">Submit Support Ticket</a></li>
+                </ul>
+              </nav><!-- .side-nav -->
+            </div><!-- .col-md-6 -->
+          </div><!-- .row -->
+        </div><!-- .col-md-6.space-bottom -->
+        <div class="col-md-6 space-bottom">
+
+          <!-- Social Links -->
+          <h5 class="text-uppercase text-gray text-thin space-bottom">Social Links</h5>
+          <div class="social-bar">
+            <a href="#" class="sb-email" data-toggle="tooltip" data-placement="top" title="Email">
+              <i class="fa fa-envelope"></i>
+            </a>
+            <a href="#" class="sb-behance" data-toggle="tooltip" data-placement="top" title="Behance">
+              <i class="fa fa-behance"></i>
+            </a>
+            <a href="#" class="sb-bitbucket" data-toggle="tooltip" data-placement="top" title="BitBucket">
+              <i class="fa fa-bitbucket"></i>
+            </a>
+            <a href="#" class="sb-codepen" data-toggle="tooltip" data-placement="top" title="Codepent">
+              <i class="fa fa-codepen"></i>
+            </a>
+            <a href="#" class="sb-deviantart" data-toggle="tooltip" data-placement="top" title="DeviantArt">
+              <i class="fa fa-deviantart"></i>
+            </a>
+            <a href="#" class="sb-digg" data-toggle="tooltip" data-placement="top" title="Digg">
+              <i class="fa fa-digg"></i>
+            </a>
+            <a href="#" class="sb-dribbble" data-toggle="tooltip" data-placement="top" title="Dribbble">
+              <i class="fa fa-dribbble"></i>
+            </a>
+            <a href="#" class="sb-dropbox" data-toggle="tooltip" data-placement="top" title="Dropbox">
+              <i class="fa fa-dropbox"></i>
+            </a>
+            <a href="#" class="sb-facebook" data-toggle="tooltip" data-placement="top" title="Facebook">
+              <i class="fa fa-facebook"></i>
+            </a>
+            <a href="#" class="sb-flickr" data-toggle="tooltip" data-placement="top" title="Flickr">
+              <i class="fa fa-flickr"></i>
+            </a>
+            <a href="#" class="sb-foursquare" data-toggle="tooltip" data-placement="top" title="Foursquare">
+              <i class="fa fa-foursquare"></i>
+            </a>
+            <a href="#" class="sb-github" data-toggle="tooltip" data-placement="top" title="Github">
+              <i class="fa fa-github"></i>
+            </a>
+            <a href="#" class="sb-google-plus" data-toggle="tooltip" data-placement="top" title="Google+">
+              <i class="fa fa-google-plus"></i>
+            </a>
+            <a href="#" class="sb-instagram" data-toggle="tooltip" data-placement="top" title="Instagram">
+              <i class="fa fa-instagram"></i>
+            </a>
+            <a href="#" class="sb-jsfiddle" data-toggle="tooltip" data-placement="top" title="jsFiddle">
+              <i class="fa fa-jsfiddle"></i>
+            </a>
+            <a href="#" class="sb-lastfm" data-toggle="tooltip" data-placement="top" title="last.fm">
+              <i class="fa fa-lastfm"></i>
+            </a>
+            <a href="#" class="sb-linkedin" data-toggle="tooltip" data-placement="top" title="LinkedIn">
+              <i class="fa fa-linkedin"></i>
+            </a>
+            <a href="#" class="sb-paypal" data-toggle="tooltip" data-placement="top" title="PayPal">
+              <i class="fa fa-paypal"></i>
+            </a>
+            <a href="#" class="sb-pinterest" data-toggle="tooltip" data-placement="top" title="Pinterest">
+              <i class="fa fa-pinterest"></i>
+            </a>
+            <a href="#" class="sb-reddit" data-toggle="tooltip" data-placement="top" title="Reddit">
+              <i class="fa fa-reddit"></i>
+            </a>
+            <a href="#" class="sb-skype" data-toggle="tooltip" data-placement="top" title="Skype">
+              <i class="fa fa-skype"></i>
+            </a>
+            <a href="#" class="sb-soundcloud" data-toggle="tooltip" data-placement="top" title="SoundCloud">
+              <i class="fa fa-soundcloud"></i>
+            </a>
+            <a href="#" class="sb-stackoverflow" data-toggle="tooltip" data-placement="top" title="Stack Overflow">
+              <i class="fa fa-stack-overflow"></i>
+            </a>
+            <a href="#" class="sb-steam" data-toggle="tooltip" data-placement="top" title="Steam">
+              <i class="fa fa-steam"></i>
+            </a>
+            <a href="#" class="sb-stumbleupon" data-toggle="tooltip" data-placement="top" title="StumbleUpon">
+              <i class="fa fa-stumbleupon"></i>
+            </a>
+            <a href="#" class="sb-trello" data-toggle="tooltip" data-placement="top" title="Trello">
+              <i class="fa fa-trello"></i>
+            </a>
+            <a href="#" class="sb-tumblr" data-toggle="tooltip" data-placement="top" title="Tumblr">
+              <i class="fa fa-tumblr"></i>
+            </a>
+            <a href="#" class="sb-twitch" data-toggle="tooltip" data-placement="top" title="Twitch">
+              <i class="fa fa-twitch"></i>
+            </a>
+            <a href="#" class="sb-twitter" data-toggle="tooltip" data-placement="top" title="Twitter">
+              <i class="fa fa-twitter"></i>
+            </a>
+            <a href="#" class="sb-vine" data-toggle="tooltip" data-placement="top" title="Vine">
+              <i class="fa fa-vine"></i>
+            </a>
+            <a href="#" class="sb-vk" data-toggle="tooltip" data-placement="top" title="Vkontakte">
+              <i class="fa fa-vk"></i>
+            </a>
+            <a href="#" class="sb-wechat" data-toggle="tooltip" data-placement="top" title="WeChat">
+              <i class="fa fa-wechat"></i>
+            </a>
+            <a href="#" class="sb-wordpress" data-toggle="tooltip" data-placement="top" title="WordPress">
+              <i class="fa fa-wordpress"></i>
+            </a>
+            <a href="#" class="sb-xing" data-toggle="tooltip" data-placement="top" title="Xing">
+              <i class="fa fa-xing"></i>
+            </a>
+            <a href="#" class="sb-yahoo" data-toggle="tooltip" data-placement="top" title="Yahoo!">
+              <i class="fa fa-yahoo"></i>
+            </a>
+            <a href="#" class="sb-yelp" data-toggle="tooltip" data-placement="top" title="Yelp">
+              <i class="fa fa-yelp"></i>
+            </a>
+            <a href="#" class="sb-youtube" data-toggle="tooltip" data-placement="top" title="YouTube">
+              <i class="fa fa-youtube"></i>
+            </a>
+          </div><!-- .social-bar -->
+        </div><!-- .col-md-6.space-bottom -->
+      </div><!-- .row -->
+
+      <!-- Tabs -->
+      <h5 class="text-uppercase text-gray text-thin space-bottom">Tabs</h5>
+      <div class="row">
+        <div class="col-sm-6 space-bottom-2x">
+          <!-- Nav Tabs -->
+          <ul class="nav-tabs" role="tablist">
+            <li class="active"><a href="#tab1" role="tab" data-toggle="tab">Tab 1</a></li>
+            <li><a href="#tab2" role="tab" data-toggle="tab">Tab 2</a></li>
+            <li><a href="#tab3" role="tab" data-toggle="tab">Tab 3</a></li>
+          </ul><!-- .nav-tabs -->
+          <!-- Tab panes -->
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane transition fade in active" id="tab1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut dignissimos ipsam obcaecati corrupti modi, deserunt facere asperiores. Voluptatum laudantium ut, minus nam. Libero facilis aspernatur cumque, quisquam quod sint odit.</div>
+            <div role="tabpanel" class="tab-pane transition fade" id="tab2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui hic laboriosam odio doloribus suscipit error nostrum totam dignissimos esse numquam voluptatum, aspernatur est, at voluptatem minus temporibus reprehenderit culpa voluptates.</div>
+            <div role="tabpanel" class="tab-pane transition fade" id="tab3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur ratione nulla asperiores repellat natus dolor delectus dolorum harum sequi fugiat vero, voluptatem reiciendis autem, vel. Repellendus ea laudantium pariatur eum!</div>
+          </div><!-- .tab-content -->
+        </div><!-- .col-sm-6 -->
+        <div class="col-sm-6 space-bottom-2x">
+          <!-- Nav Tabs -->
+          <ul class="nav-tabs text-right" role="tablist">
+            <li class="active"><a href="#tab4" role="tab" data-toggle="tab">Tab 1</a></li>
+            <li><a href="#tab5" role="tab" data-toggle="tab">Tab 2</a></li>
+            <li><a href="#tab6" role="tab" data-toggle="tab">Tab 3</a></li>
+          </ul><!-- .nav-tabs -->
+          <!-- Tab panes -->
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane transition fade in active" id="tab4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut dignissimos ipsam obcaecati corrupti modi, deserunt facere asperiores. Voluptatum laudantium ut, minus nam. Libero facilis aspernatur cumque, quisquam quod sint odit.</div>
+            <div role="tabpanel" class="tab-pane transition fade" id="tab5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui hic laboriosam odio doloribus suscipit error nostrum totam dignissimos esse numquam voluptatum, aspernatur est, at voluptatem minus temporibus reprehenderit culpa voluptates.</div>
+            <div role="tabpanel" class="tab-pane transition fade" id="tab6">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur ratione nulla asperiores repellat natus dolor delectus dolorum harum sequi fugiat vero, voluptatem reiciendis autem, vel. Repellendus ea laudantium pariatur eum!</div>
+          </div><!-- .tab-content -->
+        </div><!-- .col-sm-6 -->
+      </div><!-- .row -->
+
+      <div class="row space-bottom">
+        <div class="col-sm-6 space-bottom-2x">
+          <!-- Nav Tabs -->
+          <ul class="nav-tabs text-center" role="tablist">
+            <li class="active"><a href="#tab7" role="tab" data-toggle="tab">Fade</a></li>
+            <li><a href="#tab8" role="tab" data-toggle="tab">Scale</a></li>
+            <li><a href="#tab9" role="tab" data-toggle="tab">Scale 2</a></li>
+            <li><a href="#tab10" role="tab" data-toggle="tab">Left</a></li>
+          </ul><!-- .nav-tabs -->
+          <!-- Tab panes -->
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane transition fade in active" id="tab7">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut dignissimos ipsam obcaecati corrupti modi, deserunt facere asperiores. Voluptatum laudantium ut, minus nam. Libero facilis aspernatur cumque, quisquam quod sint odit.</div>
+            <div role="tabpanel" class="tab-pane transition fade scale" id="tab8">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui hic laboriosam odio doloribus suscipit error nostrum totam dignissimos esse numquam voluptatum, aspernatur est, at voluptatem minus temporibus reprehenderit culpa voluptates.</div>
+            <div role="tabpanel" class="tab-pane transition fade scaledown" id="tab9">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur ratione nulla asperiores repellat natus dolor delectus dolorum harum sequi fugiat vero, voluptatem reiciendis autem, vel. Repellendus ea laudantium pariatur eum!</div>
+            <div role="tabpanel" class="tab-pane transition fade left" id="tab10">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut dignissimos ipsam obcaecati corrupti modi, deserunt facere asperiores. Voluptatum laudantium ut, minus nam. Libero facilis aspernatur cumque, quisquam quod sint odit.</div>
+          </div><!-- .tab-content -->
+        </div><!-- .col-sm-6 -->
+        <div class="col-sm-6 space-bottom-2x">
+          <!-- Nav Tabs -->
+          <ul class="nav-tabs text-center" role="tablist">
+            <li class="active"><a href="#tab11" role="tab" data-toggle="tab">Right</a></li>
+            <li><a href="#tab12" role="tab" data-toggle="tab">Top</a></li>
+            <li><a href="#tab13" role="tab" data-toggle="tab">Bottom</a></li>
+            <li><a href="#tab14" role="tab" data-toggle="tab">Flip</a></li>
+          </ul><!-- .nav-tabs -->
+          <!-- Tab panes -->
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane transition fade right in active" id="tab11">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut dignissimos ipsam obcaecati corrupti modi, deserunt facere asperiores. Voluptatum laudantium ut, minus nam. Libero facilis aspernatur cumque, quisquam quod sint odit.</div>
+            <div role="tabpanel" class="tab-pane transition fade top" id="tab12">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui hic laboriosam odio doloribus suscipit error nostrum totam dignissimos esse numquam voluptatum, aspernatur est, at voluptatem minus temporibus reprehenderit culpa voluptates.</div>
+            <div role="tabpanel" class="tab-pane transition fade bottom" id="tab13">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur ratione nulla asperiores repellat natus dolor delectus dolorum harum sequi fugiat vero, voluptatem reiciendis autem, vel. Repellendus ea laudantium pariatur eum!</div>
+            <div role="tabpanel" class="tab-pane transition fade flip" id="tab14">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut dignissimos ipsam obcaecati corrupti modi, deserunt facere asperiores. Voluptatum laudantium ut, minus nam. Libero facilis aspernatur cumque, quisquam quod sint odit.</div>
+          </div><!-- .tab-content -->
+        </div><!-- .col-sm-6 -->
+      </div><!-- .row.space-bottom -->
+
+      <!-- Panels & Accordions -->
+      <h5 class="text-uppercase text-gray text-thin space-bottom">Panels &amp; Accordions</h5>
+      <div class="row space-bottom">
+        <div class="col-sm-6 space-bottom-2x">
+          <div class="panel">
+            <div class="panel-heading">
+              <h3 class="panel-title">Static Panel Example</h3>
+            </div>
+            <div class="panel-body">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis nostrum hic quae ab nihil fuga? Maiores expedita quod eligendi accusamus, animi doloribus totam soluta, dolores sed laborum repudiandae repellendus praesentium?
+            </div>
+          </div><!-- .panel -->
+          <div class="panel-group">
+            <div class="panel">
+              <div class="panel-heading">
+                <a class="panel-title" data-toggle="collapse" href="#panel">
+                  Collapsible Panel Example
+                </a>
+              </div>
+              <div id="panel" class="panel-collapse collapse in">
+                <div class="panel-body">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea eum itaque consequuntur voluptate, vero officiis assumenda atque odit recusandae explicabo harum, adipisci aliquid illum quibusdam saepe repudiandae distinctio, tempora voluptates!
+                </div>
+              </div>
+            </div><!-- .panel -->
+          </div><!-- .panel-group -->
+        </div><!-- .col-sm-6 -->
+
+        <div class="col-sm-6">
+          <div class="panel-group" id="accordion">
+            <div class="panel">
+              <div class="panel-heading">
+                <a class="panel-title" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                  Collapsible Group Item #1
+                </a>
+              </div>
+              <div id="collapseOne" class="panel-collapse collapse in">
+                <div class="panel-body">
+                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo.
+                </div>
+              </div>
+            </div><!-- .panel -->
+            <div class="panel">
+              <div class="panel-heading">
+                <a class="panel-title collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                  Collapsible Group Item #2
+                </a>
+              </div>
+              <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel">
+                <div class="panel-body">
+                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo.
+                </div>
+              </div>
+            </div><!-- .panel -->
+            <div class="panel">
+              <div class="panel-heading">
+                <a class="panel-title collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                  Collapsible Group Item #3
+                </a>
+              </div>
+              <div id="collapseThree" class="panel-collapse collapse">
+                <div class="panel-body">
+                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo.
+                </div>
+              </div>
+            </div><!-- .panel -->
+          </div><!-- .panel-group -->
+        </div><!-- .col-sm-6 -->
+      </div><!-- .row -->
+      <div class="space-top-2x visible-xs"></div>
+
+      <!-- Dark Footer -->
+      <h5 class="text-uppercase text-gray text-thin space-bottom">Alternative Dark Footer</h5>
+    </div><!-- .container -->
+    <footer class="footer footer-dark space-bottom-3x">
+      <div class="container">
+        <form class="row subscription">
+          <div class="col-sm-9">
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="form-control">
+                  <i class="pe-7s-user"></i>
+                  <input type="text" placeholder="Name">
+                </div>
+              </div>
+              <div class="col-sm-6">
+              <div class="form-control">
+                <i class="pe-7s-mail"></i>
+                <input type="email" placeholder="Email">
+              </div>
+              </div>
+            </div>
+          </div><!-- .col-sm-9 -->
+          <div class="col-sm-3">
+            <button type="submit" class="btn btn-primary btn-block">Subscribe *</button>
+          </div><!-- .col-sm-3 -->
+          <div class="col-sm-12">
+            <span class="text-muted">* Be the first to know about latest updates and new features.</span>
+          </div><!-- .col-sm-12 -->
+        </form><!-- .row.subscription -->
+        <div class="padding-top-3x padding-bottom-2x text-center">
+          <h6 class="text-thin text-light">Application available on:</h6>
+          <a href="#" class="app-store-btn"></a>
+          <a href="#" class="google-play-btn"></a>
+          <a href="#" class="windows-btn"></a>
+          <a href="#" class="amazon-btn"></a>
+          <div class="market-counter">
+            <i class="pe-7s-download"></i>
+            <span>133K</span>
+            downloads
+          </div><!-- .market-counter -->
+        </div><!-- .padding-top-3x.padding-bottom-2x.text-center -->
+
+        <!-- Copyright -->
+        <div class="copyright">
+          <div class="inner">
+            <div class="column">
+              <a href="index.html" class="site-logo">
+                <img src="img/footer-logo-alt.svg" alt="Metheor">
+              </a>
+              <span class="copy-text">&copy; 2015. All rights reserved</span>
+            </div><!-- .column -->
+            <div class="column">
+              <nav class="footer-nav">
+                <ul>
+                  <li><a href="#">Terms of service</a></li>
+                  <li><a href="#">Privacy policy</a></li>
+                  <li><a href="#">Contacts</a></li>
+                  <li><a href="#">Support</a></li>
+                </ul>
+              </nav><!-- .footer-nav -->
+            </div><!-- .column -->
+            <div class="column">
+              <div class="social-bar">
+                <a href="#" class="sb-facebook" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a>
+                <a href="#" class="sb-twitter" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a>
+                <a href="#" class="sb-google-plus" data-toggle="tooltip" data-placement="top" title="Google+"><i class="fa fa-google-plus"></i></a>
+                <a href="#" class="sb-instagram"><i class="fa fa-instagram"></i></a>
+              </div><!-- .social-bar -->
+            </div><!-- .column -->
+          </div><!-- .inner -->
+        </div><!-- .copyright -->
+      </div><!-- .container -->
+    </footer><!-- .footer -->
+
+    <div class="container">
+
+      <!-- Image Carousel -->
+      <div class="row">
+        <div class="col-lg-9 col-md-8">
+          <h5 class="text-uppercase text-gray text-thin space-bottom">Image Carousel</h5>
+          <!-- Data API:
+            data-loop="true/false" enable/disable looping
+            data-autoplay="true/false" enable/disable carousel autoplay
+            data-interval="3000" autoplay interval timeout in miliseconds 
+            data-autoheight="true/false" enable/disable autoheight with transition
+            data-dots="true/false" enable/disable bullet navigation
+            Simply add necessary data attribute to the ".image-carousel" with appropriate value to adjust carousel functionality.
+            Add ".light-controls" class to change skin of carousel controls to light version. e.x. for dark images.
+           -->
+          <div class="image-carousel space-bottom-2x" data-dots="true">
+            <div class="inner">
+              <img src="img/blog/carousel/01.jpg" alt="Image">
+              <img src="img/blog/carousel/02.jpg" alt="Image">
+              <img src="img/blog/carousel/03.jpg" alt="Image">
+            </div>
+          </div><!-- .image-carousel -->
+        </div><!-- .col-lg-9.col-md-8 -->
+      </div><!-- .row -->
+      
+      <!-- Image Shapes -->
+      <h5 class="text-uppercase text-gray text-thin space-bottom">Image Shapes</h5>
+      <div class="row">
+        <div class="col-sm-4 space-bottom">
+          <img src="img/img.png" class="block-center" alt="Square">
+        </div><!-- .col-sm-4 -->
+        <div class="col-sm-4 space-bottom">
+          <img src="img/img.png" class="img-circle block-center" alt="Circle">
+        </div><!-- .col-sm-4 -->
+        <div class="col-sm-4 space-bottom">
+          <img src="img/img.png" class="img-rounded block-center" alt="Rounded">
+        </div><!-- .col-sm-4 -->
+      </div><!-- .row -->
+    </div><!-- .container -->
+
+    <!-- Scroll To Top Button -->
+    <a href="#" class="scroll-to-top-btn">
+      <i class="icon-arrow-up"></i> 
+    </a><!-- .scroll-to-top-btn -->
+
+    <!-- Footer -->
+    <!-- Use modifier class ".footer-dark" to switch to dark skin. -->
+    <footer class="footer space-top-3x">
+      <div class="container">
+        <form action="//rokaux.us12.list-manage.com/subscribe/post?u=c7103e2c981361a6639545bd5&amp;id=1194bb7544" method="post" class="row subscription validate" target="_blank" novalidate>
+          <div class="col-sm-9">
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="form-control">
+                  <i class="pe-7s-user"></i>
+                  <input type="text" name="FNAME" placeholder="Name">
+                </div>
+              </div>
+              <div class="col-sm-6">
+              <div class="form-control">
+                <i class="pe-7s-mail"></i>
+                <input type="email" name="EMAIL" placeholder="Email">
+              </div>
+              </div>
+            </div>
+          </div><!-- .col-sm-9 -->
+          <div class="col-sm-3">
+            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_c7103e2c981361a6639545bd5_1194bb7544" tabindex="-1" value=""></div>
+            <button type="submit" class="btn btn-primary btn-block">Subscribe *</button>
+          </div><!-- .col-sm-3 -->
+          <div class="col-sm-12">
+            <span class="text-muted">* Be the first to know about latest updates and new features.</span>
+          </div><!-- .col-sm-12 -->
+        </form><!-- .row.subscription -->
+        <div class="padding-top-3x padding-bottom-2x text-center">
+          <h6 class="text-thin">Application available on:</h6>
+          <a href="#" class="app-store-btn"></a>
+          <a href="#" class="google-play-btn"></a>
+          <a href="#" class="windows-btn"></a>
+          <a href="#" class="amazon-btn"></a>
+          <div class="market-counter">
+            <i class="pe-7s-download"></i>
+            <span>133K</span>
+            downloads
+          </div><!-- .market-counter -->
+        </div><!-- .padding-top-3x.padding-bottom-2x.text-center -->
+
+        <!-- Copyright -->
+        <div class="copyright">
+          <div class="inner">
+            <div class="column">
+              <a href="index.html" class="site-logo">
+                <img src="img/footer-logo-def.svg" alt="Metheor">
+              </a>
+              <span class="copy-text">&copy; 2015. All rights reserved</span>
+            </div><!-- .column -->
+            <div class="column">
+              <nav class="footer-nav">
+                <ul>
+                  <li><a href="#">Terms of service</a></li>
+                  <li><a href="#">Privacy policy</a></li>
+                  <li><a href="contacts.html">Contacts</a></li>
+                  <li><a href="help-center.html">Support</a></li>
+                </ul>
+              </nav><!-- .footer-nav -->
+            </div><!-- .column -->
+            <div class="column">
+              <div class="social-bar">
+                <a href="#" class="sb-facebook" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a>
+                <a href="#" class="sb-twitter" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a>
+                <a href="#" class="sb-google-plus" data-toggle="tooltip" data-placement="top" title="Google+"><i class="fa fa-google-plus"></i></a>
+                <a href="#" class="sb-instagram"><i class="fa fa-instagram"></i></a>
+              </div><!-- .social-bar -->
+            </div><!-- .column -->
+          </div><!-- .inner -->
+        </div><!-- .copyright -->
+      </div><!-- .container -->
+    </footer><!-- .footer -->
+  </div><!-- .page-wrapper -->
+
+  <!-- JavaScript (jQuery) libraries, plugins and custom scripts -->
+  <script src="js/vendor/jquery-2.1.4.min.js"></script>
+  <script src="js/vendor/bootstrap.min.js"></script>
+  <script src="js/vendor/placeholder.js"></script>
+  <script src="js/vendor/smoothscroll.js"></script>
+  <script src="js/vendor/velocity.min.js"></script>
+  <script src="js/vendor/icheck.min.js"></script>
+  <script src="js/vendor/magnific-popup.min.js"></script>
+  <script src="js/vendor/owl.carousel.min.js"></script>
+  <script src="js/scripts.js"></script>
+  <script src="color-switcher/color-switcher.js"></script>
+
+</body><!-- <body> -->
+
+</html>
