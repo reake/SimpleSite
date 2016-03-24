@@ -9,7 +9,8 @@ composer install
 
 # Run
 ```
-php artisan serve --port=1234
+127.0.0.1 www.simple-site.cn simple-site.cn
+sudo php artisan serve --host=www.simple-site.cn --port=80
 ```
 
 # Log
