@@ -1,27 +1,25 @@
-## Laravel PHP Framework
+## Simple-Site(简站)
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+[![Build Status](https://travis-ci.org/simple-site/SimpleSite.svg?branch=master)](https://travis-ci.org/simple-site/SimpleSite)
+[![Latest Stable Version](https://poser.pugx.org/wufeifei/simple-site/v/stable)](https://packagist.org/packages/wufeifei/simple-site) 
+[![Total Downloads](https://poser.pugx.org/wufeifei/simple-site/downloads)](https://packagist.org/packages/wufeifei/simple-site) 
+[![Latest Unstable Version](https://poser.pugx.org/wufeifei/simple-site/v/unstable)](https://packagist.org/packages/wufeifei/simple-site) 
+[![License](https://poser.pugx.org/wufeifei/simple-site/license)](https://packagist.org/packages/wufeifei/simple-site)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+SimpleSite is a site content manage system.
 
-Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+## Feature
 
-## Official Documentation
+- Content Manage System
+- WeChat Manage System
+- Multi Themes
+- Easy to usage
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
 
-## Contributing
+## Document
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+Documentation for the framework can be found on the [SimpleSite wiki](https://github.com/simple-site/SimpleSite/wiki).
 
 ### License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+The SimpleSite is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
