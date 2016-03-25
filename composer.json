@@ -2,11 +2,23 @@
   "name": "wufeifei/simple-site",
   "description": "WebSite Content Manage System",
   "keywords": [
-    "framework",
-    "laravel"
+    "cms",
+    "wechat",
+    "themes"
   ],
   "license": "MIT",
   "type": "project",
+  "authors": [
+    {
+      "name": "Feei",
+      "email": "wufeifei@wufeifei.com",
+      "homepage": "http://wufeifei.com",
+      "role": "Developer"
+    }
+  ],
+  "support": {
+    "email": "service@simple-site.cn"
+  },
   "require": {
     "php": ">=5.5.9",
     "laravel/framework": "5.1.*"
