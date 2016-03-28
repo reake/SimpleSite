@@ -20,3 +20,7 @@ Route::group(['domain' => '{subDomain}.simple-site.cn'], function () {
 
 	Route::get('/login', ['as' => 'login', 'uses' => 'UserController@login']);
 });
+
+Route::get('/manage/dashboard', function(){
+	return view('themes/manage/dashboard', ['theme' => 'webapp']);
+});
