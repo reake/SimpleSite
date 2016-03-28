@@ -22,5 +22,13 @@ Route::group(['domain' => '{subDomain}.simple-site.cn'], function () {
 });
 
 Route::get('/manage/dashboard', function(){
+	$result = array(
+		'theme' => 'webapp',
+		'app' => array(
+			'setting' => array(
+				'bg' => 'test'
+			)
+		)
+	);
 	return view('themes/manage/dashboard', ['theme' => 'webapp']);
 });

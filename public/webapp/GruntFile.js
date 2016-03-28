@@ -1,11 +1,11 @@
-module.exports = function(grunt) {
+module.exports = function (grunt) {
 
     grunt.initConfig({
         bower: grunt.file.readJSON('bower.json'),
         clean: {
             dist: ['dist/*'],
             html: ['html/*.html'],
-            tmp : ['.tmp']
+            tmp: ['.tmp']
         },
         copy: {
             dist: {
@@ -14,31 +14,32 @@ module.exports = function(grunt) {
                     {expand: true, cwd: 'html/', src: '**', dest: 'dist/html/'},
                     {expand: true, cwd: 'assets/', src: ['**', '!**/scss/**'], dest: 'dist/assets/'},
                     {expand: true, cwd: 'libs/', src: '**', dest: 'dist/libs/'},
-                    {src: 'index.html', dest: 'dist/index.html'}
+                    {src: 'index.html', dest: 'dist/index.html'},
+                    {src: 'html/dashboard.html', dest: '../../resources/views/themes/manage/dashboard.blade.php'}
                 ]
             },
             js: {
                 files: [
-                    {src: 'dist/scripts/app.angular.js', dest : 'dist/angular/scripts/app.angular.js'},
-                    {src: 'dist/scripts/app.html.js', dest : 'dist/html/scripts/app.html.js'}
+                    {src: 'dist/scripts/app.angular.js', dest: 'dist/angular/scripts/app.angular.js'},
+                    {src: 'dist/scripts/app.html.js', dest: 'dist/html/scripts/app.html.js'}
                 ]
             },
-            libs:{
+            libs: {
                 files: '<%= bower.copy %>'
             }
         },
         htmlmin: {
             dist: {
-                options: { removeComments: true, collapseWhitespace: true },
+                options: {removeComments: true, collapseWhitespace: true},
                 files: [
-                    { expand: true, cwd: 'views/', src: ['*.html', '**/*.html'], dest: 'dist/views/' }
+                    {expand: true, cwd: 'views/', src: ['*.html', '**/*.html'], dest: 'dist/views/'}
                 ]
             }
         },
         watch: {
             sass: {
-              files: ['assets/scss/*.scss'],
-              tasks: ['sass'],
+                files: ['assets/scss/*.scss'],
+                tasks: ['sass'],
             }
         },
         sass: {
@@ -49,10 +50,10 @@ module.exports = function(grunt) {
             }
         },
         useminPrepare: {
-            html: ['angular/index.html','html/*.html']
+            html: ['angular/index.html', 'html/*.html']
         },
         usemin: {
-            html: ['dist/angular/index.html','dist/html/*.html']
+            html: ['dist/angular/index.html', 'dist/html/*.html', '../../resources/views/themes/manage/dashboard.blade.php']
         },
         bump: {
             options: {
@@ -69,79 +70,79 @@ module.exports = function(grunt) {
             }
         },
         assemble: {
-          options: {
-            layoutdir: 'html/layout/',
-            data: ['html/scripts/data.json'],
-            flatten: true
-          },
-          page: {
             options: {
-              layout: 'layout.html'
+                layoutdir: 'html/layout/',
+                data: ['html/scripts/data.json'],
+                flatten: true
             },
-            src: [
-                'views/**/*.html',
-                '!views/blocks/**',
-                '!views/layout/**',
-                '!views/misc/**',
-                '!views/**/ng.*.html',
-                '!views/**/tpl.*.html',
-            ],
-            dest: 'html/'
-          },
-          layout0: {
-            options: {
-              layout: 'layout.0.html'
+            page: {
+                options: {
+                    layout: 'layout.html'
+                },
+                src: [
+                    'views/**/*.html',
+                    '!views/blocks/**',
+                    '!views/layout/**',
+                    '!views/misc/**',
+                    '!views/**/ng.*.html',
+                    '!views/**/tpl.*.html',
+                ],
+                dest: 'html/'
             },
-            src: [
-                'views/dashboard/dashboard.0.html',
-            ],
-            dest: 'html/'
-          },
-          layout1: {
-            options: {
-              layout: 'layout.1.html'
+            layout0: {
+                options: {
+                    layout: 'layout.0.html'
+                },
+                src: [
+                    'views/dashboard/dashboard.0.html',
+                ],
+                dest: 'html/'
             },
-            src: [
-                'views/dashboard/dashboard.1.html',
-            ],
-            dest: 'html/'
-          },
-          layout2: {
-            options: {
-              layout: 'layout.2.html'
+            layout1: {
+                options: {
+                    layout: 'layout.1.html'
+                },
+                src: [
+                    'views/dashboard/dashboard.1.html',
+                ],
+                dest: 'html/'
             },
-            src: [
-                'views/dashboard/dashboard.2.html',
-            ],
-            dest: 'html/'
-          },
-          layout3: {
-            options: {
-              layout: 'layout.3.html'
+            layout2: {
+                options: {
+                    layout: 'layout.2.html'
+                },
+                src: [
+                    'views/dashboard/dashboard.2.html',
+                ],
+                dest: 'html/'
             },
-            src: [
-                'views/dashboard/dashboard.3.html',
-            ],
-            dest: 'html/'
-          },
-          layout4: {
-            options: {
-              layout: 'layout.4.html'
+            layout3: {
+                options: {
+                    layout: 'layout.3.html'
+                },
+                src: [
+                    'views/dashboard/dashboard.3.html',
+                ],
+                dest: 'html/'
             },
-            src: [
-                'views/dashboard/dashboard.4.html',
-            ],
-            dest: 'html/'
-          },
-          misc: {
-            options: {
-              layout: 'base.html'
+            layout4: {
+                options: {
+                    layout: 'layout.4.html'
+                },
+                src: [
+                    'views/dashboard/dashboard.4.html',
+                ],
+                dest: 'html/'
             },
-            src: [
-                'views/misc/*.html'
-            ],
-            dest: 'html/'
-          }
+            misc: {
+                options: {
+                    layout: 'base.html'
+                },
+                src: [
+                    'views/misc/*.html'
+                ],
+                dest: 'html/'
+            }
         }
     });
 
@@ -169,6 +170,11 @@ module.exports = function(grunt) {
         'htmlmin',
         'clean:tmp',
         'copy:js'
+    ]);
+
+    grunt.registerTask('test', [
+        'clean:dist',
+        'copy:dist'
     ]);
 
     grunt.registerTask('release', [
