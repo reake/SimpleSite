@@ -2,91 +2,85 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
+use Validator;
 use Illuminate\Http\Request;
-
+use Auth;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 class UserController extends Controller
 {
-	/**
-	 * Display a listing of the resource.
-	 *
-	 * @return \Illuminate\Http\Response
-	 */
-	public function login()
-	{
-		return view('themes/manage/login', ['theme' => 'flatkit']);
-	}
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function login()
+    {
+        return view('themes/manage/login', ['theme' => 'webapp']);
+    }
 
-	public function register()
-	{
-		return view('themes/manage/register', ['theme' => 'flatkit']);
-	}
+    public function _login(Request $request)
+    {
+        $email = $request->get('email');
+        $password = $request->get('password');
+        // 尝试登录
+        if (Auth::attempt(['email' => $email, 'password' => $password])) {
+            // 认证通过...
+            return redirect()->intended('manage/dashboard');
+        } else {
+            echo 'failed';
+        }
+    }
 
-	/**
-	 * Show the form for creating a new resource.
-	 *
-	 * @return \Illuminate\Http\Response
-	 */
-	public function create()
-	{
-		//
-	}
+    public function register()
+    {
+        return view('themes/manage/register', ['theme' => 'webapp']);
+    }
 
-	/**
-	 * Store a newly created resource in storage.
-	 *
-	 * @param  \Illuminate\Http\Request $request
-	 * @return \Illuminate\Http\Response
-	 */
-	public function store(Request $request)
-	{
-		//
-	}
+    public function _register(Request $request)
+    {
+        $validator = $this->validator($request->all());
 
-	/**
-	 * Display the specified resource.
-	 *
-	 * @param  int $id
-	 * @return \Illuminate\Http\Response
-	 */
-	public function show($id)
-	{
-		//
-	}
+        print_r($request->all());
+        if ($validator->fails()) {
+            echo $validator->getMessageBag();
+            exit();
+            $this->throwValidationException(
+                $request, $validator
+            );
+        }
+        $this->create($request->all());
+    }
 
-	/**
-	 * Show the form for editing the specified resource.
-	 *
-	 * @param  int $id
-	 * @return \Illuminate\Http\Response
-	 */
-	public function edit($id)
-	{
-		//
-	}
+    /**
+     * Get a validator for an incoming registration request.
+     *
+     * @param  array $data
+     * @return \Illuminate\Contracts\Validation\Validator
+     */
+    protected function validator(array $data)
+    {
+        return Validator::make($data, [
+            'username' => 'required|max:255',
+            'email' => 'required|email|max:255|unique:users',
+            'password' => 'required|min:6',
+        ]);
+    }
 
-	/**
-	 * Update the specified resource in storage.
-	 *
-	 * @param  \Illuminate\Http\Request $request
-	 * @param  int                      $id
-	 * @return \Illuminate\Http\Response
-	 */
-	public function update(Request $request, $id)
-	{
-		//
-	}
-
-	/**
-	 * Remove the specified resource from storage.
-	 *
-	 * @param  int $id
-	 * @return \Illuminate\Http\Response
-	 */
-	public function destroy($id)
-	{
-		//
-	}
+    /**
+     * Create a new user instance after a valid registration.
+     *
+     * @param  array $data
+     * @return User
+     */
+    protected function create(array $data)
+    {
+        return User::create([
+            'username' => $data['username'],
+            'email' => $data['email'],
+            'password' => bcrypt($data['password']),
+        ]);
+    }
 }
