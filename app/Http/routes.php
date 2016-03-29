@@ -11,6 +11,15 @@
 |
 */
 
+// 认证路由...
+Route::get('manage/login', 'Auth\AuthController@getLogin');
+Route::post('manage/login', 'Auth\AuthController@postLogin');
+Route::get('manage/logout', 'Auth\AuthController@getLogout');
+
+// 注册路由...
+Route::get('manage/register', 'Auth\AuthController@getRegister');
+Route::post('manage/register', 'Auth\AuthController@postRegister');
+
 Route::group(['domain' => '{subDomain}.simple-site.cn'], function () {
     Route::get('/', function ($subDomain) {
         // 判断 subDomain 是否存在
