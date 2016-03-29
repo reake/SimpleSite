@@ -15,7 +15,8 @@ module.exports = function (grunt) {
                     {expand: true, cwd: 'assets/', src: ['**', '!**/scss/**'], dest: 'dist/assets/'},
                     {expand: true, cwd: 'libs/', src: '**', dest: 'dist/libs/'},
                     {src: 'index.html', dest: 'dist/index.html'},
-                    {src: 'html/dashboard.html', dest: '../../resources/views/themes/manage/dashboard.blade.php'}
+                    {src: 'html/ss_dashboard.html', dest: '../../resources/views/themes/manage/dashboard.blade.php'},
+                    {src: 'html/ss_signin.html', dest: '../../resources/views/themes/manage/signin.blade.php'}
                 ]
             },
             js: {
@@ -53,7 +54,7 @@ module.exports = function (grunt) {
             html: ['angular/index.html', 'html/*.html']
         },
         usemin: {
-            html: ['dist/angular/index.html', 'dist/html/*.html', '../../resources/views/themes/manage/dashboard.blade.php']
+            html: ['dist/angular/index.html', 'dist/html/*.html', '../../resources/views/themes/manage/*.php']
         },
         bump: {
             options: {

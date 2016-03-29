@@ -12,23 +12,19 @@
 */
 
 Route::group(['domain' => '{subDomain}.simple-site.cn'], function () {
-	Route::get('/', function ($subDomain) {
-		// 判断 subDomain 是否存在
+    Route::get('/', function ($subDomain) {
+        // 判断 subDomain 是否存在
 
-		return view('themes/default/index', ['theme' => 'default']);
-	});
+        return view('themes/default/index', ['theme' => 'default']);
+    });
 
-	Route::get('/login', ['as' => 'login', 'uses' => 'UserController@login']);
+    Route::get('/login', ['as' => 'login', 'uses' => 'UserController@login']);
 });
 
-Route::get('/manage/dashboard', function(){
-	$result = array(
-		'theme' => 'webapp',
-		'app' => array(
-			'setting' => array(
-				'bg' => 'test'
-			)
-		)
-	);
-	return view('themes/manage/dashboard', ['theme' => 'webapp']);
+Route::get('/manage/dashboard', function () {
+    return view('themes/manage/dashboard', ['theme' => 'webapp']);
+});
+
+Route::get('/manage/signin', function () {
+    return view('themes/manage/signin', ['theme' => 'webapp']);
 });
