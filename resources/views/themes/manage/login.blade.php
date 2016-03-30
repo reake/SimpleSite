@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <base href="../{{$theme}}/dist/">
+    <base href="../webapp/dist/">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- for ios 7 style, multi-resolution icon of 152x152 -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-barstyle" content="black-translucent">
@@ -59,9 +60,9 @@
         </div>
 
         <div class="p-v-lg text-center">
-            <div class="m-b"><a ui-sref="access.forgot-password" href="#/access/forgot-password"
+            <div class="m-b"><a ui-sref="access.forgot-password" href="/manage/forgot-password"
                                 class="text-primary _600">忘记密码?</a></div>
-            <div>注册账户? <a ui-sref="access.signup" href="#/access/signup" class="text-primary _600">注册</a></div>
+            <div>注册账户? <a ui-sref="access.signup" href="/manage/register" class="text-primary _600">注册</a></div>
         </div>
     </div>
 
@@ -69,5 +70,6 @@
 
 </div>
 <script src="scripts/app.html.js"></script>
+<script src="scripts/login.js"></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-// lazyload config
+// lazyload配置
 var MODULE_CONFIG = {
     easyPieChart:   [ '../libs/jquery/jquery.easy-pie-chart/dist/jquery.easypiechart.fill.js' ],
     sparkline:      [ '../libs/jquery/jquery.sparkline/dist/jquery.sparkline.retina.js' ],

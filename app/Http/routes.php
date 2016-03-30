@@ -19,10 +19,8 @@ Route::group(['domain' => '{subDomain}.simple-site.cn'], function () {
 
     Route::get('/manage/login', ['as' => 'login', 'uses' => 'UserController@login']);
     Route::get('/manage/register', ['as' => 'register', 'uses' => 'UserController@register']);
-    Route::post('/manage/_login', ['as' => 'register', 'uses' => 'UserController@_login']);
+    Route::post('/manage/_login', ['as' => 'login', 'uses' => 'UserController@_login']);
     Route::post('/manage/_register', ['as' => 'register', 'uses' => 'UserController@_register']);
-});
-
-Route::get('/manage/dashboard', function () {
-    return view('themes/manage/dashboard', ['theme' => 'webapp']);
+    Route::get('/manage/dashboard', ['as' => 'dashboard', 'middleware' => 'auth', 'uses' => 'Main\MainController@dashboard']);
+    Route::get('/manage/version', ['as' => 'version', 'uses' => 'Main\MainController@version']);
 });

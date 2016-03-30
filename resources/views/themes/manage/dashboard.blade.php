@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <base href="../{{$theme}}/dist/">
+    <base href="../webapp/dist/">
     <!-- for ios 7 style, multi-resolution icon of 152x152 -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-barstyle" content="black-translucent">
@@ -38,7 +38,17 @@
                 <div ui-include="'../views/blocks/navbar.brand.html'"></div>
             </div>
             <div flex-no-shrink>
-                <div ui-include="'../views/blocks/aside.top.2.html'"></div>
+                <div class="nav-fold">
+                    <a href="#/app/page/profile" ui-sref="app.page.profile">
+                        <span class="pull-left">
+                          <img src="../assets/images/a2.jpg" alt="..." class="w-40 r">
+                        </span>
+                        <span class="clear hidden-folded p-x">
+                          <span class="block _500">{{$user['username']}}</span>
+                          <small class="block text-muted">Administrator</small>
+                        </span>
+                    </a>
+                </div>
             </div>
             <div flex class="hide-scroll">
                 <nav class="scroll nav-stacked nav-active-primary">

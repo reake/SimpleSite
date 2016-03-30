@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <base href="../{{$theme}}/dist/">
+    <base href="../webapp/dist/">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- for ios 7 style, multi-resolution icon of 152x152 -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-barstyle" content="black-translucent">
@@ -64,7 +65,7 @@
         </div>
 
         <div class="p-v-lg text-center">
-            <div>已经有账号了? <a ui-sref="access.signin" href="#/access/signin" class="text-primary _600">立即登录</a></div>
+            <div>已经有账号了? <a ui-sref="access.signin" href="/manage/login" class="text-primary _600">立即登录</a></div>
         </div>
     </div>
 

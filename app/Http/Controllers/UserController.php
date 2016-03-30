@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\User;
+use App\Utility\Response;
 use Validator;
 use Illuminate\Http\Request;
 use Auth;
@@ -18,25 +19,23 @@ class UserController extends Controller
      */
     public function login()
     {
-        return view('themes/manage/login', ['theme' => 'webapp']);
+        return view('themes/manage/login');
     }
 
     public function _login(Request $request)
     {
         $email = $request->get('email');
         $password = $request->get('password');
-        // 尝试登录
-        if (Auth::attempt(['email' => $email, 'password' => $password])) {
-            // 认证通过...
-            return redirect()->intended('manage/dashboard');
+        if (Auth::attempt(['email' => $email, 'password' => $password], $request->has('remember'))) {
+            Response::jsonReturn(1001, '/manage/dashboard');
         } else {
-            echo 'failed';
+            Response::jsonReturn(1002, '账号密码错误!');
         }
     }
 
     public function register()
     {
-        return view('themes/manage/register', ['theme' => 'webapp']);
+        return view('themes/manage/register');
     }
 
     public function _register(Request $request)
