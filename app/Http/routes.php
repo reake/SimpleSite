@@ -13,7 +13,6 @@
 Route::group(['domain' => '{subDomain}.simple-site.cn'], function () {
     Route::get('/', function ($subDomain) {
         // 判断 subDomain 是否存在
-
         return view('themes/default/index', ['theme' => 'default']);
     });
 

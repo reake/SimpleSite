@@ -3,7 +3,7 @@
     // 应用配置
     window.app = {
         name: 'SimpleSite',
-        version: '1.0.3',
+        version: '1.0.0',
         // for chart colors
         color: {
             'primary': '#0cc2aa',
