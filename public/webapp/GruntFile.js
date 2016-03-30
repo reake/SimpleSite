@@ -17,7 +17,9 @@ module.exports = function (grunt) {
                     {src: 'index.html', dest: 'dist/index.html'},
                     {src: 'html/ss_dashboard.html', dest: '../../resources/views/themes/manage/dashboard.blade.php'},
                     {src: 'html/ss_login.html', dest: '../../resources/views/themes/manage/login.blade.php'},
-                    {src: 'html/ss_register.html', dest: '../../resources/views/themes/manage/register.blade.php'}
+                    {src: 'html/ss_register.html', dest: '../../resources/views/themes/manage/register.blade.php'},
+                    {src: 'html/ss_404.html', dest: '../../resources/views/themes/manage/404.blade.php'},
+                    {src: 'html/ss_500.html', dest: '../../resources/views/themes/manage/500.blade.php'}
                 ]
             },
             js: {
