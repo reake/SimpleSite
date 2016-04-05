@@ -148,80 +148,53 @@
 
                         <li ng-class="{active:$state.includes('app.ui')}">
                             <a>
-        <span class="nav-caret">
-          <i class="fa fa-caret-down"></i>
-        </span>
+                                <span class="nav-caret">
+                                  <i class="fa fa-caret-down"></i>
+                                </span>
                                 <span class="nav-label"><b
                                         class="label label-sm {{$app['setting']['theme']['accent']}}">8</b></span>
-        <span class="nav-icon">
-          <i class="material-icons">&#xe429;<span ui-include="'../assets/images/i_4.svg'"></span></i>
-        </span>
+                                    <span class="nav-icon">
+                                      <i class="material-icons">&#xe429;<span
+                                              ui-include="'../assets/images/i_4.svg'"></span></i>
+                                    </span>
                                 <span class="nav-text">基本信息</span>
                             </a>
                             <ul class="nav-sub nav-mega nav-mega-3">
                                 <li ui-sref-active="active" class="hide" ng-class="{'show': 1}">
-                                    <a ui-sref="app.ui.angularstrap"><span class="nav-text">AngularStrap</span></a>
+                                    <a ui-sref="app.ui.angularstrap"><span class="nav-text">网站信息</span></a>
                                 </li>
                                 <li ui-sref-active="active">
-                                    <a href="arrow.html" ui-sref="app.ui.arrow"><span class="nav-text">Arrow</span></a>
+                                    <a href="arrow.html" ui-sref="app.ui.arrow"><span class="nav-text">基本资料</span></a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li ng-class="{active:$state.includes('app.ui')}">
+                            <a>
+                                <span class="nav-caret">
+                                  <i class="fa fa-caret-down"></i>
+                                </span>
+                                <span class="nav-label"><b
+                                        class="label label-sm {{$app['setting']['theme']['accent']}}">8</b></span>
+                                    <span class="nav-icon">
+                                      <i class="material-icons">&#xe429;<span
+                                              ui-include="'../assets/images/i_4.svg'"></span></i>
+                                    </span>
+                                <span class="nav-text">微信设置</span>
+                            </a>
+                            <ul class="nav-sub nav-mega nav-mega-3">
+                                <li ui-sref-active="active" class="hide" ng-class="{'show': 1}">
+                                    <a ui-sref="app.ui.angularstrap"><span class="nav-text">账户设置</span></a>
                                 </li>
                                 <li ui-sref-active="active">
-                                    <a href="box.html" ui-sref="app.ui.box"><span class="nav-text">Box</span></a>
+                                    <a href="arrow.html" ui-sref="app.ui.arrow"><span class="nav-text">自定义菜单</span></a>
+                                </li>
+                                <li ui-sref-active="active">
+                                    <a href="box.html" ui-sref="app.ui.box"><span class="nav-text">自定义回复</span></a>
                                 </li>
                                 <li ui-sref-active="active">
                                     <a href="button.html" ui-sref="app.ui.button"><span
-                                            class="nav-text">Button</span></a>
-                                </li>
-                                <li ui-sref-active="active">
-                                    <a href="color.html" ui-sref="app.ui.color"><span class="nav-text">Color</span></a>
-                                </li>
-                                <li ui-sref-active="active">
-                                    <a href="dropdown.html" ui-sref="app.ui.dropdown"><span
-                                            class="nav-text">Dropdown</span></a>
-                                </li>
-                                <li ui-sref-active="active">
-                                    <a href="grid.html" ui-sref="app.ui.grid"><span class="nav-text">Grid</span></a>
-                                </li>
-                                <li ui-sref-active="active">
-                                    <a href="icon.html" ui-sref="app.ui.icon"><span class="nav-text">Icon</span></a>
-                                </li>
-                                <li ui-sref-active="active">
-                                    <a href="label.html" ui-sref="app.ui.label"><span class="nav-text">Label</span></a>
-                                </li>
-                                <li ui-sref-active="active">
-                                    <a href="list.html" ui-sref="app.ui.list"><span
-                                            class="nav-text">List Group</span></a>
-                                </li>
-                                <li ui-sref-active="active">
-                                    <a href="modal.html" ui-sref="app.ui.modal"><span class="nav-text">Modal</span></a>
-                                </li>
-                                <li ui-sref-active="active">
-                                    <a href="nav.html" ui-sref="app.ui.nav"><span class="nav-text">Nav</span></a>
-                                </li>
-                                <li ui-sref-active="active">
-                                    <a href="progress.html" ui-sref="app.ui.progress"><span
-                                            class="nav-text">Progress</span></a>
-                                </li>
-                                <li ui-sref-active="active">
-                                    <a href="social.html" ui-sref="app.ui.social"><span
-                                            class="nav-text">Social</span></a>
-                                </li>
-                                <li ui-sref-active="active">
-                                    <a href="sortable.html" ui-sref="app.ui.sortable"><span
-                                            class="nav-text">Sortable</span></a>
-                                </li>
-                                <li ui-sref-active="active">
-                                    <a href="streamline.html" ui-sref="app.ui.streamline"><span class="nav-text">Streamline</span></a>
-                                </li>
-                                <li ui-sref-active="active">
-                                    <a href="timeline.html" ui-sref="app.ui.timeline"><span
-                                            class="nav-text">Timeline</span></a>
-                                </li>
-                                <li ui-sref-active="active">
-                                    <a href="map.vector.html" ui-sref="app.ui.vectormap"><span class="nav-text">Vector Map</span></a>
-                                </li>
-                                <li ui-sref-active="active" class="hide" ng-class="{'show': 1}">
-                                    <a href="#/app/ui/googlemap" ui-sref="app.googlemap"><span class="nav-text">Google Map</span></a>
+                                            class="nav-text">模板消息设置</span></a>
                                 </li>
                             </ul>
                         </li>
@@ -236,72 +209,27 @@
                                       <i class="material-icons">&#xe3e8;<span
                                               ui-include="'../assets/images/i_5.svg'"></span></i>
                                     </span>
-                                <span class="nav-text">页面设置</span>
+                                <span class="nav-text">网站设置</span>
                             </a>
                             <ul class="nav-sub nav-mega">
                                 <li ui-sref-active="active">
                                     <a href="profile.html" ui-sref="app.page.profile">
-                                        <span class="nav-text">Profile</span>
+                                        <span class="nav-text">网站导航</span>
                                     </a>
                                 </li>
                                 <li ui-sref-active="active">
                                     <a href="setting.html" ui-sref="app.page.setting">
-                                        <span class="nav-text">Setting</span>
+                                        <span class="nav-text">功能插件</span>
                                     </a>
                                 </li>
                                 <li ui-sref-active="active">
                                     <a href="search.html" ui-sref="app.page.search">
-                                        <span class="nav-text">Search</span>
+                                        <span class="nav-text">模板主题</span>
                                     </a>
                                 </li>
                                 <li ui-sref-active="active">
                                     <a href="faq.html" ui-sref="app.page.faq">
-                                        <span class="nav-text">FAQ</span>
-                                    </a>
-                                </li>
-                                <li ui-sref-active="active">
-                                    <a href="invoice.html" ui-sref="app.page.invoice">
-                                        <span class="nav-text">Invoice</span>
-                                    </a>
-                                </li>
-                                <li ui-sref-active="active">
-                                    <a href="price.html" ui-sref="app.page.price">
-                                        <span class="nav-text">Price</span>
-                                    </a>
-                                </li>
-                                <li ui-sref-active="active">
-                                    <a href="blank.html" ui-sref="app.page.blank">
-                                        <span class="nav-text">Blank</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="signin.html" ui-sref="access.signin">
-                                        <span class="nav-text">Sign In</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="signup.html" ui-sref="access.signup">
-                                        <span class="nav-text">Sign Up</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="forgot-password.html" ui-sref="access.forgot-password">
-                                        <span class="nav-text">Forgot Password</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="lockme.html" ui-sref="access.lockme">
-                                        <span class="nav-text">Lockme Screen</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="404.html" ui-sref="404">
-                                        <span class="nav-text">Error 404</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="505.html" ui-sref="505">
-                                        <span class="nav-text">Error 505</span>
+                                        <span class="nav-text">系统状态</span>
                                     </a>
                                 </li>
                             </ul>
@@ -380,49 +308,34 @@
             <div class="row-col primary">
                 <div class="col-xs-4 lt">
                     <div class="p-a-md">
-			<span class="pull-right">
-				<i class="fa text fa-caret-up text-success"></i>
-			</span>
-                        <span class="_500">Views</span>
+                        <span class="pull-right">
+                            <i class="fa text fa-caret-up text-success"></i>
+                        </span>
+                        <span class="_500">今日访问量</span>
                         <div class="h3 _700 m-y">
-                            2,045k
-                        </div>
-                        <div>
-                            <span ui-jp="sparkline" ui-refresh="app.setting.color"
-                                  ui-options="[2,3,4,6,5,4,3,5,4,3,4,3,4,3,2,2], {type:'line', height:20, width: '70', lineWidth:2, valueSpots:{'0:':'#fff'}, lineColor:'#fff', spotColor:'#fff', fillColor:'transparent', highlightLineColor:'#fff', spotRadius:0}"
-                                  class="sparkline inline"></span>
+                            31,234
                         </div>
                     </div>
                 </div>
                 <div class="col-xs-4 bg">
                     <div class="p-a-md">
-			<span class="pull-right">
-				<i class="fa text fa-caret-down text-warn"></i>
-			</span>
-                        <span class="_500">Referrals</span>
+                        <span class="pull-right">
+                            <i class="fa text fa-caret-down text-warn"></i>
+                        </span>
+                        <span class="_500">今日报名量</span>
                         <div class="h3 _700 m-y">
-                            69k
-                        </div>
-                        <div>
-                            <span ui-jp="sparkline" ui-refresh="app.setting.color"
-                                  ui-options="[4,4,3,5,4,3,5,3,4,6,5,3,2,3,4,6], {type:'line', height:20, width: '70', lineWidth:2, valueSpots:{'0:':'#fff'}, lineColor:'#fff', spotColor:'#fff', fillColor:'transparent', highlightLineColor:'#fff', spotRadius:0}"
-                                  class="sparkline inline"></span>
+                            2174
                         </div>
                     </div>
                 </div>
                 <div class="col-xs-4 dk">
                     <div class="p-a-md">
-			<span class="pull-right">
-				<i class="fa text fa-caret-down text-danger"></i>
-			</span>
-                        <span class="_500">Members</span>
+                        <span class="pull-right">
+                            <i class="fa text fa-caret-down text-danger"></i>
+                        </span>
+                        <span class="_500">新增会员</span>
                         <div class="h3 _700 m-y">
                             4,560
-                        </div>
-                        <div>
-                            <span ui-jp="sparkline" ui-refresh="app.setting.color"
-                                  ui-options="[2,1,5,3,4,3,5,4,3,5,6,7,6,4,3,2], {type:'line', height:20, width: '70', lineWidth:2, valueSpots:{'0:':'#fff'}, lineColor:'#fff', spotColor:'#fff', fillColor:'transparent', highlightLineColor:'#fff', spotRadius:0}"
-                                  class="sparkline inline"></span>
                         </div>
                     </div>
                 </div>
@@ -432,12 +345,12 @@
                     <div class="row-col">
                         <div class="col-sm-6">
                             <div class="p-a-md p-r-0">
-                                <h6 class="m-b-sm">Sales Overview</h6>
+                                <h6 class="m-b-sm">报名缴费情况</h6>
                                 <p class="text-sm">
-                                    <i class="fa fa-caret-down text-warn"></i> <span class="text-muted">Min:</span>
-                                    $39,050
-                                    <i class="fa fa-caret-up text-success m-l-sm"></i> <span
-                                        class="text-muted">Max:</span> $78,560
+                                    <i class="fa fa-toggle-off"></i> <span class="text-muted">今日收入:</span>
+                                    ￥39,050
+                                    <i class="fa fa-toggle-on m-l-sm"></i> <span
+                                        class="text-muted">总收入:</span> ￥78,560
                                 </p>
                                 <div class="list no-padding">
                                     <div class="list-item">
@@ -447,7 +360,7 @@
                                             </div>
                                         </div>
                                         <div class="list-body">
-                                            Google advertise network
+                                            第三线路
                                         </div>
                                     </div>
                                     <div class="list-item">
@@ -457,7 +370,7 @@
                                             </div>
                                         </div>
                                         <div class="list-body">
-                                            Apple app store
+                                            第七线路
                                         </div>
                                     </div>
                                     <div class="list-item">
@@ -467,7 +380,7 @@
                                             </div>
                                         </div>
                                         <div class="list-body">
-                                            Flatty inc.
+                                            第九线路
                                         </div>
                                     </div>
                                     <div class="list-item">
@@ -477,7 +390,7 @@
                                             </div>
                                         </div>
                                         <div class="list-body">
-                                            Other app stores.
+                                            第十二线路
                                         </div>
                                     </div>
                                 </div>
@@ -495,10 +408,10 @@
                                             </li>
                                         </ul>
                                     </div>
-                                    <span>Total: $3,000</span>
+                                    <span>报名总人数: 3,030</span>
                                 </div>
                                 <div ui-jp="plot" ui-refresh="app.setting.color" ui-options="
-		              [{data: 10, label: &#x27;Apple&#x27;}, {data: 15, label: &#x27;Google&#x27;}, {data: 35, label: &#x27;Flatty&#x27;}, {data: 45, label: &#x27;Other&#x27;}],
+		              [{data: 10, label: &#x27;第一线路&#x27;}, {data: 15, label: &#x27;第七线路&#x27;}, {data: 35, label: &#x27;第14线路&#x27;}, {data: 45, label: &#x27;Other&#x27;}],
 		              {
 		                series: { pie: { show: true, tilt: 0.6, offset:{left: -30}, stroke: { width: 0 }, label: { show: true, threshold: 0.05 } } },
 		                legend: {backgroundColor: 'transparent'},
@@ -514,8 +427,8 @@
                 </div>
                 <div class="col-md-4 lt v-b">
                     <div class="p-a-md">
-                        <h6 class="m-b-sm">Market in 2015</h6>
-                        <small class="text-muted">Quick view of the trending of this year.</small>
+                        <h6 class="m-b-sm">系统公告</h6>
+                        <small class="text-muted">系统公告可以在左侧[运营与管理]-[公告设置]里设置</small>
                     </div>
                     <div style="overflow-x:hidden">
                         <div style="margin: 0 -2px">
