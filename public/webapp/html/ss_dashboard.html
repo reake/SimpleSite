@@ -64,7 +64,7 @@
 
                     <ul class="nav" ui-nav>
                         <li class="nav-header hidden-folded">
-                            <small class="text-muted">Main</small>
+                            <small class="text-muted">运营与管理</small>
                         </li>
 
                         <li ui-sref-active="active">
@@ -72,7 +72,7 @@
         <span class="nav-icon">
           <i class="material-icons">&#xe3fc;<span ui-include="'../assets/images/i_0.svg'"></span></i>
         </span>
-                                <span class="nav-text">Dashboard</span>
+                                <span class="nav-text">管理中心</span>
                             </a>
                         </li>
 
@@ -143,7 +143,7 @@
                         </li>
 
                         <li class="nav-header hidden-folded">
-                            <small class="text-muted">Components</small>
+                            <small class="text-muted">网站设置</small>
                         </li>
 
                         <li ng-class="{active:$state.includes('app.ui')}">
@@ -156,7 +156,7 @@
         <span class="nav-icon">
           <i class="material-icons">&#xe429;<span ui-include="'../assets/images/i_4.svg'"></span></i>
         </span>
-                                <span class="nav-text">UI kit</span>
+                                <span class="nav-text">基本信息</span>
                             </a>
                             <ul class="nav-sub nav-mega nav-mega-3">
                                 <li ui-sref-active="active" class="hide" ng-class="{'show': 1}">
@@ -228,14 +228,15 @@
 
                         <li ng-class="{active:$state.includes('app.page')}">
                             <a>
-        <span class="nav-caret">
-          <i class="fa fa-caret-down"></i>
-        </span>
+                                <span class="nav-caret">
+                                  <i class="fa fa-caret-down"></i>
+                                </span>
                                 <span class="nav-label"><b class="label no-bg">9</b></span>
-        <span class="nav-icon">
-          <i class="material-icons">&#xe3e8;<span ui-include="'../assets/images/i_5.svg'"></span></i>
-        </span>
-                                <span class="nav-text">Pages</span>
+                                    <span class="nav-icon">
+                                      <i class="material-icons">&#xe3e8;<span
+                                              ui-include="'../assets/images/i_5.svg'"></span></i>
+                                    </span>
+                                <span class="nav-text">页面设置</span>
                             </a>
                             <ul class="nav-sub nav-mega">
                                 <li ui-sref-active="active">
@@ -306,206 +307,18 @@
                             </ul>
                         </li>
 
-                        <li ng-class="{active:$state.includes('app.form')}">
-                            <a>
-        <span class="nav-caret">
-          <i class="fa fa-caret-down"></i>
-        </span>
-        <span class="nav-icon">
-          <i class="material-icons">&#xe39e;<span ui-include="'../assets/images/i_6.svg'"></span></i>
-        </span>
-                                <span class="nav-text">Form</span>
-                            </a>
-                            <ul class="nav-sub">
-                                <li ui-sref-active="active">
-                                    <a href="form.layout.html" ui-sref="app.form.layout"><span class="nav-text">Form Layout</span></a>
-                                </li>
-                                <li ui-sref-active="active">
-                                    <a href="form.element.html" ui-sref="app.form.element"><span class="nav-text">Form Element</span></a>
-                                </li>
-                                <li ui-sref-active="active">
-                                    <a href="form.validation.html" ui-sref="app.form.validation"><span class="nav-text">Form Validation</span></a>
-                                </li>
-                                <li ui-sref-active="active">
-                                    <a href="form.select.html" ui-sref="app.form.select"><span
-                                            class="nav-text">Select</span></a>
-                                </li>
-                                <li ui-sref-active="active">
-                                    <a href="form.editor.html" ui-sref="app.form.editor"><span
-                                            class="nav-text">Editor</span></a>
-                                </li>
-                                <li ng-class="{'hide': 1}">
-                                    <a href="form.picker.html"><span class="nav-text">Picker</span></a>
-                                </li>
-                                <li ng-class="{'hide': 1}">
-                                    <a href="form.wizard.html"><span class="nav-text">Wizard</span></a>
-                                </li>
-                                <li ui-sref-active="active" class="hide" ng-class="{'show': 1}">
-                                    <a ui-sref="app.form.slider"><span class="nav-text">Slider</span></a>
-                                </li>
-                                <li ui-sref-active="active" class="hide" ng-class="{'show': 1}">
-                                    <a ui-sref="app.form.tree"><span class="nav-text">Tree</span></a>
-                                </li>
-                                <li ui-sref-active="active" class="hide" ng-class="{'show': 1}">
-                                    <a ui-sref="app.form.file-upload"><span class="nav-text">File Upload</span></a>
-                                </li>
-                                <li ui-sref-active="active" class="hide" ng-class="{'show': 1}">
-                                    <a ui-sref="app.form.image-crop"><span class="nav-text">Image Crop</span></a>
-                                </li>
-                                <li ui-sref-active="active" class="hide" ng-class="{'show': 1}">
-                                    <a ui-sref="app.form.editable"><span class="nav-text">Editable</span></a>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li ng-class="{active:$state.includes('app.table')}">
-                            <a>
-        <span class="nav-caret">
-          <i class="fa fa-caret-down"></i>
-        </span>
-        <span class="nav-icon">
-          <i class="material-icons">&#xe896;<span ui-include="'../assets/images/i_7.svg'"></span></i>
-        </span>
-                                <span class="nav-text">Tables</span>
-                            </a>
-                            <ul class="nav-sub">
-                                <li ui-sref-active="active">
-                                    <a href="static.html" ui-sref="app.table.static"><span
-                                            class="nav-text">Static table</span></a>
-                                </li>
-                                <li ui-sref-active="active">
-                                    <a href="datatable.html" ui-sref="app.table.datatable"><span class="nav-text">Datatable</span></a>
-                                </li>
-                                <li ui-sref-active="active">
-                                    <a href="footable.html" ui-sref="app.table.footable"><span
-                                            class="nav-text">Footable</span></a>
-                                </li>
-                                <li ui-sref-active="active" class="hide" ng-class="{'show': 1}">
-                                    <a ui-sref="app.table.smart"><span class="nav-text">Smart table</span></a>
-                                </li>
-                                <li ui-sref-active="active" class="hide" ng-class="{'show': 1}">
-                                    <a ui-sref="app.table.uigrid"><span class="nav-text">UI Grid</span></a>
-                                </li>
-                                <li ui-sref-active="active" class="hide" ng-class="{'show': 1}">
-                                    <a ui-sref="app.table.editable"><span class="nav-text">Editable</span></a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li ui-sref-active="active">
-                            <a>
-        <span class="nav-caret">
-          <i class="fa fa-caret-down"></i>
-        </span>
-                                <span class="nav-label hidden-folded"><b class="label label-sm info">N</b></span>
-        <span class="nav-icon">
-          <i class="material-icons">&#xe1b8;<span ui-include="'../assets/images/i_8.svg'"></span></i>
-        </span>
-                                <span class="nav-text">Charts</span>
-                            </a>
-                            <ul class="nav-sub">
-                                <li ui-sref-active="active">
-                                    <a href="chart.html" ui-sref="app.chart"><span class="nav-text">Chart</span></a>
-                                </li>
-                                <li ui-sref-active="active">
-                                    <a>
-            <span class="nav-caret">
-              <i class="fa fa-caret-down"></i>
-            </span>
-                                        <span class="nav-text">Echarts</span>
-                                    </a>
-                                    <ul class="nav-sub">
-                                        <li ui-sref-active="active">
-                                            <a href="echarts-line.html" ui-sref="app.echarts.line">
-                                                <span class="nav-text">line</span>
-                                            </a>
-                                        </li>
-                                        <li ui-sref-active="active">
-                                            <a href="echarts-bar.html" ui-sref="app.echarts.bar">
-                                                <span class="nav-text">Bar</span>
-                                            </a>
-                                        </li>
-                                        <li ui-sref-active="active">
-                                            <a href="echarts-pie.html" ui-sref="app.echarts.pie">
-                                                <span class="nav-text">Pie</span>
-                                            </a>
-                                        </li>
-                                        <li ui-sref-active="active">
-                                            <a href="echarts-scatter.html" ui-sref="app.echarts.scatter">
-                                                <span class="nav-text">Scatter</span>
-                                            </a>
-                                        </li>
-                                        <li ui-sref-active="active">
-                                            <a href="echarts-radar-chord.html" ui-sref="app.echarts.rc">
-                                                <span class="nav-text">Radar &amp; Chord</span>
-                                            </a>
-                                        </li>
-                                        <li ui-sref-active="active">
-                                            <a href="echarts-gauge-funnel.html" ui-sref="app.echarts.gf">
-                                                <span class="nav-text">Gauges &amp; Funnel</span>
-                                            </a>
-                                        </li>
-                                        <li ui-sref-active="active">
-                                            <a href="echarts-map.html" ui-sref="app.echarts.map">
-                                                <span class="nav-text">Map</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-
                         <li class="nav-header hidden-folded">
-                            <small class="text-muted">Help</small>
+                            <small class="text-muted">帮助中心</small>
                         </li>
 
                         <li class="hidden-folded" ui-sref-active="active">
                             <a href="docs.html" ui-sref="app.docs">
-                                <span class="nav-text">Documents</span>
+                                <span class="nav-text">使用文档</span>
                             </a>
                         </li>
 
                     </ul>
                 </nav>
-            </div>
-            <div flex-no-shrink>
-                <nav ui-nav>
-                    <ul class="nav">
-                        <li>
-                            <div class="b-b b m-v-sm"></div>
-                        </li>
-                        <li class="no-bg">
-                            <a class="auto">
-      	<span class="nav-icon">
-          <i class="material-icons inline">&#xe835;</i>
-          <i class="material-icons text-warn none">&#xe834;</i>
-        </span>
-                                <span class="nav-text">Filter</span>
-                            </a>
-                        </li>
-                        <li class="no-bg">
-                            <a>
-        <span class="nav-icon">
-          <i class="material-icons">&#xe83a;</i>
-        </span>
-        <span class="nav-text">
-          Star<small class="block text-muted">Border</small>
-        </span>
-                            </a>
-                        </li>
-                        <li>
-                            <div class="b-b b m-t-sm"></div>
-                        </li>
-                        <li class="no-bg">
-                            <a>
-        <span class="nav-icon">
-      	 <i class="material-icons">&#xe8ac;</i>
-        </span>
-                                <span class="nav-text">Logout</span>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-
             </div>
         </div>
     </div>
@@ -526,21 +339,16 @@
 
                 <!-- navbar right -->
                 <ul class="nav navbar-nav pull-right">
-                    <li class="nav-item dropdown pos-stc-xs">
-                        <a class="nav-link" href data-toggle="dropdown">
-                            <i class="material-icons">&#xe7f5;</i>
-                            <span class="label label-sm up warn">3</span>
-                        </a>
-                        <div ui-include="'../views/blocks/dropdown.notification.html'"></div>
-                    </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link clear" href data-toggle="dropdown">
-          <span class="avatar w-32">
-            <img src="../assets/images/a0.jpg" alt="...">
-            <i class="on b-white bottom"></i>
-          </span>
+                          <span class="avatar w-32">
+                            <img src="../assets/images/a0.jpg" alt="...">
+                            <i class="on b-white bottom"></i>
+                          </span>
                         </a>
-                        <div ui-include="'../views/blocks/dropdown.user.html'"></div>
+                        <div class="dropdown-menu pull-right dropdown-menu-scale">
+                            <a class="dropdown-item" ui-sref="access.signin">退出登陆</a>
+                        </div>
                     </li>
                     <li class="nav-item hidden-md-up">
                         <a class="nav-link" data-toggle="collapse" data-target="#collapse">
@@ -549,36 +357,19 @@
                     </li>
                 </ul>
                 <!-- / navbar right -->
-
-                <!-- navbar collapse -->
-                <div class="collapse navbar-toggleable-sm" id="collapse">
-                    <div ui-include="'../views/blocks/navbar.form.right.html'"></div>
-                    <!-- link and dropdown -->
-                    <ul class="nav navbar-nav">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link" href data-toggle="dropdown">
-                                <i class="fa fa-fw fa-plus text-muted"></i>
-                                <span>New</span>
-                            </a>
-                            <div ui-include="'../views/blocks/dropdown.new.html'"></div>
-                        </li>
-                    </ul>
-                    <!-- / -->
-                </div>
-                <!-- / navbar collapse -->
             </div>
         </div>
         <div class="app-footer">
             <div class="p-a text-xs">
                 <div class="pull-right text-muted">
-                    &copy; Copyright <strong>{{$app['name']}}</strong> <span class="hidden-xs-down">- v{{$app['version']}}</span>
+                    Copyright &copy; 2016 <strong>{{$app['name']}}</strong> All Rights Reserved <span
+                        class="hidden-xs-down">- v{{$app['version']}}</span>
                     <a ui-scroll-to="content"><i class="fa fa-long-arrow-up p-x-sm"></i></a>
                 </div>
                 <div class="nav">
                     <a class="nav-link" href="../">About</a>
                     <span class="text-muted">-</span>
-                    <a class="nav-link label accent" href="http://themeforest.net/user/flatfull/portfolio?ref=flatfull">Get
-                        it</a>
+                    <a class="nav-link label accent" href="https://www.simple-site.cn">Get it</a>
                 </div>
             </div>
 
@@ -751,176 +542,6 @@
                     </div>
                 </div>
             </div>
-            <div class="row-col b-b white">
-                <div class="col-md-8 b-r">
-                    <div class="p-a-md">
-                        <h6>Open Projects <span class="label">9</span></h6>
-                        <small>Your data status</small>
-                        <ul class="list no-padding">
-                            <li class="list-item">
-                                <a herf class="list-left">
-		          	<span class="w-40 circle _600 text-lg text-white blue-200">
-		            	B
-                        </apan>
-                                </a>
-                                <div class="list-body">
-                                    <div class="m-y-sm pull-right">
-                                        <a href class="btn btn-xs white"><i class="fa fa-pencil"></i></a>
-                                        <a href class="btn btn-xs white"><i class="fa fa-remove"></i></a>
-                                    </div>
-                                    <div><a href>Broadcast web app mockup</a></div>
-                                    <div class="text-sm">
-                                        <span class="text-muted"><strong>5</strong> tasks, <strong>3</strong> issues</span>
-                                        <span class="label"></span>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="list-item">
-                                <a herf class="list-left">
-		          	<span class="w-40 circle _600 text-lg text-white blue-200">
-		            	G
-                        </apan>
-                                </a>
-                                <div class="list-body">
-                                    <div class="m-y-sm pull-right">
-                                        <a href class="btn btn-xs white"><i class="fa fa-pencil"></i></a>
-                                        <a href class="btn btn-xs white"><i class="fa fa-remove"></i></a>
-                                    </div>
-                                    <div><a href>GoodDesign Bootstrap 4 migration</a></div>
-                                    <div class="text-sm">
-                                        <span class="text-muted"><strong>35</strong> tasks, <strong>6</strong> issues</span>
-                                        <span class="label"></span>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="list-item">
-                                <a herf class="list-left">
-		          	<span class="w-40 circle _600 text-lg text-white blue-200">
-		            	#
-                        </apan>
-                                </a>
-                                <div class="list-body">
-                                    <div class="m-y-sm pull-right">
-                                        <a href class="btn btn-xs white"><i class="fa fa-pencil"></i></a>
-                                        <a href class="btn btn-xs white"><i class="fa fa-remove"></i></a>
-                                    </div>
-                                    <div><a href>#Hashtag android app develop</a></div>
-                                    <div class="text-sm">
-                                        <span class="text-muted"><strong>52</strong> tasks, <strong>13</strong> issues</span>
-                                        <span class="label"></span>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="list-item">
-                                <a herf class="list-left">
-		          	<span class="w-40 circle _600 text-white blue-200">
-		            	<i class="fa fa-lg fa-google"></i>
-                        </apan>
-                                </a>
-                                <div class="list-body">
-                                    <div class="m-y-sm pull-right">
-                                        <a href class="btn btn-xs white"><i class="fa fa-pencil"></i></a>
-                                        <a href class="btn btn-xs white"><i class="fa fa-remove"></i></a>
-                                    </div>
-                                    <div><a href>Google material design application</a></div>
-                                    <div class="text-sm">
-                                        <span class="text-muted"><strong>15</strong> tasks, <strong>3</strong> issues</span>
-                                        <span class="label"></span>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="list-item">
-                                <a herf class="list-left">
-		          	<span class="w-40 circle _600 text-white blue-200">
-		            	<i class="fa fa-lg fa-facebook"></i>
-                        </apan>
-                                </a>
-                                <div class="list-body">
-                                    <div class="m-y-sm pull-right">
-                                        <a href class="btn btn-xs white"><i class="fa fa-pencil"></i></a>
-                                        <a href class="btn btn-xs white"><i class="fa fa-remove"></i></a>
-                                    </div>
-                                    <div><a href>Facebook connection web application</a></div>
-                                    <div class="text-sm">
-                                        <span class="text-muted"><strong>30</strong> tasks, <strong>5</strong> issues</span>
-                                        <span class="label"></span>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="p-a-md">
-                        <a href class="pull-right"><span class="label blue">910</span></a>
-                        <h6>Tickets</h6>
-                        <small>230 tickets need answerns</small>
-                        <ul class="list no-padding">
-                            <li class="list-item">
-                                <a herf class="list-left">
-	            	<span class="w-40 avatar red-100">
-	                  <span>C</span>
-	                  <i class="on b-white bottom"></i>
-	                </span>
-                                </a>
-                                <div class="list-body">
-                                    <div><a href>Chris Fox</a></div>
-                                    <a href class="text-muted">How to create an icon like the demo app</a>
-                                </div>
-                            </li>
-                            <li class="list-item">
-                                <a herf class="list-left">
-	              <span class="w-40 avatar purple-100">
-	                  <span>M</span>
-	                  <i class="on b-white bottom"></i>
-	              </span>
-                                </a>
-                                <div class="list-body">
-                                    <div><a href>Mogen Polish</a></div>
-                                    <a href class="text-muted">How to build my custom color</a>
-                                </div>
-                            </li>
-                            <li class="list-item">
-                                <a herf class="list-left">
-	              <span class="w-40 avatar blue-200">
-	                  <span>J</span>
-	                  <i class="off b-white bottom"></i>
-	              </span>
-                                </a>
-                                <div class="list-body">
-                                    <div><a href>Joge Lucky</a></div>
-                                    <a href class="text-muted">What is the app requriements</a>
-                                </div>
-                            </li>
-                            <li class="list-item">
-                                <a herf class="list-left">
-	              <span class="w-40 avatar warning">
-	                  <span>F</span>
-	                  <i class="on b-white bottom"></i>
-	              </span>
-                                </a>
-                                <div class="list-body">
-                                    <div><a href>Folisise Chosielie</a></div>
-                                    <a href class="text-muted">Where to find the API</a>
-                                </div>
-                            </li>
-                            <li class="list-item">
-                                <a herf class="list-left">
-	            	<span class="w-40 avatar green-100">
-	                  <span>P</span>
-	                  <i class="away b-white bottom"></i>
-	                </span>
-                                </a>
-                                <div class="list-body">
-                                    <div><a href>Peter</a></div>
-                                    <a href class="text-muted">How to add my router</a>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
             <!-- ############ PAGE END-->
 
         </div>
