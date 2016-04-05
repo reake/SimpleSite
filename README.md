@@ -15,11 +15,13 @@ SimpleSite is a site content manage system.
 - Multi Themes
 - Easy to usage
 
+## Screenshot
+![Demo1](https://raw.githubusercontent.com/simple-site/SimpleSite/master/public/demo1.png)
 
 ## Document
 
 Documentation for the framework can be found on the [SimpleSite wiki](https://github.com/simple-site/SimpleSite/wiki).
 
-### License
+## License
 
 The SimpleSite is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
