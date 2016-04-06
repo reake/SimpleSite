@@ -23,3 +23,8 @@ Route::group(['domain' => '{subDomain}.simple-site.cn'], function () {
     Route::get('/manage/dashboard', ['as' => 'dashboard', 'middleware' => 'auth', 'uses' => 'Main\MainController@dashboard']);
     Route::get('/manage/version', ['as' => 'version', 'uses' => 'Main\MainController@version']);
 });
+
+/**
+ * Open For WeChat
+ */
+Route::get('/api', ['as' => 'api', 'uses' => 'WeChat\ApiController@auth']);
