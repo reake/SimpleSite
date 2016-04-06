@@ -9,6 +9,10 @@ class UserController extends Controller
 {
     public function auth(Request $request)
     {
+        /**
+         * Debug
+         * http://mp.weixin.qq.com/debug/cgi-bin/sandboxinfo?action=showinfo&t=sandbox/index
+         */
         $options = array(
             /**
              * Debug 模式，bool 值：true/false
